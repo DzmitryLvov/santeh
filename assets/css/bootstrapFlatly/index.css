@@ -1,0 +1,33 @@
+
+.logo{
+	background: #FFE401;
+	height: 80px;
+	color: #047ED1;
+	font-size: 20px;
+	font-weight: bolder;
+	
+}
+.adress{
+	font-size: 15px;
+	color: #047ED1;
+	text-align: center;
+
+}
+.adress p{
+	padding: 12px;
+
+}
+.zayavka{
+	background: #FFE401;
+	height: 80px;
+	margin: auto;
+    text-align: center;
+
+}
+.zayavka p{
+	font-family: "Times New Roman", Georgia, Serif;
+	font-weight: bold;
+	font-size: 15px;
+	color: #047ED1;
+	
+}
