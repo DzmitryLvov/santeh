@@ -1,38 +1,55 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="angularstrapApp">
+
 <head>
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta content="utf-8" http-equiv="encoding">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/bootstrapFlatly/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/bootstrapFlatly/index.css">
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/bootstrapFlatly/bootstrap.css">
+  <link rel="stylesheet" href="assets/css/bootstrapFlatly/index.css">
+
+
+  <title>santehnica.ru</title>
 </head>
-<title>santehnica.ru</title>
+
+
 <body>
-<div class="secndnav">
-  <div class="container-fluid">
-    <div class="row">
-   	  <div class="col-md-2"></div>
-      <div class="col-md-1 logo">AQUA<br>SUPPLY</div>
-       <div class="col-md-6 adress">
-            <div class="col-md-6"><p>Москва, Цветной бульвар<br>д.11 стр.6, офис 406</p>
-            </div>
-
-  	        <div class="col-md-6"><p>+7(123)456-78-90<br>Пн-Вс с 9:00 до 21:00</p>
-  	        </div>
-
-  	    </div>
-  	  
-  	        <div class="col-md-1 application"><a href="#"class="button"><span>Оставить<br>заявку</span></a>
-  	        </div>
-
-  	  <div class="col-md-2"></div>
+  <div class="secndnav">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-1 logo">AQUA
+          <br>SUPPLY</div>
+        <div class="col-md-6 adress">
+          <div class="col-md-6">
+            <p>Москва, Цветной бульвар
+              <br>д.11 стр.6, офис 406</p>
+          </div>
+          <div class="col-md-6">
+            <p>+7(123)456-78-90
+              <br>Пн-Вс с 9:00 до 21:00</p>
+          </div>
+        </div>
+        
+  	        <div class="col-md-1 application">
+  	            <a href="#"class="button"><span>Оставить<br>заявку</span></a>
+  	         </div>
+        <div class="col-md-2"></div>
+      </div>
     </div>
   </div>
-</div> 
-
-
-
-
 </body>
+
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/bootstrap/dist/css/bootstrap.min.css"></script>
+<script src="/bower_components/angular/angular.min.js"></script>
+<script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="/app/app.config.js"></script>
+<script src="/app/app.states.js"></script>
+<script src="/app/components/home/home.directives.js"></script>
+<script src="/app/components/home/home.controller.js"></script>
+<script src="/app/components/home/services/home.services.js"></script>
+<script src="/app/components/about/about.controller.js"></script>
+<script src="/app/components/about/about.services.js"></script>
+
 </html>
