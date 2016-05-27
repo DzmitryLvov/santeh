@@ -3,90 +3,192 @@
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/bootstrapFlatly/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrapFlatly/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
 </head>
 <title>AngularStrap Angular Application Template</title>
 <body>
-<div class="container">
-    <div class="row clearfix">
-        <div class="col-md-12 column">
-            <nav class="navbar navbar-default" role="navigation">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                    <a class="navbar-brand" href="#/">AngularStrap</a>
+
+<!--*********************************************** HEADER ************************************************ -->
+<div class="header">
+<div class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse navHeaderCollapse">
+            <ul class="nav navbar-nav center">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Виды услуг</a></li>
+                <li><a href="#">Прайс</a></li>
+                <li><a href="#">Вакансии</a></li>
+                <li><a href="#">Наши проекты</a></li>
+                <li><a href="#">Новости</a></li>
+
+                <form class="navbar-form navbar-right" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Поиск по сайту">
+                    <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button></span>
                 </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a href="#/about">About</a>
-                        </li>
-                        <li>
-                            <a href="#">Link</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">Action</a>
-                                </li>
-                                <li>
-                                    <a href="#">Another action</a>
-                                </li>
-                                <li>
-                                    <a href="#">Something else here</a>
-                                </li>
-                                <li class="divider">
-                                </li>
-                                <li>
-                                    <a href="#">Separated link</a>
-                                </li>
-                                <li class="divider">
-                                </li>
-                                <li>
-                                    <a href="#">One more separated link</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <form class="navbar-form navbar-left" role="search">
-                        <div class="form-group">
-                            <input type="text" class="form-control" />
-                        </div> <button type="submit" class="btn btn-default">Submit</button>
-                    </form>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#">Link</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">Action</a>
-                                </li>
-                                <li>
-                                    <a href="#">Another action</a>
-                                </li>
-                                <li>
-                                    <a href="#">Something else here</a>
-                                </li>
-                                <li class="divider">
-                                </li>
-                                <li>
-                                    <a href="#">Separated link</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+            </ul>
         </div>
     </div>
-    <!-- start dynamic content -->
-    <div ui-view=""></div>
-    <!-- end dynamic content -->
 </div>
-</body>
+</div>
 
+
+<!--********************************************* ADRESS DESK ********************************************** -->
+
+<div class="secndnav"> 
+    <div class="container-fluid"> 
+        <div class="row"> 
+            <div class="col-md-2"></div> 
+            <div class="col-md-1 logo"><a href="#">AQUA <br>SUPPLY</a></div> 
+            <div class="col-md-6 adress"> 
+                <div class="col-md-6"><p>Москва, Цветной бульвар <br>д.11 стр.6, офис 406</p></div> 
+                <div class="col-md-6"> <p>+7(123)456-78-90 <br>Пн-Вс с 9:00 до 21:00</p></div> 
+            </div> 
+            <div class="col-md-1 application"> <a href="#"><b>Оставить<br>заявку</b></a></div>
+            <div class="col-md-2"></div> 
+        </div> 
+    </div> 
+</div>
+
+
+<!--********************************************* BUTTONS DESK ********************************************** -->
+
+<div class="container-fluid"> 
+    <div class="row santehworks"> 
+        <div class="col-md-12"> 
+            <div class="row title">САНТЕХНИЧЕСКИЕ РАБОТЫ ЛЮБОГО ВИДА</div> 
+
+            <div class="container"> 
+                <div class="row"> 
+                    <div class="col-md-12 four-buttons"> 
+                        <ul class="list-inline"> 
+                            <li><a href="#"><button class="butt"><b>Водоснабжение</b></button> </a></li> 
+                            <li><a href="#"><button class="butt"><b>Отопление</b></button></a></li> 
+                            <li><a href="#"><button class="butt"><b>Водопровод</b></button></a></li> 
+                            <li><a href="#"><button class="butt"><b>Канализация</b></button></a></li> 
+                        </ul> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+     </div> 
+</div> 
+</div>
+
+<!--********************************************* TUBES AND THE MAN ***************************************** -->
+
+<div class="two-cards">
+<div class="container-fluid">
+<div class="row">
+
+    <div class="col-md-2"></div>
+
+        <div class="col-md-4 tubes">
+            <img src="img/3.png"width="40%" id="tubes">
+            <div class="info">
+            <h3><b>Продукты</b></h3>
+            <p>Подберите необходимое<br>оборудование</p>
+            <button class="details"><b>Подробнее</b></button>
+            </div>
+        </div>
+  
+        <div class="col-md-4 man">
+            <img src="img/2.png"width="40%" id="man">
+            <div class="info">
+            <h3><b>Сервис</b></h3>
+            <p>Получите качественное<br> сервисное обслуживание</p>
+            <button class="details"><b>Подробнее</b></button>
+            </div>
+        </div>
+
+    <div class="col-md-2"></div>
+
+</div>
+</div>
+</div>
+
+
+<!--********************************************* WELCOME ******************************************** -->
+<div class="welcome">
+    <div class="container-fluid">
+        <div class="row">
+
+          <div class="col-md-2"></div>
+
+          <div class="col-md-5 welcom-text">
+
+<h3><b>Добро пожаловать!</b></h3>
+<h4><b>Внимание! Вся информация на сайте тестовая!</b></h4>
+
+
+<div class="row">
+<div class="col-md-5"><img src="img/4.jpg" width="100%"></div>
+<div class="col-md-7"><p>
+    Ат альяквюам пэртинакёа ыюм, мэль мэльиорэ долорэм эюрйпйдяч но, ыт кюм нощтыр дытракжйт. Про ат лебыр вёвындо аппарэат. Экз кхоро конкльюдатюрквюэ дуо, ку квуй видырэр трактатоз. Мыа квюот лудуз мыдиокрым эи, жят эю брутэ чонэт пожйдонёюм. Квюод зальютатуж про но, ыюм льабятюр эуежмод глориатюр ат. Хомэро промпта нэ про, экз хёз золэт иреуры.Нэ нам кхоро вэрйтюж чингюльищ, ут эррэм ножтро дяшзынтиыт хёз. Нэ нам кхоро вэрйтюж чингюльищ, ут эррэм ножтро дяшзынтиыт хёз.
+</p></div>
+</div>
+
+<p>
+    Ат альяквюам пэртинакёа ыюм, мэль мэльиорэ долорэм эюрйпйдяч но, ыт кюм нощтыр дытракжйт. Про ат лебыр вёвындо аппарэат. Экз кхоро конкльюдатюрквюэ дуо, ку квуй видырэр трактатоз. Мыа квюот лудуз мыдиокрым эи, жят эю брутэ чонэт пожйдонёюм. Квюод зальютатуж про но, ыюм льабятюр эуежмод глориатюр ат. Хомэро промпта нэ про, экз хёз золэт иреуры.Нэ нам кхоро вэрйтюж чингюльищ, ут эррэм ножтро дяшзынтиыт хёз. Нэ нам кхоро вэрйтюж чингюльищ, ут эррэм ножтро дяшзынтиыт хёз.
+Ат альяквюам пэртинакёа ыюм, мэль мэльиорэ долорэм эюрйпйдяч но, ыт кюм нощтыр дытракжйт. Про ат лебыр вёвындо аппарэат. Экз кхоро конкльюдатюрквюэ дуо, ку квуй видырэр трактатоз. Мыа квюот лудуз мыдиокрым эи, жят эю брутэ чонэт пожйдонёюм. Квюод зальютатуж про но, ыюм льабятюр эуежмод глориатюр ат. </p>
+
+
+          </div>
+
+
+          <div class="col-md-3 ulist">
+            <ul class="list">
+                <li><a href="">Бурение скважин на воду</a></li>
+                <li><a href="">Типы систем водоснабжения</a></li>
+                <li><a href="">Установка кессона, кессон<br>для скважины</a></li>
+                <li><a href="">Обустройство скважины</a></li>
+                <li><a href="">Водоснабжение загородного<br>дома</a></li>
+                <li><a href="">Водоподготовка</a></li>
+                <li><a href="">Канализация</a></li>
+                <li><a href="">Отопление</a></li>
+            </ul>
+
+            <img src="img/5.jpg" width="100%">
+
+            <div class="information">
+                <h3><b><font color="#FFE401">Акции</font></b></h3>
+                <h5><b>Заказывайте комплексное<br> водоснобжение по<br><font color="#FFE401">выгодной цене</font></b></h5>
+                <p>Здесь будет находиться ваша реклама,<br>спецпредложения или любые дополнения,<br>которые будут редактироваться вами<br>(фотографии, банеры, и т.п.) </p>
+            </div>   
+
+        </div>
+
+        <div class="col-md-2"></div>
+    </div>
+</div>
+</div>
+
+
+<!--********************************************* NEWS *********************************************** -->
+
+
+
+
+
+</body>
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/bootstrap/dist/css/bootstrap.min.css"></script>
 <script src="/bower_components/angular/angular.min.js"></script>
@@ -98,5 +200,4 @@
 <script src="/app/components/home/services/home.services.js"></script>
 <script src="/app/components/about/about.controller.js"></script>
 <script src="/app/components/about/about.services.js"></script>
-
 </html>
