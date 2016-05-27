@@ -391,3 +391,67 @@ padding-bottom: 10px;
 padding-top: 5px;
 padding-bottom: 5px;
 }
+
+
+/*******************************************************************************************************
+********************************************************************************************************
+                                             NEWS
+********************************************************************************************************
+*******************************************************************************************************/
+
+
+.allnews{
+  background: white;
+  
+}
+
+.news h3{
+ display: inline-block;
+}
+
+.news a{
+  padding-left: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #016ABD;
+}
+
+.news2nd{
+  background: #016ABD;
+}
+
+.date-padding{
+ padding-top: 25px;
+ padding-bottom: 25px;
+}
+
+.day{
+  background: white;
+  color: #016ABD;
+  padding: 2px;
+  font-size: 20px;
+}
+
+.time{
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+}
+
+.news-title a{
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+}
+
+.news-title a:hover{
+  font-size: 15px;
+  color: #FFE401;;
+  font-weight: bold;
+}
+
+.text-news{
+  font-size: 15px;
+  color: white;
+  
+}
