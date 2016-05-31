@@ -1,33 +1,393 @@
-
-.logo{
-	background: #FFE401;
-	height: 80px;
-	color: #047ED1;
-	font-size: 20px;
-	font-weight: bolder;
-	
+<<<<<<< HEAD
+body{
+	background-color:#F5F5F5;
+  margin: 0;
+  padding: 0;
 }
-.adress{
-	font-size: 15px;
-	color: #047ED1;
-	text-align: center;
+
+
+@media (max-width: 40em) {
+body {
+background-color: white;
+}
+}
+/*******************************************************************************************************
+********************************************************************************************************
+                                                  HEADER
+********************************************************************************************************
+*******************************************************************************************************/
+
+.navbar-default {
+  background-color: #016ABD;
+  font-size: 18px;
+  font-family: calibri;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  background-color: #017CCC;
+  color: white;
+  transition: background-color .4s ease;
+}
+
+.form-control {
+  background-color: #016ABD;
+  padding-left: 5px;
+}
+
+.form-control, input {
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-family: calibri;
+}
+
+.navbar-form .input-group > .form-control{
+  width: 136px;
+}
+
+.form-control::-webkit-input-placeholder { color: #4FC3F7; border-bottom: 1px solid #4FC3F7;}
+.form-control:-moz-placeholder { color: #4FC3F7; border-bottom: 1px solid #4FC3F7;}
+.form-control::-moz-placeholder { color: #4FC3F7; border-bottom: 1px solid #4FC3F7;}
+.form-control:-ms-input-placeholder { color: #4FC3F7; border-bottom: 1px solid #4FC3F7;}
+
+.btn-default {
+  background-color: #017CCC;
+  border: none;
+  padding: 10px 14px 10px 14px;
+  color: #4FC3F7;
+}
+
+.btn-default:hover{
+  background-color: #017CCC;
+  color: #BBDEFB;
+}
+
+.btn-default:focus{
+  background-color: #017CCC;
+  color: #BBDEFB;
+}
+
+.navbar-default .navbar-toggle{
+  background-color: #016ABD;
+  border: 1px solid white;
+}
+
+.navbar-default .navbar-toggle:hover{
+  background-color: #016ABD;
+  border: 1px solid white;
+}
+
+.navbar-default .navbar-toggle:focus{
+  background-color: #016ABD;
+  border: 1px solid white;
+}
+
+.nav {
+  float: none;
+  display: inline-block;
+  margin:0 20px;
+  vertical-align:middle;
+}
+
+
+/*******************************************************************************************************
+********************************************************************************************************
+                                             ADRESS DESK
+********************************************************************************************************
+*******************************************************************************************************/
+
+.secndnav{
+  margin-top: -21px;
+  text-align: center;
+  background-color: white;
+}
+
+.logo{ 
+  background: #FFE401; 
+  height: 90px; 
+  color: #047ED1; 
+  font-weight: bolder; 
+  font-family: PhrasticMedium; 
+  padding-right: 0px;
+  padding-left: 0px; 
+} 
+
+.adress{ 
+  font-size: 18px; 
+  color: #047ED1; 
+  text-align: center;
+  font-family: calibri;
+  line-height: 21px;
+} 
+
+.adress p{ 
+  padding-top: 27px; 
+} 
+
+.application{ 
+  background: #FFE401; 
+  height: 90px;
+  padding-right: 0px;
+  padding-left: 0px; 
+} 
+
+.application a{ 
+  display:block; 
+  text-decoration: none; 
+  font-family: calibri;
+  font-size: 20px; 
+  color: #047ED1; 
+  padding: 23px 0px 27px 0px;
+  line-height: 20px;
+} 
+
+.application a:hover{ 
+  text-decoration: none; 
+  font-size: 20px;
+  font-family: calibri;
+  color: white; 
+  background-color: #017CCC;
+  transition: background-color .4s ease;
+} 
+
+.application:active{ 
+  background-color: #047ED1; 
+  color: #FFF;
+} 
+
+.logo a{ 
+  display:block; 
+  text-decoration: none; 
+  font-family: PhrasticMedium;
+  font-size: 20px; 
+  color: #047ED1; 
+  padding: 17px 0px 17px 0px;
+} 
+
+.logo a:hover{ 
+  text-decoration: none; 
+  color: white; 
+  background-color: #017CCC;
+  transition: background-color .4s ease;
+} 
+
+.logo:active{ 
+  background-color: #047ED1; 
+  color: #FFF;
+} 
+
+
+/*******************************************************************************************************
+********************************************************************************************************
+                                             BUTTONS DESK
+********************************************************************************************************
+*******************************************************************************************************/
+
+.santehworks{ 
+  background-image:url("img/12.jpg"); 
+  background-repeat:repeat-x; 
+  background-size: 100%; 
+  max-height: 300px;
+  overflow: auto;
+
+} 
+
+.title{ 
+  display: block;
+  color: white; 
+  font-weight: bold; 
+  font-size: 2.4vw; 
+  text-align:center; 
+  padding-top: 6%; 
+} 
+
+.four-buttons { 
+  text-decoration: none; 
+  text-align: center; 
+  padding-top: 15px; 
+  padding-bottom: 7%; 
+
+} 
+
+.four-buttons li a{
+
+  color: #7F7F7F; 
+  font-family: calibri; 
+  font-size: 2.0vw; 
+} 
+
+.four-buttons li a button:hover{ 
+  color: white; 
+  background-color: #016ABD; 
+  transition: background-color .4s ease; 
+} 
+
+.butt{ 
+  border: none; 
+  background-color: white;
+  text-align: center;
+}
+
+
+@media (max-width: 40em) {
+.four-buttons li a {
+font-size: 25px;
+}
+.santehworks{
+  background-image:none;
+}
+.title{
+  color: red;
+  font-size: 25px;
+  padding: 0px 0px;
+}
+}
+
+
+
+/*******************************************************************************************************
+********************************************************************************************************
+                                             TUBES AND THE MAN
+********************************************************************************************************
+*******************************************************************************************************/
+.two-cards{
+  margin-top: -20px;
+}
+
+.tubes{
+  display: block;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.man{
+  display: block;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.details{
+  background-color: #0176C6;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 17px;
+  font-family: calibri;
+}
+
+.details:hover{
+  background-color: #FFE401;
+  color: #0176C6;
+  transition: background-color .4s ease;
+}
+
+.info{
+  margin: -40% 0% 0% 35%;
+}
+
+.two-cards p{
+  font-size: 14px;
+  font-family: calibri;
+  text-shadow: white 0 0 2px;
+  line-height: 14px;
+}
+
+.two-cards h3{
+  font-size: 30px;
+  font-family: calibri;
+  text-shadow: white 0 0 2px;
+}
+
+
+
+@media (max-width: 40em) {
+#man {
+display:none;
+}
+.info {
+  text-align: center;
+}
+}
+
+@media (max-width: 40em) {
+#tubes {
+display:none;
+}
+.info {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px;
+}
+}
+
+/*******************************************************************************************************
+********************************************************************************************************
+                                             WELCOME
+********************************************************************************************************
+*******************************************************************************************************/
+
+.welcome{
+  padding-top: 85px;
 
 }
-.adress p{
-	padding: 12px;
 
+.list{
+  padding: 0px 0px;
 }
-.zayavka{
-	background: #FFE401;
-	height: 80px;
-	margin: auto;
-    text-align: center;
 
+.list li{
+	display: block;
+	text-decoration: none;
+  background-color: white;
 }
-.zayavka p{
-	font-family: "Times New Roman", Georgia, Serif;
-	font-weight: bold;
-	font-size: 15px;
-	color: #047ED1;
-	
+
+.list li a{
+	display: block;
+	text-decoration: none;
+	padding: 5px 10px 5px 10px;
+	font-family: calibri;
+	font-size: 19px;
+	color: #7F7F7F;
+	border-top: 1px solid rgba(255,255,255,0.3); 
+  border-bottom: 1px solid rgba(0,0,0,0.1); 
+}
+
+.list li a:hover{
+	text-decoration: none;
+	font-family: calibri;
+	font-size: 19px;
+	background-color: #0176C6; 
+	color: white;
+	transition: background-color .4s ease;
+}
+
+.ulist{
+	padding-left: 20px;
+	padding-right:20px;
+  padding-top: 30px;
+}
+
+.information p{
+font-size: 10px;
+line-height: 10px;
+}
+
+.information{
+margin-top: -170px;
+margin-left: 20px;
+color:white;
+}
+
+.welcom-text h4{
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+
+.welcom-text p{
+padding-top: 5px;
+padding-bottom: 5px;
 }
