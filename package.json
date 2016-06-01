@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/JeremyMorgan/Angular-Kickstart/issues"
   },
-  "homepage": "https://github.com/JeremyMorgan/Angular-Kickstart"
+  "homepage": "https://github.com/JeremyMorgan/Angular-Kickstart",
+  "devDependencies": {
+    "angular": "^1.5.5"
+  }
 }
