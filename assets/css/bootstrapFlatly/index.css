@@ -1,16 +1,23 @@
-<<<<<<< HEAD
 body{
 	background-color: #F5F5F5;
   margin: 0;
   padding: 0;
 }
 
-
 /*******************************************************************************************************
 ********************************************************************************************************
                                                   HEADER
 ********************************************************************************************************
 *******************************************************************************************************/
+
+.navbar-brand{
+  display: block;
+  position: relative;
+  margin: -5px 0px ;
+  width: 80%;
+  height: 80%;
+}
+
 
 .navbar-default {
   background-color: #016ABD;
@@ -227,19 +234,6 @@ body{
 }
 
 
-@media (max-width: 40em) {
-.four-buttons li a {
-font-size: 25px;
-}
-.santehworks{
-  background-image:none;
-}
-.title{
-  color: red;
-  font-size: 25px;
-  padding: 0px 0px;
-}
-}
 
 
 
@@ -299,30 +293,14 @@ font-size: 25px;
 
 
 
-@media (max-width: 40em) {
-#man {
-display:none;
-}
-.info {
-  text-align: center;
-}
-}
 
-@media (max-width: 40em) {
-#tubes {
-display:none;
-}
-.info {
-  margin: 0px 0px 0px 0px;
-  padding: 0px 0px;
-}
-}
 
 /*******************************************************************************************************
 ********************************************************************************************************
                                              WELCOME
 ********************************************************************************************************
 *******************************************************************************************************/
+
 .welcom-text{
   padding-top: 30px;
 }
@@ -360,7 +338,7 @@ display:none;
 .ulist{
 	padding-left: 40px;
 	padding-right: 0px;
-  padding-top: 70px;
+  padding-top: 55px;
 }
 
 .information p{
@@ -382,8 +360,74 @@ padding-bottom: 10px;
 .welcom-text p{
 padding-top: 5px;
 padding-bottom: 5px;
-font-size: 2.1vh;
+font-size: 15px;
 }
+
+
+
+/*******************************************************************************************************
+********************************************************************************************************
+                                             NEWS
+********************************************************************************************************
+*******************************************************************************************************/
+
+
+.news{
+  background: white;
+  
+}
+
+.news h3{
+ display: inline-block;
+}
+
+.news a{
+  padding-left: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #016ABD;
+}
+
+.news2nd{
+  background: #016ABD;
+}
+
+.date-padding{
+ padding-top: 25px;
+ padding-bottom: 25px;
+}
+
+.day{
+  background: white;
+  color: #016ABD;
+  padding: 2px;
+  font-size: 20px;
+}
+
+.time{
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+}
+
+.news-title a{
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+}
+
+.news-title a:hover{
+  font-size: 15px;
+  color: #FFE401;;
+  font-weight: bold;
+}
+
+.text-news{
+  font-size: 12px;
+  color: white;
+  
+}
+
 
 
 
@@ -397,6 +441,7 @@ font-size: 2.1vh;
   text-align: center;
   padding-top: 40px;
 }
+
 
 .on-top{
   margin-left: 120px;
@@ -412,6 +457,7 @@ font-size: 2.1vh;
 
 .navbar-primary .navbar-nav > li > a {
   color: #017CCC;
+    font-size: 18px;
 }
 
 .navbar-primary .navbar-nav > li > a:hover {
@@ -428,10 +474,10 @@ font-size: 2.1vh;
 
 
 .fin{
+  margin-top: -40px;
   background-color: #016ABD;
   text-align: center;
   height: auto;
-  margin-top: -20px;
 }
 
 .fin p{
@@ -444,5 +490,121 @@ font-size: 2.1vh;
 .fin a{
   color: #FFE401;
   font-size: 12px;
+}
+
+
+
+/*******************************************************************************************************
+********************************************************************************************************
+                                                MOBILE
+********************************************************************************************************
+*******************************************************************************************************/
+
+@media (max-width: 40em) {
+.four-buttons li a {
+font-size: 20px;
+}
+.santehworks{
+  background-image:none;
+}
+.title{
+  background-color:#016ABD; 
+  color: white;
+  font-size: 20px;
+  padding: 10px 10px;
+  font-family: calibri;
+}
+}
+
+
+@media (max-width: 40em) {
+#man {
+display:none;
+}
+.info {
+  text-align: center;
+  border: 2px solid #016ABD;
+  border-radius: 4px
+}
+}
+
+
+@media (max-width: 40em) {
+#tubes {
+display:none;
+}
+.info {
+  margin: 10px 0px 0px 0px;
+  padding: 0px 0px 20px 0px;
+}
+}
+
+@media (max-width: 40em) {
+body {
+background-color: white;
+}
+}
+
+
+@media (max-width: 40em) {
+.ulist{
+padding-left: 0px;
+}
+}
+
+
+@media (min-width: 40em) {
+.navbar-brand{
+display:none;
+}
+}
+
+@media (max-width: 40em) {
+.logo{
+display:none;
+}
+}
+
+@media (max-width: 40em) {
+.adress p{
+font-size: 16px;
+padding: 6px 2px 6px 2px;
+line-height: 16px;
+color: white;
+}
+.adress{
+background-color: #016ABD;
+}
+}
+
+
+@media (max-width: 40em) {
+.application{
+margin-top: -10px;
+}
+.application a{
+font-size: 25px;
+}
+}
+
+
+@media (max-width: 40em) {
+.butt{
+border: 1px solid white;
+width: 260px;
+color: white;
+border-radius: 5px;
+background-color: #016ABD;
+}
+.list-inline li{
+padding-top: 5px;
+padding-bottom: 5px;
+}
+}
+
+@media (max-width: 40em) {
+.footer{
+display:none;
+}
 }
 
