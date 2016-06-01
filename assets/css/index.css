@@ -292,7 +292,7 @@ input {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.list li a:hover {
+.list li a:hover, .list li a.active {
   text-decoration: none;
   font-family: calibri;
   font-size: 19px;
