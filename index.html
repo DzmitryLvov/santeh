@@ -1,4 +1,5 @@
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="angularstrapApp">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="myApp">
+
 <head>
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
   <meta content="utf-8" http-equiv="encoding">
@@ -8,7 +9,7 @@
 </head>
 
 <body>
-  <!--*********************************************** HEADER ************************************************ -->
+  <!-- HEADER -->
   <div class="header">
     <div class="navbar navbar-default navbar-static-top">
       <div class="container-fluid">
@@ -45,7 +46,7 @@
     </div>
   </div>
 
-  <!--********************************************* ADRESS DESK ********************************************** -->
+  <!-- ADRESS DESK -->
   <div class="secndnav">
     <div class="container-fluid">
       <div class="row">
@@ -67,7 +68,7 @@
     </div>
   </div>
 
-  <!--********************************************* BUTTONS DESK ********************************************** -->
+  <!-- BUTTONS DESK -->
   <div class="container-fluid">
     <div class="row santehworks">
       <div class="col-md-12">
@@ -106,7 +107,7 @@
     </div>
   </div>
 
-  <!--********************************************* TUBES AND THE MAN ***************************************** -->
+  <!-- TUBES AND THE MAN -->
   <div class="two-cards">
     <div class="container-fluid">
       <div class="row">
@@ -134,8 +135,8 @@
     </div>
   </div>
 
-  <!--********************************************* WELCOME ******************************************** -->
-  <div class="welcome">
+  <!-- WELCOME -->
+  <div class="welcome" ng-controller="aboutController as aboutCtrl">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-2"></div>
@@ -180,7 +181,7 @@
     </div>
   </div>
 
-  <!--********************************************* NEWS *********************************************** -->
+  <!-- NEWS -->
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-2"></div>
@@ -214,7 +215,6 @@
               <br> находилась делегация из Дании во главе с
               <br>Послом Королевства в Российской
               <br>Федерации Томасом...</p>
-
           </div>
         </div>
         <div class="col-md-4">
@@ -234,7 +234,7 @@
   </div>
   </div>
 
-  <!--********************************************* FOOTER *********************************************** -->
+  <!-- FOOTER -->
   <div class="footer">
     <div class="navbar navbar-primary navbar-static-top">
       <div class="container-fluid">
@@ -269,14 +269,14 @@
     </div>
   </div>
 </body>
-  <script src="node_modules/angular/angular.min.js"></script>
-  <script src="assets/js/jquery-1.12.3.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="app/app.config.js"></script>
-  <script src="app/app.states.js"></script>
-  <script src="app/components/home/home.directives.js"></script>
-  <script src="app/components/home/home.controller.js"></script>
-  <script src="app/components/home/services/home.services.js"></script>
-  <script src="app/components/about/about.controller.js"></script>
-  <script src="app/components/about/about.services.js"></script>
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="assets/js/jquery-1.12.3.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="app/app.config.js"></script>
+<script src="app/app.states.js"></script>
+<script src="app/components/home/services/home.services.js"></script>
+<script src="app/components/home/home.controller.js"></script>
+<script src="app/components/about/about.controller.js"></script>
+<script src="app/components/about/about.services.js"></script>
 </html>

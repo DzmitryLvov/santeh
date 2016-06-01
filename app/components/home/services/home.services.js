@@ -1,10 +1,10 @@
 (function () {
     'use strict';
 
-    angular.module('angularstrapApp.homeServices', [])
+    angular.module('myApp')
         .service('asyncService', asyncService);
 
-    asyncService.$inject = ['$http', '$q'];
+   // asyncService.$inject = ['$http', '$q'];
 
         function asyncService($http, $q) {
             

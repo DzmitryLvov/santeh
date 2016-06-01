@@ -1,18 +1,15 @@
 (function () {
-    'use strict';
+  'use strict';
 
-    angular.module('angularstrapApp')
-        .controller('aboutController', aboutController);
+  angular.module('myApp')
+    .controller('aboutController', aboutController);
 
-    aboutController.$inject = ["$scope", "$http", "$window", "$q", "asyncService"];
+  function aboutController($scope, $http, $window, $q, aboutService) {
 
-    function aboutController($scope, $http, $window, $q, asyncService) {
+    var vm = this;
 
-        var vm = this;
+    vm.data = aboutService.preparedData;
 
-        vm.Heading = "About Page";
-        vm.Text = "This is a sample about page.";
-
-        return vm;
-    }
+    return vm;
+  }
 })();
