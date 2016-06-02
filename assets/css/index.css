@@ -92,7 +92,7 @@ input {
 
 .nav {
   float: none;
-  display: inline-block;
+  display: inline;
   margin: 0 20px;
   vertical-align: middle;
 }
