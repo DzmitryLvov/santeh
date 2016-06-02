@@ -7,6 +7,7 @@ body {
 .navbar-default {
   background-color: #016ABD;
   font-size: 18px;
+  margin-bottom: 0;
   font-family: calibri;
 }
 
@@ -96,10 +97,14 @@ input {
   vertical-align: middle;
 }
 
-.secndnav {
-  margin-top: -21px;
-  text-align: center;
+.address-panel-container {
   background-color: white;
+}
+
+.address-panel {
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .logo {
