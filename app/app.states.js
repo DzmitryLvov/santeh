@@ -24,10 +24,15 @@ angular.module('myApp')
             templateUrl: 'app/shared/404.html'
         })
         .state('about', {
-            // we'll add another state soon
             url: '/about',
             templateUrl: 'app/components/about/views/about.view.html',
             controller: 'aboutController',
+            controllerAs: 'ctrl'
+        })
+        .state('price', {
+            url: '/price',
+            templateUrl: 'app/components/price/views/price.view.html',
+            controller: 'priceController',
             controllerAs: 'ctrl'
         });
 }]);
