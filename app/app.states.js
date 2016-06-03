@@ -4,7 +4,7 @@
  * https://github.com/angular-ui/ui-router/wiki
  */
 angular.module('myApp')
-    .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
+    .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider){
 
     // any unknown URLS go to 404
     $urlRouterProvider.otherwise('/404');
