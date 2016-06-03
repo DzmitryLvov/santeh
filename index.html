@@ -131,81 +131,47 @@
   </div>
 
   <!-- WELCOME -->
-  <div class="welcome" ng-controller="aboutController as aboutCtrl">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-5 welcom-text">
-          <h3><b>Добро пожаловать!</b></h3>
-          <h4><b>{{aboutCtrl.selectedItem.headerText}}</b></h4>
-          <div class="row">
-           <p>{{aboutCtrl.selectedItem.descriptionText}}</p>
-          </div>
+  <div class="about-container row container-fluid" ng-controller="aboutController as aboutCtrl">
+    <div class="col-md-8 centered">
+      <div class="col-md-8 welcom-text">
+        <h3><b>Добро пожаловать!</b></h3>
+        <h4><b>{{aboutCtrl.selectedItem.headerText}}</b></h4>
+        <div class="row">
+          <p>{{aboutCtrl.selectedItem.descriptionText}}</p>
         </div>
-        <div class="col-md-3 ulist">
-          <ul class="list">
-            <li ng-repeat="item in aboutCtrl.data" ng-click="aboutCtrl.displayItem(item)">
-              <a href="" ng-class="{'active': item.selected}" >{{item.name}}</a>
-            </li>
-          </ul>
-          <img src="assets/img/5.jpg" width="100%">
-          <div class="information">
-            <h3><b><font color="#FFE401">Акции</font></b></h3>
-            <h5><b>Заказывайте комплексное<br> водоснобжение по<br><font color="#FFE401">выгодной цене</font></b></h5>
-            <p>Здесь будет находиться ваша реклама,
-              <br>спецпредложения или любые дополнения,
-              <br>которые будут редактироваться вами
-              <br>(фотографии, банеры, и т.п.) </p>
-          </div>
+      </div>
+      <div class="col-md-4 ulist">
+        <ul class="sub-category-list">
+          <li ng-repeat="item in aboutCtrl.data" ng-click="aboutCtrl.displayItem(item)">
+            <a href="" ng-class="{'active': item.selected}">{{item.name}}</a>
+          </li>
+        </ul>
+        <img src="assets/img/5.jpg" width="100%">
+        <div class="information">
+          <h3><b><font color="#FFE401">Акции</font></b></h3>
+          <h5><b>Заказывайте комплексное<br> водоснобжение по<br><font color="#FFE401">выгодной цене</font></b></h5>
+          <p>Здесь будет находиться ваша реклама,
+            <br>спецпредложения или любые дополнения,
+            <br>которые будут редактироваться вами
+            <br>(фотографии, банеры, и т.п.) </p>
         </div>
-        <div class="col-md-2"></div>
       </div>
     </div>
   </div>
 
   <!-- NEWS -->
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-2"></div>
-      <div class="col-md-8 news">
-        <h3><b>Новости </b></h3><span><a href="#">Все</a></span>
+    <div class="news-block-container col-md-8 centered">
+      <div class="news-block-header col-md-12 row">
+        <span><h3><b>Новости </b></h3><a href="#">Все</a></span>
       </div>
-      <div class="col-md-2"></div>
-    </div>
-    <div class="row">
-      <div class="col-md-2"></div>
-      <div class="col-md-8 news2nd">
+      <div class=" news-block-content col-md-12 row">
         <div class="col-md-4">
-          <div class="row date-padding">
-            <time class="time"><span class="day">15</span> 01.16</time>
+          <div class="row date">
+            <span class="day">15</span> 01.16
           </div>
           <div class="row">
-            <p class="news-title"><a href="">БАШКОРСТАН И ДАНИЯ<br>НАЛАЖИВАЮТ СОТРУДНИЧЕСТВО</a></p>
-            <p class="text-news">В июне в Уфе с рабочим визитом
-              <br> находилась делегация из Дании во главе с
-              <br>Послом Королевства в Российской
-              <br>Федерации Томасом...</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="row date-padding">
-            <time class="time"><span class="day">15</span> 01.16</time>
-          </div>
-          <div class="row">
-            <p class="news-title"><a href="">БАШКОРСТАН И ДАНИЯ<br>НАЛАЖИВАЮТ СОТРУДНИЧЕСТВО</a></p>
-            <p class="text-news">В июне в Уфе с рабочим визитом
-              <br> находилась делегация из Дании во главе с
-              <br>Послом Королевства в Российской
-              <br>Федерации Томасом...</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="row date-padding">
-            <time class="time"><span class="day">15</span> 01.16</time>
-          </div>
-          <div class="row">
-            <p class="news-title"><a href="">БАШКОРСТАН И ДАНИЯ<br>НАЛАЖИВАЮТ СОТРУДНИЧЕСТВО</a></p>
-            <p class="text-news">В июне в Уфе с рабочим визитом
+            <p class="post-title"><a href="">БАШКОРСТАН И ДАНИЯ<br>НАЛАЖИВАЮТ СОТРУДНИЧЕСТВО</a></p>
+            <p class="post-text">В июне в Уфе с рабочим визитом
               <br> находилась делегация из Дании во главе с
               <br>Послом Королевства в Российской
               <br>Федерации Томасом...</p>
@@ -213,14 +179,13 @@
         </div>
       </div>
     </div>
-  </div>
-
+  <div class="container"></div>
   <!-- FOOTER -->
   <div class="footer">
     <div class="navbar navbar-primary navbar-static-top">
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
-          <ul class="nav navbar-nav left">
+          <ul class="nav navbar-nav centered">
             <li><a href="#">Главная</a></li>
             <li><a href="#">О компании</a></li>
             <li><a href="#">Виды услуг</a></li>

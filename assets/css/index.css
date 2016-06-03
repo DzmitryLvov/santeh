@@ -4,6 +4,11 @@ body {
   padding: 0;
 }
 
+.centered {
+    float: none;
+    margin: 0 auto;
+}
+
 .navbar-default {
   background-color: #016ABD;
   font-size: 18px;
@@ -90,11 +95,12 @@ input {
   border: 1px solid white;
 }
 
-.nav {
+.navbar-bottom{
   float: none;
   display: inline;
   margin: 0 20px;
   vertical-align: middle;
+
 }
 
 .address-panel-container {
@@ -105,16 +111,6 @@ input {
   text-align: center;
   padding-left: 0;
   padding-right: 0;
-}
-
-.logo {
-  background: #FFE401;
-  height: 90px;
-  color: #047ED1;
-  font-weight: bolder;
-  font-family: PhrasticMedium;
-  padding-right: 0px;
-  padding-left: 0px;
 }
 
 .adress {
@@ -160,10 +156,17 @@ input {
   color: #FFF;
 }
 
+.logo {
+  height: 90px;
+  color: #047ED1;
+  font-weight: bolder;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
 .logo a {
   display: block;
   text-decoration: none;
-  font-family: PhrasticMedium;
   font-size: 20px;
   color: #047ED1;
   padding: 17px 0px 17px 0px;
@@ -276,17 +279,18 @@ input {
   padding-top: 30px;
 }
 
-.list {
+.sub-category-list {
   padding: 0px 0px;
+  margin: 0;
 }
 
-.list li {
+.sub-category-list li {
   display: block;
   text-decoration: none;
   background-color: white;
 }
 
-.list li a {
+.sub-category-list li a {
   display: block;
   text-decoration: none;
   padding: 5px 10px 5px 10px;
@@ -297,7 +301,7 @@ input {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.list li a:hover, .list li a.active {
+.sub-category-list li a:hover, .sub-category-list li a.active {
   text-decoration: none;
   font-family: calibri;
   font-size: 19px;
@@ -333,57 +337,53 @@ input {
   font-size: 15px;
 }
 
-.news {
+.news-block-header {
   background: white;
 }
 
-.news h3 {
+.news-block-header h3 {
   display: inline-block;
 }
 
-.news a {
+.news-block-header a {
   padding-left: 15px;
   font-size: 20px;
   font-weight: bold;
   color: #016ABD;
 }
 
-.news2nd {
+.news-block-content {
   background: #016ABD;
 }
 
-.date-padding {
+.news-block-content .date {
   padding-top: 25px;
   padding-bottom: 25px;
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
 }
 
-.day {
+ .news-block-content .date .day {
   background: white;
   color: #016ABD;
   padding: 2px;
   font-size: 20px;
 }
 
-.time {
+.news-block-content .post-title a {
   font-size: 15px;
   color: white;
   font-weight: bold;
 }
 
-.news-title a {
-  font-size: 15px;
-  color: white;
-  font-weight: bold;
-}
-
-.news-title a:hover {
+.news-block-content .post-title a:hover {
   font-size: 15px;
   color: #FFE401;
-  ;
   font-weight: bold;
 }
 
-.text-news {
+.news-block-content .post-text {
   font-size: 12px;
   color: white;
 }
@@ -394,7 +394,12 @@ input {
 }
 
 .on-top {
-  margin-left: 120px;
+  right: 0;
+}
+
+.on-top a {
+  background-color: #FFE401;
+  color: #016ABD;
 }
 
 .navbar-primary {
@@ -412,11 +417,6 @@ input {
   background-color: #FFE401;
   color: #017CCC;
   transition: background-color .4s ease;
-}
-
-.on-top a {
-  background-color: #FFE401;
-  color: #016ABD;
 }
 
 .fin {
