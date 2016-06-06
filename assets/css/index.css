@@ -454,26 +454,7 @@ input {
   }
 }
 
-@media (max-width: 40em) {
-  #man {
-    display: none;
-  }
-  .info {
-    text-align: center;
-    border: 2px solid #016ABD;
-    border-radius: 4px
-  }
-}
 
-@media (max-width: 40em) {
-  #tubes {
-    display: none;
-  }
-  .info {
-    margin: 10px 0px 0px 0px;
-    padding: 0px 0px 20px 0px;
-  }
-}
 
 @media (max-width: 40em) {
   body {
