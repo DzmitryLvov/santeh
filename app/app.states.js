@@ -40,5 +40,11 @@ angular.module('myApp')
             templateUrl: 'app/components/news/views/newslist.view.html',
             controller: 'newsController',
             controllerAs: 'ctrl'
+        })
+        .state('post', {
+            url: '/post/:postId',
+            templateUrl: 'app/components/news/views/post.view.html',
+            controller: 'postController',
+            controllerAs: 'ctrl'
         });
 }]);
