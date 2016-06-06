@@ -1,0 +1,15 @@
+<div class="news-block-container col-md-8 centered" ng-controller="newsController as ctrl">
+  <div class="news-block-header col-md-12 row">
+    <span><h3><b>Новости</b></h3><a href="#/news" ui-sref="news">Все</a></span>
+  </div>
+  <div class="news-block-content col-md-12 row">
+    <div class="col-md-4" ng-repeat="post in ctrl.postList | limitTo: 3">
+      <div class="date">
+        <span class="day">{{post.date.getDay()}}</span> {{post.date.getMonth()}}.{{post.date.getFullYear()}}
+      </div>
+        <p class="post-title"><a href="#/post/{{post.id}}" ui-sref="post({postId: post.id})">{{post.title}}</a></p>
+        <p class="post-text">{{post.previewText}}</p>
+    </div>
+  </div>
+</div>
+<div class="container"></div>
