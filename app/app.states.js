@@ -34,5 +34,11 @@ angular.module('myApp')
             templateUrl: 'app/components/price/views/price.view.html',
             controller: 'priceController',
             controllerAs: 'ctrl'
+        })
+        .state('news', {
+            url: '/news',
+            templateUrl: 'app/components/news/views/newslist.view.html',
+            controller: 'newsController',
+            controllerAs: 'ctrl'
         });
 }]);
