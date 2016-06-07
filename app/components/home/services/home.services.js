@@ -2,11 +2,11 @@
     'use strict';
 
     angular.module('myApp')
-        .service('asyncService', asyncService);
+        .service('homeService', homeService);
 
    // asyncService.$inject = ['$http', '$q'];
 
-        function asyncService($http, $q) {
+        function homeService($http, $q) {
             
             var factory = {
                 //properties
