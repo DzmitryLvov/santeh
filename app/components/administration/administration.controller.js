@@ -14,8 +14,7 @@
       var useFullScreen = ($mdMedia('sm') || $mdMedia('xs')) && $scope.customFullscreen;
       
       $mdDialog.show({
-          controller: DialogController
-          , templateUrl: 'app/components/administration/views/newpost.administration.view.html'
+          templateUrl: 'app/components/administration/views/newpost.administration.modal.html'
           , parent: angular.element(document.body)
           , targetEvent: event
           , clickOutsideToClose: false
