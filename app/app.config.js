@@ -4,7 +4,8 @@
 
 angular
     .module('myApp', [
-        'ui.router'
+        'ui.router',
+        'textAngular'
     ])
 
     .constant('CONFIG',
