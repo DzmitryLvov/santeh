@@ -4,6 +4,10 @@ body {
   padding: 0;
 }
 
+.fa {
+  font: normal normal normal 14px/21px FontAwesome;
+}
+
 .centered {
     float: none;
     margin: 0 auto;
@@ -26,12 +30,12 @@ body {
   transition: background-color .4s ease;
 }
 
-.form-control {
+.navbar-form .form-control {
   background-color: #016ABD;
   padding-left: 5px;
 }
 
-.form-control,
+.navbar-form .form-control,
 input {
   border: none;
   color: white;
@@ -43,39 +47,39 @@ input {
   width: 136px;
 }
 
-.form-control::-webkit-input-placeholder {
+.navbar-form .form-control::-webkit-input-placeholder {
   color: #4FC3F7;
   border-bottom: 1px solid #4FC3F7;
 }
 
-.form-control:-moz-placeholder {
+.navbar-form .form-control:-moz-placeholder {
   color: #4FC3F7;
   border-bottom: 1px solid #4FC3F7;
 }
 
-.form-control::-moz-placeholder {
+.navbar-form .form-control::-moz-placeholder {
   color: #4FC3F7;
   border-bottom: 1px solid #4FC3F7;
 }
 
-.form-control:-ms-input-placeholder {
+.navbar-form .form-control:-ms-input-placeholder {
   color: #4FC3F7;
   border-bottom: 1px solid #4FC3F7;
 }
 
-.btn-default {
+.rename-btn-default {
   background-color: #017CCC;
   border: none;
   padding: 10px 14px 10px 14px;
   color: #4FC3F7;
 }
 
-.btn-default:hover {
+.rename-btn-default:hover {
   background-color: #017CCC;
   color: #BBDEFB;
 }
 
-.btn-default:focus {
+.rename-btn-default:focus {
   background-color: #017CCC;
   color: #BBDEFB;
 }

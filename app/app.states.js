@@ -46,5 +46,11 @@ angular.module('myApp')
             templateUrl: 'app/components/news/views/post.view.html',
             controller: 'postController',
             controllerAs: 'ctrl'
+        })
+        .state('administration', {
+            url: '/administration',
+            templateUrl: 'app/components/administration/views/administration.view.html',
+            controller: 'administrationController',
+            controllerAs: 'ctrl'
         });
 }]);

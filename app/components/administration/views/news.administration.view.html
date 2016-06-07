@@ -1,0 +1,31 @@
+<div class="col-md-12">
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Заголовок</th>
+          <th>Описание</th>
+          <th>Дата</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="post in ctrl.postList">
+          <th class="col-md-1">{{post.id}}</th>
+          <td class="col-md-3">{{post.title}}</td>
+          <td class="col-md-4">{{post.previewText}}</td>
+          <td class="col-md-2">{{post.formattedDate}}</td>
+          <td class="col-md-2">
+            <section layout="row" layout-align="center center">
+              <md-button class="md-primary groupX left">Редактировать</md-button>
+              <md-button class="md-warn groupX right">Удалить</md-button>
+            </section>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <md-button class="md-raised md-primary" ng-click="ctrl.openNewPostDialog($event)">Добавить новость</md-button>
+</div>
