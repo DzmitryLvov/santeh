@@ -12,98 +12,65 @@
   <link type="text/css" rel="stylesheet" href="assets/css/index.css">
 </head>
 
-<body layout="column">
-  <div class="main-container" layout="row">
-    <md-content flex>
-      <div class="header">
-        <div class="navbar navbar-default navbar-static-top">
-          <div class="container">
-            <div class="navbar-header">
-              <a class="navbar-brand" href="#">
-                <img alt="Brand" src="assets/img/6.png" width="100%">
-              </a>
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-            </div>
-            <div class="collapse navbar-collapse navHeaderCollapse">
-              <ul class="nav navbar-nav center">
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">О компании</a></li>
-                <li><a href="#">Виды услуг</a></li>
-                <li><a href="#">Прайс</a></li>
-                <li><a href="#">Новости</a></li>
-                <form class="navbar-form navbar-right" role="search">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Поиск по сайту">
-                    <span class="input-group-btn">
+<body>
+  <div class="main-container">
+    <div class="header">
+      <div class="navbar navbar-default navbar-static-top">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+              <img alt="Brand" src="assets/img/6.png" width="100%">
+            </a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse navHeaderCollapse">
+            <ul class="nav navbar-nav center">
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Виды услуг</a></li>
+              <li><a href="#">Прайс</a></li>
+              <li><a href="#">Новости</a></li>
+              <form class="navbar-form navbar-right" role="search">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Поиск по сайту">
+                  <span class="input-group-btn">
                     <button class="btn btn-default" type="button">
                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                    </span>
-                  </div>
-              </ul>
-            </div>
+                  </span>
+                </div>
+              </form>
+            </ul>
           </div>
         </div>
       </div>
-
-      <!-- ADRESS DESK -->
-      <div class="container-fluid address-panel-container">
-        <div class="container address-panel center-block">
-          <div class="col-md-2 logo">
-            <a href="#">AQUA <br>SUPPLY</a>
-          </div>
-          <div class="col-md-8 adress">
-            <div class="col-md-6">
-              <p>Москва, Цветной бульвар
-                <br>д.11 стр.6, офис 406</p>
-            </div>
-            <div class="col-md-6">
-              <p>+7(123)456-78-90
-                <br>Пн-Вс с 9:00 до 21:00</p>
-            </div>
-          </div>
-          <div class="col-md-2 application"> <a href="#"><b>Оставить<br>заявку</b></a></div>
+    </div>
+    <!-- ADRESS DESK -->
+    <div class="container-fluid address-panel-container">
+      <div class="container address-panel center-block">
+        <div class="col-md-2 logo">
+          <a href="#">AQUA <br>SUPPLY</a>
         </div>
-      </div>
-
-      <ui-view></ui-view>
-
-      <!-- FOOTER -->
-      <div class="footer">
-        <div class="navbar navbar-primary navbar-static-top">
-          <div class="container">
-            <div class="row">
-              <ul class="nav navbar-nav centered">
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">О компании</a></li>
-                <li><a href="#">Виды услуг</a></li>
-                <li><a href="#">Прайс</a></li>
-                <li><a href="#">Новости</a></li>
-                <li class="on-top"><a href="#"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></a></li>
-              </ul>
-            </div>
+        <div class="col-md-8 adress">
+          <div class="col-md-6">
+            <p>Москва, Цветной бульвар
+              <br>д.11 стр.6, офис 406</p>
+          </div>
+          <div class="col-md-6">
+            <p>+7(123)456-78-90
+              <br>Пн-Вс с 9:00 до 21:00</p>
           </div>
         </div>
+        <div class="col-md-2 application"> <a href="#"><b>Оставить<br>заявку</b></a></div>
       </div>
-      <div class="fin">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-2">
-              <p>Название компании 2016.</p>
-            </div>
-            <div class="col-md-4"></div>
-            <div class="col-md-2">
-              <p><a href="#">Design Studio Copyright.</a></p>
-            </div>
-            <div class="col-md-2"></div>
-          </div>
-        </div>
-      </div>
-    </md-content>
+    </div>
+    <ui-view></ui-view>
+    <div class="push"></div>
+  </div>
+  <div class="footer-container">
   </div>
 </body>
 <script src="node_modules/angular/angular.min.js"></script>

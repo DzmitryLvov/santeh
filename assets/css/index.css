@@ -1,7 +1,13 @@
 body {
+  min-height: 100%;
   background-color: #F5F5F5;
-  margin: 0;
   padding: 0;
+  position: relative;
+}
+
+.main-container {
+  min-height: 100%;
+  margin-bottom: -120px;
 }
 
 .fa {
@@ -9,8 +15,8 @@ body {
 }
 
 .centered {
-    float: none;
-    margin: 0 auto;
+  float: none;
+  margin: 0 auto;
 }
 
 .navbar-default {
@@ -99,12 +105,11 @@ input {
   border: 1px solid white;
 }
 
-.navbar-bottom{
+.navbar-bottom {
   float: none;
   display: inline;
   margin: 0 20px;
   vertical-align: middle;
-
 }
 
 .address-panel-container {
@@ -305,7 +310,8 @@ input {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.sub-category-list li a:hover, .sub-category-list li a.active {
+.sub-category-list li a:hover,
+.sub-category-list li a.active {
   text-decoration: none;
   font-family: calibri;
   font-size: 19px;
@@ -368,7 +374,7 @@ input {
   font-weight: bold;
 }
 
- .news-block-content .date .day {
+.news-block-content .date .day {
   background: white;
   color: #016ABD;
   padding: 2px;
@@ -388,18 +394,9 @@ input {
 }
 
 .news-block-content .post-text {
-  padding:0 0 15px 0;
+  padding: 0 0 15px 0;
   font-size: 12px;
   color: white;
-}
-
-.footer {
-  text-align: center;
-  padding-top: 40px;
-}
-
-.on-top {
-  right: 0;
 }
 
 .on-top a {
@@ -411,6 +408,7 @@ input {
   background-color: white;
   font-family: calibri;
   font-size: 16px;
+  margin: 0;
 }
 
 .navbar-primary .navbar-nav > li > a {
@@ -422,25 +420,6 @@ input {
   background-color: #FFE401;
   color: #017CCC;
   transition: background-color .4s ease;
-}
-
-.fin {
-  margin-top: -40px;
-  background-color: #016ABD;
-  text-align: center;
-  height: auto;
-}
-
-.fin p {
-  color: white;
-  font-size: 12px;
-  padding-top: 50px;
-  padding-bottom: 40px;
-}
-
-.fin a {
-  color: #FFE401;
-  font-size: 12px;
 }
 
 @media (max-width: 40em) {
@@ -458,8 +437,6 @@ input {
     font-family: calibri;
   }
 }
-
-
 
 @media (max-width: 40em) {
   body {
@@ -520,8 +497,18 @@ input {
   }
 }
 
-@media (max-width: 40em) {
-  .footer {
-    display: none;
-  }
+.post-add-button {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.push, .footer-container{
+  height: 120px;
+}
+
+.footer-container {
+  display: inline-block;
+  width: 100%;
+  background: #016ABD;
+  z-index: 100;
 }
