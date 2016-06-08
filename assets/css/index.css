@@ -512,3 +512,12 @@ input {
   background: #016ABD;
   z-index: 100;
 }
+
+.footer-navbar{
+  height: 60px;
+  background: #fff;
+}
+
+.footer-navbar a{
+  color: #016ABD;
+}
