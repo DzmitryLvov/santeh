@@ -521,3 +521,9 @@ input {
 .footer-navbar a{
   color: #016ABD;
 }
+
+.navbar-brand{
+  font-size: 1.5em;
+  line-height: 0.7em;
+  color: white;
+}
