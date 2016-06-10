@@ -424,7 +424,7 @@ input {
 
 @media (max-width: 40em) {
   .four-buttons li a {
-    font-size: 20px;
+    font-size: 16px;
   }
   .santehworks {
     background-image: none;
@@ -432,8 +432,8 @@ input {
   .title {
     background-color: #016ABD;
     color: white;
-    font-size: 20px;
-    padding: 10px 10px;
+    font-size: 1.2em;
+    padding: 15px 15px;
     font-family: calibri;
   }
 }
@@ -464,37 +464,70 @@ input {
 
 @media (max-width: 40em) {
   .adress p {
-    font-size: 16px;
-    padding: 6px 2px 6px 2px;
-    line-height: 16px;
-    color: white;
+    font-size: 10px;
+    padding: 6px 0px 6px 0px;
+    line-height: 10px;
+    color: #016ABD;
   }
   .adress {
-    background-color: #016ABD;
+    background-color: #fff;
   }
 }
 
 @media (max-width: 40em) {
   .application {
     margin-top: -10px;
+    height: auto;
+    text-align: center;
   }
   .application a {
-    font-size: 25px;
+    font-size: 20px;
+    line-height: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
 @media (max-width: 40em) {
   .butt {
-    border: 1px solid white;
-    width: 260px;
-    color: white;
-    border-radius: 5px;
+    border: 2px solid #016ABD;
+    width: 280px;
+    color: #fff;
     background-color: #016ABD;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 3px;
   }
+
+.info{
+  margin: -50% 0% 0% 45%;
+  padding-bottom: 50px;
+}
+
+.man{
+  padding-left: 10%;
+}
+
+.tubes{
+  padding-left: 10%;
+}
+
+
+
+.four-buttons{
+padding-top: 5px;
+width: 100%;
+}
+
   .list-inline li {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
   }
+
+
+.footer-navbar{
+display: none;
+}
 }
 
 .post-add-button {
@@ -521,3 +554,15 @@ input {
 .footer-navbar a{
   color: #016ABD;
 }
+
+.navbar-brand{
+  font-size: 1.5em;
+  line-height: 0.7em;
+  color: white;
+}
+
+
+.input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
+  background-color: #1E88E5;
+  border: none;
+  }

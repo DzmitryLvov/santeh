@@ -1,0 +1,192 @@
+html,html a {
+-webkit-font-smoothing: antialiased;
+text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+ 
+}
+
+.price-list-table{
+  background: #ECEFF1;
+}
+
+
+
+
+.price-list{
+  color: #016ABD;
+  text-align: center;
+  letter-spacing: 2px;
+  background: #ECEFF1;
+}
+
+#plans,#plans ul,#plans ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#pricePlans:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+#pricePlans {
+  zoom: 1;
+}
+
+#pricePlans {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#pricePlans #plans .plan {
+  background: #fff;
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin: 0 0 20px 0;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+.planContainer {
+  border-radius: 5px;
+}
+
+.planContainer .title h2 {
+  background-color: #016ABD;
+  font-size: 1em;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  padding: 0.2em 0em 0em 0em;
+  border-radius: 5px 5px 0px 0px;
+  box-shadow: inset 0 1px 0 #64B5F6;
+}
+
+.planContainer .price p {
+  background:#016ABD;	
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 700;
+  margin: 0 0 1em;
+  padding: 0.2em 0em 0.6em 0em;
+}
+
+.planContainer .options {
+  margin-top: 10em;
+}
+
+.planContainer .options li {
+  font-weight: 600;
+  color: black;
+  line-height: 2.4;
+}
+
+.planContainer .options li span {
+  font-size: 18px;
+  color: #9FA7AA;
+}
+
+.planContainer .button a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 3px;
+  line-height:4.5em;
+  display: inline-block;
+  width: 100%;
+  height: 4.5em;
+  margin: 1.5em 0 0;
+  font-size: 16px;
+  background-color: #016ABD;
+  border-radius: 0px 0px 5px 5px;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+#pricePlans #plans .plan {
+  width: 100%;
+  margin: 0 2% 20px 0;
+}
+
+#pricePlans #plans > li:nth-child(2n) {
+  margin-right: 0;
+}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+#pricePlans #plans .plan {
+  width: 100%;
+  margin: 0 2% 20px 0;
+}
+
+#pricePlans #plans > li:nth-child(2n) {
+  margin-right: 0;
+}
+}
+
+@media screen and (min-width: 1025px) {
+#pricePlans {
+  margin: 0.5em 0em 0em 0em;
+}
+
+#pricePlans #plans .plan {
+  width: 100%;
+  margin: 0 0% 20px 0%;
+}
+
+#pricePlans #plans > li:last-child {
+  margin-right: 0;
+}
+
+#pricePlans #plans .plan:hover {
+box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.planContainer .button a {
+  -webkit-transition: all .25s;
+  -moz-transition: all .25s;
+  -ms-transition: all .25s;
+  -o-transition: all .25s;
+  transition: all .25s;
+}
+
+.planContainer .button a:hover {
+  background: #FFE401;
+  color: #016ABD;
+}
+}
+
+.price-list-end{
+  color: #016ABD;
+  text-align: center;
+  background: #ECEFF1;
+}
+
+#check{
+  color: green;
+}
+
+#nocheck{
+  color: red;
+}
+
+.modal h4{
+  font-size: 25px;
+}
+
+.modal-footer button{
+  width: 100%;
+  font-size: 20px;
+}
+
+#plans, #plans ul, #plans ul li {
+  border-radius: 5px 5px 0px 0px;
+}
