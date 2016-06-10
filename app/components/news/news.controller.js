@@ -8,7 +8,7 @@
   function newsController(newsService) {
     var vm = this;
 
-    vm.postList = newsService.getPostList();
+    vm.postList = newsService.preparedData;
 
     console.log(vm.postList);
     return vm;
