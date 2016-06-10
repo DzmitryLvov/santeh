@@ -1,11 +1,11 @@
 body {
   min-height: 100%;
-  background-color: #F5F5F5;
   padding: 0;
   position: relative;
 }
 
 .main-container {
+  background-color: #F5F5F5;
   min-height: 100%;
   margin-bottom: -120px;
 }
@@ -439,12 +439,6 @@ input {
 }
 
 @media (max-width: 40em) {
-  body {
-    background-color: white;
-  }
-}
-
-@media (max-width: 40em) {
   .ulist {
     padding-left: 0px;
   }
@@ -498,36 +492,27 @@ input {
     padding-bottom: 8px;
     border-radius: 3px;
   }
-
-.info{
-  margin: -50% 0% 0% 45%;
-  padding-bottom: 50px;
-}
-
-.man{
-  padding-left: 10%;
-}
-
-.tubes{
-  padding-left: 10%;
-}
-
-
-
-.four-buttons{
-padding-top: 5px;
-width: 100%;
-}
-
+  .info {
+    margin: -50% 0% 0% 45%;
+    padding-bottom: 50px;
+  }
+  .man {
+    padding-left: 10%;
+  }
+  .tubes {
+    padding-left: 10%;
+  }
+  .four-buttons {
+    padding-top: 5px;
+    width: 100%;
+  }
   .list-inline li {
     padding-top: 2px;
     padding-bottom: 2px;
   }
-
-
-.footer-navbar{
-display: none;
-}
+  .footer-navbar {
+    display: none;
+  }
 }
 
 .post-add-button {
@@ -535,7 +520,8 @@ display: none;
   margin: 0 auto;
 }
 
-.push, .footer-container{
+.push,
+.footer-container {
   height: 120px;
 }
 
@@ -546,23 +532,23 @@ display: none;
   z-index: 100;
 }
 
-.footer-navbar{
+.footer-navbar {
   height: 60px;
   background: #fff;
 }
 
-.footer-navbar a{
+.footer-navbar a {
   color: #016ABD;
 }
 
-.navbar-brand{
+.navbar-brand {
   font-size: 1.5em;
   line-height: 0.7em;
   color: white;
 }
 
-
-.input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
+.input-group-btn:last-child>.btn,
+.input-group-btn:last-child>.btn-group {
   background-color: #1E88E5;
   border: none;
-  }
+}
