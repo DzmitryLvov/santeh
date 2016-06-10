@@ -1,95 +1,95 @@
-  <!-- BUTTONS DESK -->
-  <div class="container-fluid">
-    <div class="row santehworks">
-      <div class="row title">САНТЕХНИЧЕСКИЕ РАБОТЫ ЛЮБОГО ВИДА</div>
-      <div class="buttons-four">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-12 four-buttons">
-              <ul class="list-inline">
-                <li>
-                  <a href="#">
-                    <button class="butt"><b>Водоснабжение</b></button>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <button class="butt"><b>Отопление</b></button>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <button class="butt"><b>Водопровод</b></button>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <button class="butt"><b>Канализация</b></button>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- TUBES AND THE MAN -->
-  <div class="two-cards">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-4 tubes">
-          <img src="assets/img/3.png" width="40%" id="tubes">
-          <div class="info">
-            <h3><b>Продукты</b></h3>
-            <p>Подберите необходимое
-              <br>оборудование</p>
-            <button class="details"><b>Подробнее</b></button>
-          </div>
-        </div>
-        <div class="col-md-4 man">
-          <img src="assets/img/2.png" width="40%" id="man">
-          <div class="info">
-            <h3><b>Сервис</b></h3>
-            <p>Получите качественное
-              <br> сервисное обслуживание</p>
-            <button class="details"><b>Подробнее</b></button>
-          </div>
-        </div>
-        <div class="col-md-2"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- INFO -->
-  <div class="about-container container-fluid" ng-controller="aboutController as aboutCtrl">
-    <div class="col-md-8 centered">
-      <div class="col-md-8 welcom-text">
-        <h3><b>Добро пожаловать!</b></h3>
-        <h4><b>{{aboutCtrl.selectedItem.headerText}}</b></h4>
+<!-- BUTTONS DESK -->
+<div class="container-fluid">
+  <div class="row santehworks">
+    <div class="row title">САНТЕХНИЧЕСКИЕ РАБОТЫ ЛЮБОГО ВИДА</div>
+    <div class="buttons-four">
+      <div class="container-fluid">
         <div class="row">
-          <p>{{aboutCtrl.selectedItem.descriptionText}}</p>
-        </div>
-      </div>
-      <div class="col-md-4 ulist">
-        <ul class="sub-category-list">
-          <li ng-repeat="item in aboutCtrl.data" ng-click="aboutCtrl.displayItem(item)">
-            <a href="" ng-class="{'active': item.selected}">{{item.name}}</a>
-          </li>
-        </ul>
-        <img src="assets/img/5.jpg" width="100%">
-        <div class="information">
-          <h3><b><font color="#FFE401">Акции</font></b></h3>
-          <h5><b>Заказывайте комплексное<br> водоснобжение по<br><font color="#FFE401">выгодной цене</font></b></h5>
-          <p>Здесь будет находиться ваша реклама,
-            <br>спецпредложения или любые дополнения,
-            <br>которые будут редактироваться вами
-            <br>(фотографии, банеры, и т.п.) </p>
+          <div class="col-md-12 four-buttons">
+            <ul class="list-inline">
+              <li>
+                <a href="#">
+                  <button class="butt"><b>Водоснабжение</b></button>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <button class="butt"><b>Отопление</b></button>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <button class="butt"><b>Водопровод</b></button>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <button class="butt"><b>Канализация</b></button>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  
-  <news-preview></news-preview>
+</div>
+
+<!-- TUBES AND THE MAN -->
+<div class="two-cards">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-4 tubes">
+        <img src="assets/img/3.png" width="40%" id="tubes">
+        <div class="info">
+          <h3><b>Продукты</b></h3>
+          <p>Подберите необходимое
+            <br>оборудование</p>
+          <button class="details"><b>Подробнее</b></button>
+        </div>
+      </div>
+      <div class="col-md-4 man">
+        <img src="assets/img/2.png" width="40%" id="man">
+        <div class="info">
+          <h3><b>Сервис</b></h3>
+          <p>Получите качественное
+            <br> сервисное обслуживание</p>
+          <button class="details"><b>Подробнее</b></button>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+</div>
+
+<!-- INFO -->
+<div class="about-container container-fluid" ng-controller="aboutController as aboutCtrl">
+  <div class="col-md-8 centered">
+    <div class="col-md-8 welcom-text">
+      <h3><b>Добро пожаловать!</b></h3>
+      <h4><b>{{aboutCtrl.selectedItem.headerText}}</b></h4>
+      <div class="row">
+        <p>{{aboutCtrl.selectedItem.descriptionText}}</p>
+      </div>
+    </div>
+    <div class="col-md-4 ulist">
+      <ul class="sub-category-list">
+        <li ng-repeat="item in aboutCtrl.data" ng-click="aboutCtrl.displayItem(item)">
+          <a href="" ng-class="{'active': item.selected}">{{item.name}}</a>
+        </li>
+      </ul>
+      <img src="assets/img/5.jpg" width="100%">
+      <div class="information">
+        <h3><b>Акции</b></h3>
+        <h5><b>Заказывайте комплексное<br> водоснобжение по<br>выгодной цене</b></h5>
+        <p>Здесь будет находиться ваша реклама,
+          <br>спецпредложения или любые дополнения,
+          <br>которые будут редактироваться вами
+          <br>(фотографии, банеры, и т.п.) </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<news-preview></news-preview>
