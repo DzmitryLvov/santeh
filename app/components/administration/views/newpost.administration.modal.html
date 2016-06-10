@@ -1,10 +1,10 @@
-<md-dialog aria-label="Добавление новости" ng-cloak>
+<md-dialog class="newpost-modal" aria-label="Добавление новости" ng-cloak>
   <form>
     <md-toolbar>
       <div class="md-toolbar-tools">
-         <h2>Добавление новости</h2>
+        <h2>Добавление новости</h2>
         <span flex></span>
-        <md-button class="md-icon-button" ng-click="cancel()">
+        <md-button class="md-icon-button" ng-click="ctrl.cancel()">
           <i class="fa fa-times"></i>
         </md-button>
       </div>
@@ -12,17 +12,22 @@
     <md-dialog-content>
       <div class="md-dialog-content">
         <md-input-container class="md-block" flex-gt-xs>
-          <label>Company (Disabled)</label>
-          <input ng-model="user.company" disabled>
+          <label>Заголовок</label>
+          <input ng-model="ctrl.post.title">
         </md-input-container>
+        <md-input-container class="md-block" flex-gt-xs>
+          <label>Описание</label>
+          <input ng-model="ctrl.post.previewText">
+        </md-input-container>
+        <div text-angular ng-model="ctrl.post.text"></div>
       </div>
     </md-dialog-content>
     <md-dialog-actions layout="row">
       <span flex></span>
-      <md-button ng-click="">
+      <md-button ng-click="ctrl.savePost()">
         Сохранить
       </md-button>
-      <md-button ng-click="">
+      <md-button ng-click="ctrl.cancel()">
         Закрыть
       </md-button>
     </md-dialog-actions>

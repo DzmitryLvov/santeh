@@ -19,13 +19,13 @@
           <td class="col-md-2">{{post.formattedDate}}</td>
           <td class="col-md-2">
             <section layout="row" layout-align="center center">
-              <md-button class="md-primary groupX left">Редактировать</md-button>
-              <md-button class="md-warn groupX right">Удалить</md-button>
+              <md-button class="md-primary groupX left" ng-click="ctrl.editPostDialog($event, post)">Редактировать</md-button>
+              <md-button class="md-warn groupX right" ng-click="ctrl.deletePost($event, post.id)">Удалить</md-button>
             </section>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
-  <md-button class="post-add-button md-raised md-primary" ng-click="ctrl.openNewPostDialog($event)">Добавить новость</md-button>
+  <md-button class="post-add-button md-raised md-primary" ng-click="ctrl.editPostDialog($event)">Добавить новость</md-button>
 </div>
