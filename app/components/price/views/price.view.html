@@ -4,19 +4,16 @@
       <h2>Прайс лист</h2>
     </div>
     <section class="price-plans">
-      <div class="col-md-4">
+      <div class="col-md-4" ng-repeat="item in ctrl.priceList | limitTo: 3 ">
         <div class="plan-container">
           <div class="price-title">
-            <h2>Прайс 1</h2>
-            <p>200</p>
+            <h2>{{item.title}}</h2>
+            <p>{{item.price}}</p>
           </div>
           <ul class="options">
-            <li><span id="check"> &#10003; </span>Особенность 1</li>
-            <li><span id="check"> &#10003; </span>Особенность 2</li>
-            <li><span id="nocheck"> &#10006; </span>Особенность 3</li>
-            <li><span id="nocheck"> &#10006; </span>Особенность 4</li>
-            <li><span id="check"> &#10003; </span>Особенность 5</li>
-            <li><span id="check"> &#10003; </span>Особенность 6</li>
+            <li ng-repeat="option in item.options">
+              <span id="check"> &#10003; </span>{{option}}
+            </li>
           </ul>
           <div class="request-button" class="btn btn-primary">
             <a href="">ЗАКАЗАТЬ</a>
