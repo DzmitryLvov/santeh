@@ -7,12 +7,9 @@
   function administrationController(newsService, aboutService, homeService, priceService, requestService, $mdDialog, $mdMedia) {
     var vm = this;
 
-    console.log(newsService);
-
     vm.postList = newsService.preparedData;
 
     vm.editPostDialog = function (event, post) {
-      console.log(post);
       var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'));
 
       $mdDialog.show({
@@ -44,6 +41,14 @@
       $mdDialog.show(confirm).then(function () {
         newsService.deletePost(postId);
       }, function () {});
+    };
+
+    vm.priceList = priceService.cardItems;
+
+    vm.savePriceItem = function (item) {
+      if (item) {
+        priceService.saveItem(item);
+      }
     };
 
     return vm;

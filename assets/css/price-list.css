@@ -69,3 +69,11 @@
   background: #FFE401;
   color: #016ABD;
 }
+
+
+/*govnokod*/
+
+.price-plans md-input-container {
+  width: 100%;
+  margin: 5px 0;
+}
