@@ -10,7 +10,6 @@
 
     vm.postList = newsService.preparedData;
 
-    console.log(vm.postList);
     return vm;
   };
 
