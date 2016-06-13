@@ -4,11 +4,11 @@
   </div>
   <div class="news-block-content col-md-12 row">
     <div class="col-md-4" ng-repeat="post in ctrl.postList | limitTo: 3">
-      <div class="date">
+      <div class="post-date">
         <span class="day">{{post.date.getDay()}}</span> {{post.date.getMonth()}}.{{post.date.getFullYear()}}
       </div>
-        <p class="post-title"><a href="#/post/{{post.id}}" ui-sref="post({postId: post.id})">{{post.title}}</a></p>
-        <p class="post-text">{{post.previewText}}</p>
+      <p class="post-title"><a href="#/post/{{post.id}}" ui-sref="post({postId: post.id})">{{post.title}}</a></p>
+      <p class="post-text">{{post.previewText}}</p>
     </div>
   </div>
 </div>

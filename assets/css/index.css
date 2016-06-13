@@ -366,7 +366,7 @@ input {
   background: #016ABD;
 }
 
-.news-block-content .date {
+.post-date {
   padding-top: 25px;
   padding-bottom: 25px;
   font-size: 15px;
@@ -374,7 +374,7 @@ input {
   font-weight: bold;
 }
 
-.news-block-content .date .day {
+.post-date .day {
   background: white;
   color: #016ABD;
   padding: 2px;
