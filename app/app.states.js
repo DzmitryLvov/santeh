@@ -13,8 +13,6 @@ angular.module('myApp')
       .state('home', {
         url: '/'
         , templateUrl: 'app/components/home/views/home.view.html'
-        , controller: "homeController"
-        , controllerAs: 'ctrl'
       })
       .state('404', {
         url: '/404'

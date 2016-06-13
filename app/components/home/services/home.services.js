@@ -1,33 +1,29 @@
 (function () {
-    'use strict';
+  'use strict';
 
-    angular.module('myApp')
-        .service('homeService', homeService);
+  angular.module('myApp')
+    .service('homeService', homeService);
 
-   // asyncService.$inject = ['$http', '$q'];
+  function homeService($http) {
+    var self = this;
 
-        function homeService($http, $q) {
-            
-            var factory = {
-                //properties
-                retrievedData: [],
-                getHeroText : getHeroText
-            };
+    function getInfo() {
+      console.log('Get main info');
 
-            function getHeroText() {
+      return {
+        phone: '+7(123)456-78-90'
+        , address: 'Москва, Цветной бульвар д.11 стр.6, офис 406'
+        , schedule: 'Пн-Вс с 9:00 до 21:00'
+      }
+    }
 
-                // this is where we'd put some ajax calls
+    function saveInfo(info) {
 
-                factory.retrievedData = {
-                    HeroHeader: "Hello AngularStrap!",
-                    HeroText: "This is the AngularStrap home page. This text is being pulled from a service, and can be populated by hand coding the property in the controller, dynamically or via services."
-                };
+    }
 
-                //factory.retrievedData.HeroHeader = "Hello World!";
-                //factory.retrievedData.HeroText = "This is the AngularStrap home page. This text is being pulled from a service, and can be populated by hand coding the property in the controller, dynamically or via services.";
-
-
-            }
-            return factory;
-        }
+    return {
+      getInfo: getInfo
+      , saveInfo: saveInfo
+    }
+  }
 })();

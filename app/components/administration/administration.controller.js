@@ -7,6 +7,19 @@
   function administrationController(newsService, aboutService, homeService, priceService, requestService, $mdDialog, $mdMedia) {
     var vm = this;
 
+    vm.mainInfo = homeService.getInfo();
+
+    vm.saveMainInfo = function (event) {
+      var confirm = $mdDialog.confirm()
+        .title('Сохранить изменения?')
+        .targetEvent(event)
+        .ok('Сохранить')
+        .cancel('Отменить');
+      $mdDialog.show(confirm).then(function () {
+        homeService.saveInfo(vm.mainInfo);
+      }, function () {});
+    };
+
     vm.postList = newsService.preparedData;
 
     vm.editPostDialog = function (event, post) {

@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <div class="main-container">
+  <div class="main-container" ng-controller="homeController as ctrl">
     <div class="header">
       <div class="navbar navbar-default navbar-static-top">
         <div class="container">
@@ -52,15 +52,14 @@
         </div>
         <div class="col-md-8 adress">
           <div class="col-md-6 col-xs-6">
-            <p>Москва, Цветной бульвар
-              <br>д.11 стр.6, офис 406</p>
+            <p>{{ctrl.info.address}}</p>
           </div>
           <div class="col-md-6">
-            <p>+7(123)456-78-90
-              <br>Пн-Вс с 9:00 до 21:00</p>
+            <p>{{ctrl.info.phone}}
+              <br>{{ctrl.info.schedule}}</p>
           </div>
         </div>
-        <div class="col-md-2 application"> <a href="#/price" ui-sref="price"><b>Оставить<br>заявку</b></a></div>
+        <div class="col-md-2 application"><a href="#/price" ui-sref="price"><b>Оставить<br>заявку</b></a></div>
       </div>
     </div>
     <ui-view></ui-view>

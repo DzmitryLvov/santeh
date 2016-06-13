@@ -1,17 +1,14 @@
 (function () {
-    'use strict';
+  'use strict';
 
-    angular.module('myApp')
-        .controller('homeController', homeController);
+  angular.module('myApp')
+    .controller('homeController', homeController);
 
-    homeController.$inject = ["$scope", "$http", "$window", "$q"];
+  function homeController(homeService) {
+    var vm = this
 
-    function homeController($scope, $http, $window, $q) {
+    vm.info = homeService.getInfo();
 
-            var vm = this
-            
-            
-
-            return vm;
-       }
+    return vm;
+  }
 })();
