@@ -213,8 +213,8 @@ input {
 .four-buttons {
   text-decoration: none;
   text-align: center;
-  padding-top: 15px;
-  padding-bottom: 7%;
+  padding-top: 1%;
+  padding-bottom: 5%;
 }
 
 .four-buttons li a {
@@ -267,7 +267,7 @@ input {
 }
 
 .info {
-  margin: -40% 0% 0% 35%;
+  margin: -40% 0% 0% 38%;
   padding-bottom: 50px;
 }
 
@@ -322,16 +322,19 @@ input {
 
 .ulist {
   padding-left: 40px;
-  padding-right: 0px;
   padding-top: 55px;
 }
 
 .information p {
-  font-size: 10px;
+  font-size: 0.6vw;
+}
+
+.information h5{
+font-size: 0.9vw;
 }
 
 .information {
-  margin-top: -200px;
+  margin-top: -12vw;
   margin-left: 20px;
   color: white;
 }
@@ -422,98 +425,6 @@ input {
   transition: background-color .4s ease;
 }
 
-@media (max-width: 40em) {
-  .four-buttons li a {
-    font-size: 16px;
-  }
-  .santehworks {
-    background-image: none;
-  }
-  .title {
-    background-color: #016ABD;
-    color: white;
-    font-size: 1.2em;
-    padding: 15px 15px;
-    font-family: calibri;
-  }
-}
-
-@media (max-width: 40em) {
-  .ulist {
-    padding-left: 0px;
-  }
-}
-
-@media (min-width: 40em) {
-  .navbar-brand {
-    display: none;
-  }
-}
-
-@media (max-width: 40em) {
-  .logo {
-    display: none;
-  }
-}
-
-@media (max-width: 40em) {
-  .adress p {
-    font-size: 10px;
-    padding: 6px 0px 6px 0px;
-    line-height: 10px;
-    color: #016ABD;
-  }
-  .adress {
-    background-color: #fff;
-  }
-}
-
-@media (max-width: 40em) {
-  .application {
-    margin-top: -10px;
-    height: auto;
-    text-align: center;
-  }
-  .application a {
-    font-size: 20px;
-    line-height: 18px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-}
-
-@media (max-width: 40em) {
-  .butt {
-    border: 2px solid #016ABD;
-    width: 280px;
-    color: #fff;
-    background-color: #016ABD;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    border-radius: 3px;
-  }
-  .info {
-    margin: -50% 0% 0% 45%;
-    padding-bottom: 50px;
-  }
-  .man {
-    padding-left: 10%;
-  }
-  .tubes {
-    padding-left: 10%;
-  }
-  .four-buttons {
-    padding-top: 5px;
-    width: 100%;
-  }
-  .list-inline li {
-    padding-top: 2px;
-    padding-bottom: 2px;
-  }
-  .footer-navbar {
-    display: none;
-  }
-}
 
 .button-wide {
   width: 200px;
@@ -552,3 +463,230 @@ input {
   background-color: #1E88E5;
   border: none;
 }
+
+
+
+
+
+
+@media screen and (min-width: 300px) and (max-width: 768px) {
+
+
+  .four-buttons li a {
+    font-size: 16px;
+  }
+  .santehworks {
+    background-image: none;
+  }
+  .title {
+    background-color: #016ABD;
+    color: white;
+    font-size: 1.2em;
+    padding: 15px 15px;
+    font-family: calibri;
+  }
+
+
+
+  .ulist {
+    padding-left: 0px;
+}
+
+  .navbar-brand {
+    display: none;
+  }
+
+
+  .logo {
+    display: none;
+}
+
+
+  .adress p {
+    font-size: 8px;
+    padding: 6px 0px 6px 0px;
+    line-height: 10px;
+    color: #016ABD;
+  }
+  .adress {
+    background-color: #fff;
+  }
+
+
+
+  .application {
+    margin-top: -10px;
+    height: auto;
+    text-align: center;
+  }
+  .application a {
+    font-size: 16px;
+    line-height: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+
+
+  .butt {
+    border: 2px solid #016ABD;
+    width: 280px;
+    color: #fff;
+    background-color: #016ABD;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 3px;
+  }
+
+  .info {
+    margin: -45vw 0vw 0vw 45vw;
+    padding-bottom: 50px;
+  }
+
+.info p{
+    font-size: 3vw;
+  }
+
+  .man {
+    padding-left: 10px;
+  }
+  .tubes {
+    padding-left: 10px;
+  }
+  .four-buttons {
+    padding-top: 5px;
+    width: 100%;
+  }
+  .list-inline li {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  .footer-navbar {
+    display: none;
+ }
+
+.information{
+  margin-top: -50vw;
+}
+
+.information p {
+  font-size: 3vw;
+}
+
+.information h5{
+font-size: 4vw;
+}
+
+
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+.info{
+  margin: -19.5vw 0vw 0vw 12vw;
+  padding: 2vw 2vw 2vw 2vw;
+}
+ 
+.info p{
+    font-size: 2vw;
+    line-height: 2vw;
+  }
+
+  .info h3{
+    font-size: 3vw;
+  }
+
+  .details{
+font-size: 2vw;
+  }
+
+  .man {
+    display: inline-block;
+    width: 45%;
+  }
+  .tubes {
+    padding-right: 2vw;
+    display: inline-block;
+    width: 45%;
+  }
+
+  .man img{
+width: 30%;
+  }
+
+  .tubes img{
+width: 30%;
+  }
+
+.title{
+  font-size: 4vw;
+  padding:  1vw 1vw 1vw 1vw;
+}
+
+.butt{
+  font-size: 2.5vw;
+  width: 22vw;
+}
+
+.four-buttons{
+  padding-bottom: 2vw;
+}
+
+.application a{
+ font-size: 2.5vw;
+ line-height: 2.5vw;
+}
+
+.two-cards{
+  margin-left: 8vw;
+  padding-top: 3vw;
+}
+
+.welcom-text{
+padding-top: 0vw;
+}
+
+.adress p {
+  font-size: 2vw;
+  line-height: 2vw;
+}
+
+
+.information{
+  margin-top: -60vw;
+}
+
+.information p {
+  font-size: 3vw;
+}
+
+.information h5{
+font-size: 4vw;
+}
+
+.information h3{
+font-size: 6vw;
+}
+
+.ulist{
+  padding: 0 0 0 0;
+}
+
+
+
+
+
+
+
+  }
+
+
+
+
+  @media screen and (min-width: 1025px) {
+
+
+
+  }
