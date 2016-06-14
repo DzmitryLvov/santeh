@@ -64,6 +64,10 @@
       }
     };
 
+    vm.requestList = requestService.requestList;
+
+    vm.deleteRequest = requestService.deleteRequest;
+
     return vm;
   }
 })();

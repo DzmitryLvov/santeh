@@ -1,0 +1,33 @@
+<div class="request-panel-container">
+  <div class="col-md-4 request" ng-repeat="request in ctrl.requestList | orderBy: request.id : true ">
+    <md-card>
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">{{request.title}}</span>
+          <span class="md-subhead">{{request.date}}</span>
+        </md-card-title-text>
+        <md-card-icon-actions>
+          <md-button class="md-icon-button" aria-label="toggle">
+            <md-menu>
+              <md-button aria-label="Опции" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+              </md-button>
+              <md-menu-content width="4">
+                <md-menu-item>
+                  <md-button ng-click="ctrl.deleteRequest(request.id)"><span md-menu-align-target>Удалить</span></md-button>
+                </md-menu-item>
+              </md-menu-content>
+            </md-menu>
+          </md-button>
+        </md-card-icon-actions>
+      </md-card-title>
+      <md-card-content>
+        <p><span class="col-md-4">Телефон:</span>{{request.phone}}</p>
+        <p><span class="col-md-4">Email:</span>{{request.email}}</p>
+        <p><span class="col-md-4">Комментарии:</span></p>
+        <div class="col-md-12">
+          <p>{{request.text}}</p>
+        </div>
+      </md-card-content>
+    </md-card>
+  </div>
+</div>

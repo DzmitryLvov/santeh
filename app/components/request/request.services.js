@@ -4,11 +4,54 @@
   var serviceId = 'requestService';
 
   angular.module('myApp').factory(serviceId, function requestService($http, $filter) {
-    var preparedData = [];
+    var self = this;
 
-    var factory = {
+    self.requestList = [
+      {
+        id: 1
+        , title: 'Заявка 1'
+        , date: Date.today()
+        , phone: '+375222242424'
+        , email: 'email@mail.com'
+        , text: 'Комментарии к заявке'
+      }, {
+        id: 2
+        , title: 'Заявка 2'
+        , date: Date.today()
+        , phone: '+375222242424'
+        , email: 'email@mail.com'
+        , text: 'Комментарии к заявке'
+      }, {
+        id: 3
+        , title: 'Заявка 3'
+        , date: Date.today()
+        , phone: '+375222242424'
+        , email: 'email@mail.com'
+        , text: 'Комментарии к заявке'
+      }, {
+        id: 4
+        , title: 'Заявка 4'
+        , date: Date.today()
+        , phone: '+375222242424'
+        , email: 'email@mail.com'
+        , text: 'Комментарии к заявке'
+      }
+    ];
+
+    function saveRequest(request) {
+      if (request) {
+        self.requestList.push(request);
+      }
     };
 
-    return factory;
+    function deleteRequest(requestId) {
+
+    };
+
+    return {
+      requestList: self.requestList
+      , saveRequest: saveRequest
+      , deleteRequest: deleteRequest
+    }
   });
 })();
