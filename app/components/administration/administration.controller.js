@@ -4,8 +4,36 @@
   angular.module('myApp')
     .controller('administrationController', administrationController);
 
-  function administrationController(newsService, aboutService, homeService, priceService, requestService, $mdDialog, $mdMedia) {
+  function administrationController(newsService, aboutService, homeService, priceService, requestService, $mdDialog, $mdMedia, $rootScope) {
     var vm = this;
+
+    vm.tabs = [
+      {
+        title: 'Заявки'
+        , templateUrl: 'app/components/administration/views/requests.administration.view.html'
+      }, {
+        title: 'Главная'
+        , templateUrl: 'app/components/administration/views/main.administration.view.html'
+      }, {
+        title: 'О компании'
+        , templateUrl: 'app/components/administration/views/about.administration.view.html'
+      }, {
+        title: 'Новости'
+        , templateUrl: 'app/components/administration/views/news.administration.view.html'
+      }, {
+        title: 'Прайс лист'
+        , templateUrl: 'app/components/administration/views/price.administration.view.html'
+      }
+    ];
+
+    vm.selectedTab = vm.tabs[0];
+    vm.selectedTab.active = true;
+
+    vm.selectTab = function (tabItem) {
+      vm.selectedTab.active = false;
+      vm.selectedTab = tabItem
+      vm.selectedTab.active = true;
+    };
 
     vm.mainInfo = homeService.getInfo();
 
@@ -67,6 +95,10 @@
     vm.requestList = requestService.requestList;
 
     vm.deleteRequest = requestService.deleteRequest;
+
+    vm.logOut = function () {
+      $rootScope.logout();
+    }
 
     return vm;
   }

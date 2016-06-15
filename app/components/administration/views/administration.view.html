@@ -1,29 +1,28 @@
-<md-content>
-  <md-tabs md-dynamic-height md-border-bottom>
-    <md-tab label="Заявки">
-      <md-content class="md-padding">
-        <ng-include src="'app/components/administration/views/requests.administration.view.html'"></ng-include>
-      </md-content>
-    </md-tab>
-    <md-tab label="Главная">
-      <md-content class="md-padding">
-        <ng-include src="'app/components/administration/views/main.administration.view.html'"></ng-include>
-      </md-content>
-    </md-tab>
-    <md-tab label="О компании">
-      <md-content class="md-padding">
-        <ng-include src="'app/components/administration/views/about.administration.view.html'"></ng-include>
-      </md-content>
-    </md-tab>
-    <md-tab label="Новости">
-      <md-content class="md-padding">
-        <ng-include src="'app/components/administration/views/news.administration.view.html'"></ng-include>
-      </md-content>
-    </md-tab>
-    <md-tab label="Прайс лист">
-      <md-content class="md-padding">
-        <ng-include src="'app/components/administration/views/price.administration.view.html'"></ng-include>
-      </md-content>
-    </md-tab>
-  </md-tabs>
+<md-content flex>
+  <div class="col-md-2 administration-menu-container">
+    <md-toolbar class="md-theme-light">
+      <h2 class="md-toolbar-tools">
+      <span>Панель управления</span>
+    </h2>
+    </md-toolbar>
+    <md-content>
+      <md-list>
+        <md-list-item class="md-3-line administration-menu-item" ng-repeat="tab in ctrl.tabs">
+          <div class="item-text" ng-click="ctrl.selectTab(tab)" ng-class="{'active': tab.active}">
+            {{tab.title}}
+          </div>
+          <md-divider></md-divider>
+        </md-list-item>
+        <md-list-item class="md-3-line administration-menu-item">
+          <div class="item-text" ng-click="ctrl.logOut()">
+            Выход
+          </div>
+          <md-divider ng-if="!$last"></md-divider>
+        </md-list-item>
+      </md-list>
+    </md-content>
+  </div>
+  <div class="col-md-10">
+    <div ng-include="ctrl.selectedTab.templateUrl"></div>
+  </div>
 </md-content>
