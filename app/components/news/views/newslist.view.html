@@ -1,8 +1,19 @@
 <div class="container-fluid">
   <div class="col-md-8 centered news-list-container">
-    <div ng-repeat="post in ctrl.postList">
-      <div>{{post.formattedDate}}</div>
-      <div>{{post.title}}</div>
+    <div class="post" ng-repeat="post in ctrl.postList">
+      <a class="post-header" href="#/post/{{post.id}}" ui-sref="post({postId: post.id})">
+        <div class="post-date">
+          <span class="day">{{post.date.getDay()}}</span> {{post.date.getMonth()}}.{{post.date.getFullYear()}}
+        </div>
+        <div class="post-title">
+          {{post.title}}
+        </div>
+      </a>
+      <div class="post-content">
+        <div class="preview-text">
+          {{post.previewText}} <a href="#/post/{{post.id}}" ui-sref="post({postId: post.id})">Читать далее...</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>

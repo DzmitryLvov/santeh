@@ -60,10 +60,44 @@
 
 .post-formatted-date {
   color: #aaa;
+  vertical-align: baseline
 }
 
 .post-container .post-text {
   margin-top: 15px;
   font-size: 16px;
   line-height: 1.6em;
+}
+
+.news-list-container {
+  padding: 15px 0;
+}
+
+.news-list-container .post {
+  margin-top: 15px;
+}
+
+.news-list-container .post .post-header {
+  text-decoration: none;
+}
+
+.news-list-container .post .post-header .post-date {
+  color: #016ABD;
+  display: inline-block;
+  width: 75px;
+  padding: 0;
+}
+
+.news-list-container .post .post-header .post-title {
+  font-size: 16px;
+  padding-left: 15px;
+  display: inline-block;
+}
+
+.news-list-container .post .post-content {
+  padding: 10px 0 0 50px;
+}
+
+.news-list-container .post .post-content .preview-text {
+  display: block;
 }
