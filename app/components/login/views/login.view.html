@@ -1,0 +1,24 @@
+<div class="login-container">
+  <div layout="column" class="login-box centered">
+    <md-toolbar>
+      <h2 class="md-toolbar-tools"><span>Вход</span></h2>
+    </md-toolbar>
+    <md-content layout="column" class="md-padding">
+      <md-input-container>
+        <label>Логин</label>
+        <input ng-model="ctrl.userName" />
+      </md-input-container>
+      <md-input-container>
+        <label>Пароль</label>
+        <input type="password" ng-model="ctrl.password" />
+      </md-input-container>
+      <div layout="row" layout-align="center center" class="button-panel">
+        <md-button href="" md-no-ink="md-no-ink">Забыл пароль</md-button>
+        <div flex="flex">
+          <span class="message-text">{{ctrl.messageText}}</span>
+        </div>
+        <md-button class="md-raised md-primary" ng-click="ctrl.login()">Войти</md-button>
+      </div>
+    </md-content>
+  </div>
+</div>

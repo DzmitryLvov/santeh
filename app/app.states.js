@@ -18,6 +18,12 @@ angular.module('myApp')
         url: '/404'
         , templateUrl: 'app/shared/404.html'
       })
+      .state('login', {
+        url: '/login'
+        , templateUrl: 'app/components/login/views/login.view.html'
+        , controller: 'loginController'
+        , controllerAs: 'ctrl'
+      })
       .state('about', {
         url: '/about'
         , templateUrl: 'app/components/about/views/about.view.html'
@@ -47,5 +53,9 @@ angular.module('myApp')
         , templateUrl: 'app/components/administration/views/administration.view.html'
         , controller: 'administrationController'
         , controllerAs: 'ctrl'
+        , data: {
+          authorization: true
+          , redirectTo: 'login'
+        }
       });
 }]);
