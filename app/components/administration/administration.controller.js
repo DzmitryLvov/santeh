@@ -96,9 +96,33 @@
 
     vm.deleteRequest = requestService.deleteRequest;
 
+    vm.aboutText = aboutService.aboutText;
+
+    vm.saveAboutText = function () {
+      var confirm = $mdDialog.confirm()
+        .title('Сохранить изменения?')
+        .textContent('Сохранение')
+        .ariaLabel('Lucky day')
+        .targetEvent(event)
+        .ok('Сохранить')
+        .cancel('Отменить');
+      $mdDialog.show(confirm).then(function () {
+        aboutService.saveAboutText(vm.aboutText);
+      }, function () {});
+    };
+
     vm.logOut = function () {
-      $rootScope.logout();
-    }
+      var confirm = $mdDialog.confirm()
+        .title('Вы действительно хотите выйти?')
+        .textContent('выход из системы')
+        .ariaLabel('Lucky day')
+        .targetEvent(event)
+        .ok('Выйти')
+        .cancel('Остаться');
+      $mdDialog.show(confirm).then(function () {
+        $rootScope.logout();
+      }, function () {});
+    };
 
     return vm;
   }

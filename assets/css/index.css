@@ -4,6 +4,10 @@ body {
   position: relative;
 }
 
+img {
+  max-width: 100%;
+}
+
 .main-container {
   background-color: #F5F5F5;
   min-height: 100%;
@@ -719,3 +723,23 @@ md-list-item.administration-menu-item .item-text:hover {
   outline: 0;
 }
 
+.about-panel-save-button {
+  margin: 10px 0;
+  float: right;
+}
+
+.not-found-container {
+  position: fixed;
+  min-height: 100%;
+  width: 100%;
+}
+
+.not-found-container .not-found-text {
+  margin: 100px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.not-found-container .not-found-text h1 {
+  font-size: 72px;
+}
