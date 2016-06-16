@@ -631,3 +631,19 @@ md-list-item.administration-menu-item .item-text:focus {
   margin: 10px 0;
   float: right;
 }
+
+.not-found-container {
+  position: fixed;
+  min-height: 100%;
+  width: 100%;
+}
+
+.not-found-container .not-found-text {
+  margin: 100px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.not-found-container .not-found-text h1 {
+  font-size: 72px;
+}
