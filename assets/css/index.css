@@ -479,8 +479,6 @@ padding-top: 1px;
   margin-left: 16%;
 }
 
-
-
 @media screen and (min-width: 300px) and (max-width: 768px) {
   .four-buttons li a {
     font-size: 16px;
@@ -496,11 +494,14 @@ padding-top: 1px;
     font-family: calibri;
   }
 
+.four-buttons{
+  padding-left: 2px;
+  padding-right: 2px;
+}
 
 .head{
   padding-left: 0em;
 }
-
 
   .ulist {
     padding-left: 0px;
@@ -509,15 +510,18 @@ padding-top: 1px;
   .navbar-brand b{
     color:#fff;
   }
+
   .logo {
     display: none;
   }
+
   .adress p {
     font-size: 8px;
     padding: 6px 0px 6px 0px;
     line-height: 10px;
     color: #016ABD;
   }
+
   .adress {
     background-color: #fff;
   }
@@ -534,15 +538,13 @@ padding-top: 1px;
   }
   .butt {
     border: 2px solid #016ABD;
-    width: 280px;
+    width: 99vw;
     color: #fff;
     background-color: #016ABD;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    border-radius: 3px;
+    padding: 8px 0px 8px 0px;
   }
   .info {
-    margin: -45vw 0vw 0vw 45vw;
+    margin: -48vw 0vw 0vw 45vw;
     padding-bottom: 50px;
   }
   .info p {
@@ -570,10 +572,49 @@ padding-top: 1px;
   }
   .information p {
     font-size: 3vw;
+    line-height: 2.5vw;
   }
   .information h5 {
     font-size: 4vw;
   }
+
+  .input-group-btn {
+padding-right: 2vw;
+  }
+
+.navbar-default .navbar-toggle .icon-bar{
+  background-color: white;
+}
+
+.bktop {
+  background-color: #FFE401;
+  bottom:4px;
+  color: #016ABD;
+  display:none;
+  padding: 10px 10px 10px 11px;
+  position:fixed;
+  left:4px;
+  text-decoration:none;
+  z-index:99999;
+  font-size: 30px;
+  border-radius: 40px;
+
+-webkit-box-shadow: 1px 1px 1px black;
+     -moz-box-shadow: 1px 1px 1px black;
+          box-shadow: 1px 1px 1px black;
+}
+
+.bktop span{
+padding: 4px 5px 8px 5px;
+  }
+
+.bktop:hover {
+text-decoration: none;
+color: #016ABD;
+background-color: #FFE401;
+border: none;
+  }
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -699,6 +740,7 @@ md-list-item.administration-menu-item .item-text.active {
 
 md-list-item.administration-menu-item .item-text:hover {
   background: #eee;
+
 }
 
 
@@ -708,8 +750,11 @@ md-list-item.administration-menu-item .item-text:hover {
 .navbar-brand {
     display: none;
   }
-}
 
+.on-top-but{
+    display: none;
+  }
+}
 
   @media screen and (min-width: 765px) {
 
@@ -717,6 +762,9 @@ md-list-item.administration-menu-item .item-text:hover {
     display: none;
   }
 
+  .on-top-but{
+    display: none;
+  }
   }
 
 .md-list-item.administration-menu-item .item-text:focus {
