@@ -69,23 +69,24 @@
       </div>
     </div>
 
-
     <ui-view></ui-view>
+
     <div class="push"></div>
   </div>
   <div class="footer-container">
     <div class="footer-navbar">
       <div class="container-fluid">
-        <div class="col-md-8 col-md-offset-2 topper">
-          <ng-include src="'app/shared/navbar.view.html'"></ng-include>
-          <div class="top-but">
-            <a href="#" class="on-top"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></a>
+        <div class="col-md-12">
+          <div class="col-md-8 col-md-offset-2 topper">
+            <ng-include src="'app/shared/navbar.view.html'"></ng-include>
+            <a href="" class="on-top">
+              <i class="fa fa-angle-up" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
       </div>
     </div>
   </div>
-
 </body>
 <script src="node_modules/angular/angular.min.js"></script>
 <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
