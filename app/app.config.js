@@ -3,15 +3,15 @@
  */
 
 angular
-    .module('myApp', [
-        'ui.router',
-        'textAngular',
-        'ngMaterial'
+  .module('myApp', [
+        'ui.router'
+        , 'textAngular'
+        , 'ngMaterial'
+        , 'underscore'
     ])
 
-    .constant('CONFIG',
-    {
-	    DebugMode: true,
-	    StepCounter: 0,
-	    APIHost: 'http://localhost:12017'
-	});
+.constant('CONFIG', {
+  DebugMode: true
+  , StepCounter: 0
+  , APIHost: 'http://localhost:12017'
+});
