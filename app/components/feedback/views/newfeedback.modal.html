@@ -1,0 +1,38 @@
+<md-dialog class="newfeedback-modal col-md-5" aria-label="Обратная связь" ng-cloak>
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Добавление отзыва</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="ctrl.cancel()">
+          <i class="fa fa-times"></i>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <md-input-container class="md-block" flex-gt-xs>
+          <label>Ваше имя</label>
+          <input ng-model="ctrl.newFeedback.name">
+        </md-input-container>
+        <md-input-container class="md-block" flex-gt-xs>
+          <label>Оценка</label>
+          <input ng-model="ctrl.newFeedback.rating">
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label>Напишите нам</label>
+          <textarea ng-model="trl.newFeedback.text" rows="5"></textarea>
+        </md-input-container>
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <span flex></span>
+      <md-button ng-click="ctrl.cancel()">
+        Закрыть
+      </md-button>
+      <md-button ng-click="ctrl.savePost()">
+        Отправить
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>
