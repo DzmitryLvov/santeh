@@ -4,6 +4,10 @@ body {
   position: relative;
 }
 
+img {
+  max-width: 100%;
+}
+
 .main-container {
   background-color: #F5F5F5;
   min-height: 100%;
