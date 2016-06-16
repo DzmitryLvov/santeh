@@ -57,5 +57,11 @@ angular.module('myApp')
           authorization: true
           , redirectTo: 'login'
         }
+      })
+      .state('feedback', {
+        url: '/feedback'
+        , templateUrl: 'app/components/feedback/views/feedback.view.html'
+        , controller: 'feedbackController'
+        , controllerAs: 'ctrl'
       });
 }]);
