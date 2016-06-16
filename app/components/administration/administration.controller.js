@@ -96,6 +96,12 @@
 
     vm.deleteRequest = requestService.deleteRequest;
 
+    vm.aboutText = aboutService.aboutText;
+
+    vm.saveAboutText = function () {
+      aboutService.saveAboutText(vm.aboutText);
+    }
+
     vm.logOut = function () {
       $rootScope.logout();
     }

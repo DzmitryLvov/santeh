@@ -626,3 +626,8 @@ md-list-item.administration-menu-item .item-text:hover {
 md-list-item.administration-menu-item .item-text:focus {
   outline: 0;
 }
+
+.about-panel-save-button {
+  margin: 10px 0;
+  float: right;
+}
