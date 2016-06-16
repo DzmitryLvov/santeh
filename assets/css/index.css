@@ -457,7 +457,7 @@ input {
 .topper {
   padding-left: 0px;
   padding-right: 0px;
-  margin-left: 16%;
+  margin-left: 15.8%;
 }
 
 @media screen and (min-width: 300px) and (max-width: 768px) {
@@ -734,7 +734,6 @@ md-list-item.administration-menu-item .item-text:hover {
   .navbar-brand {
     display: none;
   }
-<<<<<<< HEAD
 
 .on-top-but{
     display: none;
@@ -752,14 +751,13 @@ md-list-item.administration-menu-item .item-text:hover {
   }
   }
 
-=======
 }
 @media screen and (min-width: 765px) {
   .navbar-brand {
     display: none;
   }
 }
->>>>>>> af3923dc88c630a33593c827fff1b8213072c19f
+
 .md-list-item.administration-menu-item .item-text:focus {
   outline: 0;
 }
