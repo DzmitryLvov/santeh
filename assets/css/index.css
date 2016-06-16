@@ -26,9 +26,22 @@ body {
   font-family: calibri;
 }
 
+
 .navbar .navbar-collapse {
   text-align: center;
+
 }
+
+
+.navbar-default .navbar-nav>li>a{
+  color:#fff;
+}
+
+.header-width{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 
 .navbar-default .navbar-nav > li > a:hover {
   background-color: #017CCC;
@@ -38,7 +51,7 @@ body {
 
 .navbar-form .form-control {
   background-color: #016ABD;
-  padding-left: 5px;
+  padding-left: 8px;
 }
 
 .navbar-form .form-control,
@@ -51,6 +64,10 @@ input {
 
 .navbar-form .input-group > .form-control {
   width: 136px;
+}
+
+.navbar-form {
+padding: 0px;
 }
 
 .navbar-form .form-control::-webkit-input-placeholder {
@@ -112,14 +129,20 @@ input {
   vertical-align: middle;
 }
 
-.address-panel-container {
+.address-panel {
   background-color: white;
+
+}
+
+.but-four{
+padding-top: 1px;
 }
 
 .address-panel {
   text-align: center;
   padding-left: 0;
   padding-right: 0;
+
 }
 
 .adress {
@@ -139,6 +162,11 @@ input {
   height: 90px;
   padding-right: 0px;
   padding-left: 0px;
+}
+
+.stripe-adress{
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .application a {
@@ -193,6 +221,11 @@ input {
   color: #FFF;
 }
 
+.adress-desk-panel{
+  padding-bottom: 50px;
+}
+
+
 .santehworks {
   background-image: url("../img/12.jpg");
   background-repeat: repeat-x;
@@ -205,7 +238,7 @@ input {
   display: block;
   color: white;
   font-weight: bold;
-  font-size: 2.4vw;
+  font-size: 2.1vw;
   text-align: center;
   padding-top: 4%;
 }
@@ -220,7 +253,7 @@ input {
 .four-buttons li a {
   color: #7F7F7F;
   font-family: calibri;
-  font-size: 2.0vw;
+  font-size: 1.7vw;
 }
 
 .four-buttons li a button:hover {
@@ -237,6 +270,7 @@ input {
 
 .two-cards {
   margin-top: -20px;
+
 }
 
 .tubes {
@@ -321,8 +355,7 @@ input {
 }
 
 .ulist {
-  padding-left: 40px;
-  padding-top: 55px;
+  padding: 55px 5px 50px 40px;
 }
 
 .information p {
@@ -392,7 +425,7 @@ font-size: 0.9vw;
 }
 
 .footer-navbar {
-  height: 60px;
+  height: 50px;
   background: #fff;
 }
 
@@ -404,6 +437,7 @@ font-size: 0.9vw;
   font-size: 1.5em;
   line-height: 0.7em;
   color: white;
+  padding-left: 1em
 }
 
 .input-group-btn:last-child>.btn,
@@ -412,6 +446,32 @@ font-size: 0.9vw;
   border: none;
 }
 
+.on-top{
+  float: right;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+  padding: 15px 15px 15px 15px;
+}
+
+.top-but{
+  padding-right: 1.5vw;
+}
+
+.top-but a{
+  text-decoration: none;
+}
+
+.top-but a:hover{
+  background-color: red;
+  color: white;
+}
+
+.topper{
+  padding-left: 0px;
+  padding-right: 0px;
+margin-left: 16%;
+}
 
 
 
@@ -435,13 +495,17 @@ font-size: 0.9vw;
   }
 
 
+.head{
+  padding-left: 0em;
+}
+
 
   .ulist {
     padding-left: 0px;
 }
 
-  .navbar-brand {
-    display: none;
+  .navbar-brand b{
+    color:#fff;
   }
 
 
@@ -633,8 +697,10 @@ font-size: 6vw;
 
 
 
-  @media screen and (min-width: 1025px) {
+  @media screen and (min-width: 765px) {
 
-
+.navbar-brand {
+    display: none;
+  }
 
   }

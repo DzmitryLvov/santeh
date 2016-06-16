@@ -19,7 +19,8 @@
   <div class="main-container" ng-controller="homeController as ctrl">
     <div class="header">
       <div class="navbar navbar-default navbar-static-top">
-        <div class="container">
+<div class="col-md-8 col-md-offset-2 header-width">
+        <div class="container-fluid">
           <div class="navbar-header">
             <a class="navbar-brand" href="#">
               <b>AQUA SUPPLY</b>
@@ -44,10 +45,13 @@
           </div>
         </div>
       </div>
+      </div>
     </div>
     <!-- ADRESS DESK -->
-    <div class="address-panel-container">
-      <div class="container address-panel center-block">
+
+      <div class="container-fluid address-panel ">
+      
+      <div class="col-md-8 col-md-offset-2 stripe-adress">
         <div class="col-md-2 logo">
           <a href="#">AQUA <br>SUPPLY</a>
         </div>
@@ -61,18 +65,26 @@
           </div>
         </div>
         <div class="col-md-2 application"><a href="#/price" ui-sref="price"><b>Оставить<br>заявку</b></a></div>
+        </div>
       </div>
-    </div>
+    
+
     <ui-view></ui-view>
     <div class="push"></div>
   </div>
   <div class="footer-container">
     <div class="footer-navbar">
-      <div class="container">
+      <div class="container-fluid">
+      <div class="col-md-8 col-md-offset-2 topper">
         <ng-include src="'app/shared/navbar.view.html'"></ng-include>
+        <div class="top-but">
+        <a href="#" class="on-top"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></a>
+        </div>
       </div>
     </div>
   </div>
+  </div>
+
 </body>
 <script src="node_modules/angular/angular.min.js"></script>
 <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
