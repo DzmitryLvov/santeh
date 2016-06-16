@@ -559,46 +559,6 @@ input {
     background-color: #1E88E5;
     border: none;
   }
-  .login-container {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-  }
-  .login-container .login-box {
-    max-width: 500px;
-  }
-  .login-container .login-box h2 {
-    text-align: center;
-  }
-  .login-container .login-box .button-panel {
-    padding-top: 20px;
-  }
-  .login-container .login-box .message-text {
-    color: crimson;
-  }
-  .administration-menu-container {
-    padding: 0;
-  }
-  md-list-item.administration-menu-item {
-    min-height: 0;
-    padding: 0;
-    cursor: pointer;
-  }
-  md-list-item.administration-menu-item .item-text {
-    padding: 20px;
-    font-size: 15px;
-    width: 100%;
-  }
-  md-list-item.administration-menu-item .item-text.active {
-    background: #eee;
-  }
-  md-list-item.administration-menu-item .item-text:hover {
-    background: #eee;
-  }
-  md-list-item.administration-menu-item .item-text:focus {
-    outline: 0;
-  }
   .information {
     margin-top: -60vw;
   }
@@ -614,4 +574,55 @@ input {
   .ulist {
     padding: 0 0 0 0;
   }
+}
+
+.login-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.login-container .login-box {
+  max-width: 500px;
+}
+
+.login-container .login-box h2 {
+  text-align: center;
+}
+
+.login-container .login-box .button-panel {
+  padding-top: 20px;
+}
+
+.login-container .login-box .message-text {
+  color: crimson;
+}
+
+.administration-menu-container {
+  padding: 0;
+}
+
+md-list-item.administration-menu-item {
+  min-height: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+md-list-item.administration-menu-item .item-text {
+  padding: 20px;
+  font-size: 15px;
+  width: 100%;
+}
+
+md-list-item.administration-menu-item .item-text.active {
+  background: #eee;
+}
+
+md-list-item.administration-menu-item .item-text:hover {
+  background: #eee;
+}
+
+md-list-item.administration-menu-item .item-text:focus {
+  outline: 0;
 }
