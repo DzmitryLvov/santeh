@@ -436,7 +436,7 @@ padding-top: 1px;
   font-size: 1.5em;
   line-height: 0.7em;
   color: white;
-  padding-left: 1em
+  padding-left: 1em;
 }
 
 .input-group-btn:last-child>.btn,
@@ -445,13 +445,14 @@ padding-top: 1px;
   border: none;
 }
 
-<<<<<<< HEAD
+
 .on-top{
   float: right;
   text-align: center;
   line-height: 30px;
   font-size: 20px;
   padding: 15px 15px 15px 15px;
+  background-color: #FFE401;
 }
 
 .top-but{
@@ -465,20 +466,17 @@ padding-top: 1px;
 .top-but a:hover{
   background-color: red;
   color: white;
+  transition: background-color .4s ease;
 }
 
 .topper{
   padding-left: 0px;
   padding-right: 0px;
-margin-left: 16%;
+  margin-left: 16%;
 }
 
 
 
-
-
-=======
->>>>>>> 149dbdab389156bceef268c63d4c030e36876b73
 @media screen and (min-width: 300px) and (max-width: 768px) {
   .four-buttons li a {
     font-size: 16px;
@@ -493,7 +491,6 @@ margin-left: 16%;
     padding: 15px 15px;
     font-family: calibri;
   }
-<<<<<<< HEAD
 
 
 .head{
@@ -507,13 +504,6 @@ margin-left: 16%;
 
   .navbar-brand b{
     color:#fff;
-=======
-  .ulist {
-    padding-left: 0px;
-  }
-  .navbar-brand {
-    display: none;
->>>>>>> 149dbdab389156bceef268c63d4c030e36876b73
   }
   .logo {
     display: none;
@@ -707,16 +697,14 @@ md-list-item.administration-menu-item .item-text:hover {
   background: #eee;
 }
 
-<<<<<<< HEAD
-
-
-
-
-
 
   }
 
-
+@media screen and (max-width: 1024px) {
+.navbar-brand {
+    display: none;
+  }
+}
 
 
   @media screen and (min-width: 765px) {
@@ -726,8 +714,8 @@ md-list-item.administration-menu-item .item-text:hover {
   }
 
   }
-=======
-md-list-item.administration-menu-item .item-text:focus {
+
+.md-list-item.administration-menu-item .item-text:focus {
   outline: 0;
 }
->>>>>>> 149dbdab389156bceef268c63d4c030e36876b73
+
