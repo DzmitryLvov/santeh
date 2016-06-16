@@ -20,35 +20,39 @@
   <div class="main-container" ng-controller="homeController as ctrl">
     <div class="header">
       <div class="navbar navbar-default navbar-static-top">
-        <div class="container">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">
-              <b>AQUA SUPPLY</b>
-            </a>
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-          <div class="collapse navbar-collapse navHeaderCollapse">
-            <ng-include src="'app/shared/navbar.view.html'"></ng-include>
-            <form class="navbar-form navbar-right" role="search">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Поиск по сайту">
-                <span class="input-group-btn">
+        <div class="col-md-8 col-md-offset-2 header-width">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">
+                <b>AQUA SUPPLY</b>
+              </a>
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse navHeaderCollapse">
+              <ng-include src="'app/shared/navbar.view.html'"></ng-include>
+              <form class="navbar-form navbar-right" role="search">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Поиск по сайту">
+                  <span class="input-group-btn">
                     <button class="btn btn-default" type="button">
                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                </span>
-              </div>
-            </form>
+                  </span>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <!-- ADRESS DESK -->
-    <div class="address-panel-container">
-      <div class="container address-panel center-block">
+
+    <div class="container-fluid address-panel ">
+
+      <div class="col-md-8 col-md-offset-2 stripe-adress">
         <div class="col-md-2 logo">
           <a href="#">AQUA <br>SUPPLY</a>
         </div>
@@ -64,16 +68,24 @@
         <div class="col-md-2 application"><a href="#/price" ui-sref="price"><b>Оставить<br>заявку</b></a></div>
       </div>
     </div>
+
+
     <ui-view></ui-view>
     <div class="push"></div>
   </div>
   <div class="footer-container">
     <div class="footer-navbar">
-      <div class="container">
-        <ng-include src="'app/shared/navbar.view.html'"></ng-include>
+      <div class="container-fluid">
+        <div class="col-md-8 col-md-offset-2 topper">
+          <ng-include src="'app/shared/navbar.view.html'"></ng-include>
+          <div class="top-but">
+            <a href="#" class="on-top"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
 </body>
 <script src="node_modules/angular/angular.min.js"></script>
 <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
@@ -114,5 +126,7 @@
 <script src="app/components/login/login.controller.js"></script>
 <script src="app/components/feedback/feedback.controller.js"></script>
 <script src="app/components/feedback/feedback.services.js"></script>
+
+<script src="assets/js/collapse-menu-hide.js"></script>
 
 </html>
