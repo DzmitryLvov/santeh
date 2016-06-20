@@ -1,19 +1,21 @@
-<div class="container-fluid">
-  <div class="col-md-8 centered news-list-container">
-    <div class="post" ng-repeat="post in ctrl.postList">
-      <a class="post-header" href="#/post/{{post.id}}" ui-sref="post({postId: post.id})">
-        <div class="post-date">
-          <span class="day">{{post.date.getDay()}}</span> {{post.date.getMonth()}}.{{post.date.getFullYear()}}
-        </div>
-        <div class="post-title">
-          {{post.title}}
-        </div>
-      </a>
-      <div class="post-content">
-        <div class="preview-text">
-          {{post.previewText}} <a href="#/post/{{post.id}}" ui-sref="post({postId: post.id})">Читать далее...</a>
-        </div>
-      </div>
+<div class="container centered news-list-container">
+  <div layout="row" layout-sm="column" layout-wrap>
+    <div flex-gt-xs="33" ng-repeat="post in ctrl.postList">
+      <md-card ui-sref="post({postId: post.id})">
+        <img ng-src=" {{post.titlePhotoUrl}} " class="md-card-image" alt="Washed Out ">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline ">{{post.title}}</span>
+            <span class="md-subhead ">{{post.formattedDate}}</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <p>{{post.previewText}}</p>
+        </md-card-content>
+        <md-card-actions layout="row " layout-align="end center ">
+          <md-button>Читать далее</md-button>
+        </md-card-actions>
+      </md-card>
     </div>
   </div>
 </div>

@@ -1,10 +1,12 @@
 <div class="container-fluid">
   <div class="col-md-8 centered">
     <div class="post-container">
-      <h2>{{ctrl.post.title}}</h2>
-      <span class="post-formatted-date">
+      <div class="post-header-text">
+        <h2>{{ctrl.post.title}}</h2>
+        <span class="post-formatted-date">
        {{ctrl.post.formattedDate}}
-     </span>
+      </span>
+      </div>
       <div ng-bind-html="ctrl.post.text" class="post-text"></div>
     </div>
   </div>

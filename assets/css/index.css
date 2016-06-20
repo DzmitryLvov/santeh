@@ -476,39 +476,31 @@ input {
     padding: 15px 15px;
     font-family: calibri;
   }
-
-
-.four-buttons{
-  padding-left: 2px;
-  padding-right: 2px;
-}
-
-.head{
-  padding-left: 0em;
-}
-
+  .four-buttons {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
   .head {
     padding-left: 0em;
   }
-
+  .head {
+    padding-left: 0em;
+  }
   .ulist {
     padding-left: 0px;
   }
   .navbar-brand b {
     color: #fff;
   }
-
   .logo {
     display: none;
   }
-
   .adress p {
     font-size: 12px;
     padding: 6px 0px 20px 0px;
     line-height: 1.2em;
     color: #016ABD;
   }
-
   .adress {
     background-color: #fff;
   }
@@ -564,44 +556,37 @@ input {
   .information h5 {
     font-size: 4vw;
   }
-
   .input-group-btn {
-padding-right: 2vw;
+    padding-right: 2vw;
   }
-
-.navbar-default .navbar-toggle .icon-bar{
-  background-color: white;
-}
-
-.bktop {
-  background-color: #FFE401;
-  bottom:4px;
-  color: #016ABD;
-  display:none;
-  padding: 10px 10px 10px 11px;
-  position:fixed;
-  left:4px;
-  text-decoration:none;
-  z-index:99999;
-  font-size: 30px;
-  border-radius: 40px;
-
--webkit-box-shadow: 1px 1px 1px black;
-     -moz-box-shadow: 1px 1px 1px black;
-          box-shadow: 1px 1px 1px black;
-}
-
-.bktop span{
-padding: 4px 5px 8px 5px;
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
   }
-
-.bktop:hover {
-text-decoration: none;
-color: #016ABD;
-background-color: #FFE401;
-border: none;
+  .bktop {
+    background-color: #FFE401;
+    bottom: 4px;
+    color: #016ABD;
+    display: none;
+    padding: 10px 10px 10px 11px;
+    position: fixed;
+    left: 4px;
+    text-decoration: none;
+    z-index: 99999;
+    font-size: 30px;
+    border-radius: 40px;
+    -webkit-box-shadow: 1px 1px 1px black;
+    -moz-box-shadow: 1px 1px 1px black;
+    box-shadow: 1px 1px 1px black;
   }
-
+  .bktop span {
+    padding: 4px 5px 8px 5px;
+  }
+  .bktop:hover {
+    text-decoration: none;
+    color: #016ABD;
+    background-color: #FFE401;
+    border: none;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -727,7 +712,6 @@ md-list-item.administration-menu-item .item-text.active {
 
 md-list-item.administration-menu-item .item-text:hover {
   background: #eee;
-
 }
 
 
@@ -736,22 +720,20 @@ md-list-item.administration-menu-item .item-text:hover {
   .navbar-brand {
     display: none;
   }
-
-.on-top-but{
+  
+  .on-top-but {
     display: none;
   }
 }
-
-  @media screen and (min-width: 765px) {
-
-.navbar-brand {
+@media screen and (min-width: 765px) {
+  .navbar-brand {
     display: none;
   }
-
-  .on-top-but{
+  
+  .on-top-but {
     display: none;
   }
-  }
+}
 
 }
 @media screen and (min-width: 765px) {
@@ -759,7 +741,6 @@ md-list-item.administration-menu-item .item-text:hover {
     display: none;
   }
 }
-
 .md-list-item.administration-menu-item .item-text:focus {
   outline: 0;
 }
@@ -779,4 +760,7 @@ md-list-item.administration-menu-item .item-text:hover {
 }
 .not-found-container .not-found-text h1 {
   font-size: 72px;
+}
+md-card img {
+  height: auto !important;
 }
