@@ -4,7 +4,7 @@
   angular.module('myApp')
     .controller('administrationController', administrationController);
 
-  function administrationController(newsService, aboutService, homeService, priceService, requestService, $mdDialog, $mdMedia, $rootScope) {
+  function administrationController(articleService, aboutService, homeService, priceService, requestService, $mdDialog, $mdMedia, $rootScope) {
     var vm = this;
 
     vm.tabs = [
@@ -18,8 +18,8 @@
         title: 'О компании'
         , templateUrl: 'app/components/administration/views/about.administration.view.html'
       }, {
-        title: 'Новости'
-        , templateUrl: 'app/components/administration/views/news.administration.view.html'
+        title: 'Статьи'
+        , templateUrl: 'app/components/administration/views/articles.administration.view.html'
       }, {
         title: 'Прайс лист'
         , templateUrl: 'app/components/administration/views/price.administration.view.html'
@@ -48,7 +48,7 @@
       }, function () {});
     };
 
-    vm.postList = newsService.preparedData;
+    vm.postList = articleService.preparedData;
 
     vm.editPostDialog = function (event, post) {
       var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'));
@@ -80,7 +80,7 @@
         .ok('Удалить')
         .cancel('Я еще подумаю');
       $mdDialog.show(confirm).then(function () {
-        newsService.deletePost(postId);
+        articleService.deletePost(postId);
       }, function () {});
     };
 

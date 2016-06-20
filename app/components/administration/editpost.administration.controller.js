@@ -4,7 +4,7 @@
   angular.module('myApp')
     .controller('editPostController', editPostController);
 
-  function editPostController(newsService, $mdDialog, $mdMedia, post) {
+  function editPostController(articleService, $mdDialog, $mdMedia, post) {
     var vm = this;
 
     vm.post = post;
@@ -18,7 +18,7 @@
     };
 
     vm.savePost = function () {
-      newsService.savePost(vm.post)
+      articleService.savePost(vm.post)
 
       $mdDialog.cancel();
     }

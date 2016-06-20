@@ -36,15 +36,15 @@ angular.module('myApp')
         , controller: 'priceController'
         , controllerAs: 'ctrl'
       })
-      .state('news', {
-        url: '/news'
-        , templateUrl: 'app/components/news/views/newslist.view.html'
-        , controller: 'newsController'
+      .state('articles', {
+        url: '/articles'
+        , templateUrl: 'app/components/post/views/articles.view.html'
+        , controller: 'articlesController'
         , controllerAs: 'ctrl'
       })
       .state('post', {
         url: '/post/:postId'
-        , templateUrl: 'app/components/news/views/post.view.html'
+        , templateUrl: 'app/components/post/views/post.view.html'
         , controller: 'postController'
         , controllerAs: 'ctrl'
       })

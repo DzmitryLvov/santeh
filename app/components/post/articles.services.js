@@ -1,9 +1,9 @@
 (function () {
   'use strict';
 
-  var serviceId = 'newsService';
+  var serviceId = 'articleService';
 
-  angular.module('myApp').factory(serviceId, function newsService($http, $filter) {
+  angular.module('myApp').factory(serviceId, function articleService($http, $filter) {
     var self = this;
 
     var options = {
