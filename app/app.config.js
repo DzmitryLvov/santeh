@@ -3,12 +3,7 @@
  */
 
 angular
-  .module('myApp', [
-        'ui.router'
-        , 'textAngular'
-        , 'ngMaterial'
-        , 'underscore'
-    ])
+  .module('myApp', ['ui.router', 'textAngular', 'ngMaterial', 'underscore'])
 
 .constant('CONFIG', {
   DebugMode: true

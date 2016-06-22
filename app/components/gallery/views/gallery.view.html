@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="gallery-container" layout="row" layout-xs="column" layout-wrap>
+    <div class="image-container" ng-repeat="item in ctrl.items" flex-gt-xs="33">
+      <a href='{{item.src}}'>
+        <img src='{{item.src}}' alt="">
+      </a>
+    </div>
+  </div>
+</div>

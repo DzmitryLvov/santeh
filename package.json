@@ -1,25 +1,19 @@
 {
-  "name": "Angular-Kickstart",
+  "name": "Santex",
   "version": "1.0.0",
-  "description": "Angular Kickstart",
-  "main": "Index.html",
+  "description": "santex",
+  "main": "index.html",
   "scripts": {
     "postinstall": "bower cache clean && bower install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/JeremyMorgan/Angular-Kickstart.git"
+    "url": "https://github.com/DzmitryLvov/santeh.git"
   },
   "keywords": [
     "git"
   ],
-  "author": "Jeremy Morgan",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JeremyMorgan/Angular-Kickstart/issues"
-  },
-  "homepage": "https://github.com/JeremyMorgan/Angular-Kickstart",
   "devDependencies": {
     "angular": "^1.5.5",
     "angular-animate": "^1.5.6",
@@ -30,6 +24,8 @@
     "bootstrap": "^3.3.6",
     "datejs": "^1.0.0-rc3",
     "font-awesome": "^4.6.3",
+    "jquery": "^3.0.0",
+    "magnific-popup": "^1.1.0",
     "textangular": "^1.5.1",
     "underscore": "^1.8.3"
   }

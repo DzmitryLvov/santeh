@@ -63,5 +63,11 @@ angular.module('myApp')
         , templateUrl: 'app/components/feedback/views/feedback.view.html'
         , controller: 'feedbackController'
         , controllerAs: 'ctrl'
+      })
+      .state('gallery', {
+        url: '/gallery'
+        , templateUrl: 'app/components/gallery/views/gallery.view.html'
+        , controller: 'galleryController'
+        , controllerAs: 'ctrl'
       });
 }]);
