@@ -1,6 +1,29 @@
+.price-list-container {
+  margin-top: 15px;
+}
+
+.price-group {
+  margin-bottom: 25px;
+}
+
+.price-list-title {
+  color: #444;
+  text-align: center;
+}
+
 .price-table {
   border: 1px solid #ddd;
   background: #fff;
+  margin-bottom: 10px;
+}
+
+.price-table >tbody>tr>td,
+.price-table >tbody>tr>th,
+.price-table >tfoot>tr>td,
+.price-table >tfoot>tr>th,
+.price-table >thead>tr>td,
+.price-table >thead>tr>th {
+  line-height: 2em;
 }
 
 .price-table thead {

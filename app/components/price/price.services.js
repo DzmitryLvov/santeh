@@ -38,7 +38,7 @@
       , cost: '200'
     }, {
       id: 6
-      , workTypeId: 4
+      , workTypeId: 3
       , name: 'Название'
       , units: 'шт'
       , cost: '200'
