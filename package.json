@@ -24,7 +24,7 @@
     "bootstrap": "^3.3.6",
     "datejs": "^1.0.0-rc3",
     "font-awesome": "^4.6.3",
-    "jquery": "^3.0.0",
+    "jquery": "1.9.1",
     "magnific-popup": "^1.1.0",
     "textangular": "^1.5.1",
     "underscore": "^1.8.3"
