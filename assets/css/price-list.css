@@ -1,79 +1,8 @@
-.price-list-title {
-  color: #016ABD;
-  text-align: center;
-}
-
-.price-plans {
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.plan-container {
+.price-table {
+  border: 1px solid #ddd;
   background: #fff;
-  float: left;
-  width: 100%;
-  margin: 20px 0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  text-align: center;
-  overflow: hidden;
 }
 
-.plan-container .price-title {
-  color: #fff;
-  background: #016ABD;
-  padding: 15px;
-}
-
-.plan-container .price-title h2 {
-  font-size: 1.3em;
-  margin: 0 0 10px 0;
-  padding: 0;
-}
-
-.plan-container .price-title p {
-  margin: 0;
-  font-size: 1.1em;
-}
-
-.plan-container .options {
-  list-style: none;
-  margin: 0;
-  padding: 15px 0;
-}
-
-.plan-container .options li {
-  color: black;
-  line-height: 2.4em;
-}
-
-.plan-container .options li span {
-  font-size: 18px;
-  color: #9FA7AA;
-}
-
-.plan-container .request-button a {
-  display: block;
-  line-height: 4.5em;
-  background-color: #016ABD;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 3px;
-  font-size: 1em;
-  color: #fff;
-  transition: all .2s ease;
-}
-
-.plan-container .request-button a:hover {
-  background: #FFE401;
-  color: #016ABD;
-}
-
-
-/*govnokod*/
-
-.price-plans md-input-container {
-  width: 100%;
-  margin: 5px 0;
+.price-table thead {
+  background: #F5FAFC;
 }

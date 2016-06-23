@@ -1,13 +1,14 @@
 .gallery-container {
-  margin: 10px auto;
+  padding: 0;
+  margin: 8px auto;
 }
 
-.gallery-container .image-container {
+.image-container {
   padding: 15px 15px 0 0;
 }
 
 @media screen and (max-width: 600px) {
-  .gallery-container .image-container {
+  .image-container {
     padding: 15px 0 0 0;
   }
 }

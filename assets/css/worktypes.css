@@ -1,0 +1,33 @@
+.worktypes-container {}
+
+.worktypes-tabs {
+  height: 55px;
+  background: #ddd;
+}
+
+.worktypes-content {
+  margin-top: 25px;
+}
+
+.heading-text {
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+  line-height: 1.428571429;
+  color: #444;
+  line-height: 1.4em;
+  border-bottom: 2px solid #FFE401;
+  margin: 10px 0 25px;
+}
+
+.description-text {}
+
+.worktype-image {
+  padding: 5px 25px 25px 0px;
+  width: 30%;
+}
+
+.price-block {}
+
+.gallery-photos {
+  margin-bottom: 25px;
+}

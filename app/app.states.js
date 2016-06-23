@@ -69,5 +69,11 @@ angular.module('myApp')
         , templateUrl: 'app/components/gallery/views/gallery.view.html'
         , controller: 'galleryController'
         , controllerAs: 'ctrl'
+      })
+      .state('works', {
+        url: '/works'
+        , templateUrl: 'app/components/worktypes/views/worktypes.view.html'
+        , controller: 'workTypesController'
+        , controllerAs: 'ctrl'
       });
 }]);

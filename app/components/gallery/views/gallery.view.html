@@ -1,8 +1,8 @@
-<div class="container">
-  <div class="gallery-container" layout="row" layout-xs="column" layout-wrap>
+<div class=" gallery-container container centered">
+  <div layout="row" layout-xs="column" layout-wrap>
     <div class="image-container" ng-repeat="item in ctrl.items" flex-gt-xs="33">
       <a href='{{item.src}}'>
-        <img src='{{item.src}}' alt="">
+        <img ng-src='{{item.src}}' alt="">
       </a>
     </div>
   </div>
