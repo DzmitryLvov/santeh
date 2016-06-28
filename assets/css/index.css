@@ -9,7 +9,6 @@ img {
 }
 
 .main-container {
-  background-color: #F5F5F5;
   min-height: 100%;
   margin-bottom: -120px;
 }
@@ -22,12 +21,16 @@ img {
 .navbar-default {
   background-color: #016ABD;
   font-size: 18px;
-  margin-bottom: 0;
+  border: none;
   font-family: calibri;
 }
 
 .navbar .navbar-collapse {
   text-align: center;
+}
+
+.navbar.navbar-header {
+  margin: 0;
 }
 
 .navbar-default .navbar-nav>li>a {

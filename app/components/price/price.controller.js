@@ -21,10 +21,10 @@
         vm.priceGroups[groupId].title = workType.titleText;
         vm.priceGroups[groupId].notesText = workType.notesText;
       }
-
     }
 
-    console.log(vm.priceGroups);
+    
+    
     return vm;
   }
 })();

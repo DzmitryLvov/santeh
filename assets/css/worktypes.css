@@ -1,8 +1,36 @@
 .worktypes-container {}
 
 .worktypes-tabs {
-  height: 55px;
-  background: #ddd;
+  background: #F5FAFC;
+  overflow: hidden;
+  position: relative;
+}
+
+.worktype-tab {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.worktype-tab:hover {
+  text-decoration: none;
+  background: #fff;
+}
+
+.worktype-tab .tab-icon img {
+  fill: red !important;
+  height: 50px;
+}
+
+.worktype-tab .tab-title {
+  margin-top: 10px;
+}
+
+.worktype-tab.active {
+  background: #fff;
+  box-shadow: 0px 0px 12px 0px rgba(69, 102, 116, 0.2);
 }
 
 .worktypes-content {

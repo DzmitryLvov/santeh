@@ -1,7 +1,12 @@
 <div class="worktypes-container">
   <div class="worktypes-tabs">
     <div class="container">
-      Иконки разделов
+      <a href="#/works/{{tab.urlText}}" class="worktype-tab" ng-class="{'active': tab.active}" ng-repeat="tab in ctrl.workTypes">
+        <div class="tab-icon">
+          <image src="{{tab.thumbSrc}}" alt=""></image>
+        </div>
+        <div class="tab-title">{{tab.thumbText}}</div>
+      </a>
     </div>
   </div>
   <div class="container worktypes-content">
@@ -35,8 +40,8 @@
     <div class="heading-text">Примеры работ</div>
     <div class="gallery-photos" layout="row" layout-xs="column" layout-wrap>
       <div class="image-container" ng-repeat="item in ctrl.selectedItem.photos | limitTo: 3" flex-gt-xs="33">
-        <a href='{{item.src}}'>
-          <img ng-src='{{item.src}}' alt="">
+        <a href="{{item.src}}">
+          <img ng-src="{{item.src}}" alt="">
         </a>
       </div>
     </div>

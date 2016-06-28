@@ -71,7 +71,7 @@ angular.module('myApp')
         , controllerAs: 'ctrl'
       })
       .state('works', {
-        url: '/works'
+        url: '/works/{workTitle}'
         , templateUrl: 'app/components/worktypes/views/worktypes.view.html'
         , controller: 'workTypesController'
         , controllerAs: 'ctrl'
