@@ -8,7 +8,7 @@
   function articlesController(articleService) {
     var vm = this;
 
-    vm.postList = articleService.preparedData;
+    vm.postList = articleService.getArticles();
 
     return vm;
   };

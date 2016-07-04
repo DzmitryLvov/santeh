@@ -9,10 +9,9 @@
 
     var searchResult = articleService.getPost($stateParams.postId);
 
-    if (searchResult.length) {
+    if (searchResult && searchResult.length) {
       vm.post = searchResult[0];
-    }
-    else{
+    } else {
       $state.go('404');
     }
 
