@@ -3,7 +3,7 @@
  */
 
 angular
-  .module('myApp', ['ui.router', 'textAngular', 'ngMaterial', 'underscore'])
+  .module('myApp', ['ui.router', 'textAngular', 'ngMaterial', 'underscore', 'firebase'])
 
 .constant('CONFIG', {
   DebugMode: true
