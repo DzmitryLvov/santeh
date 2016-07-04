@@ -1,9 +1,7 @@
 (function () {
   'use strict';
-
   var serviceId = 'workTypesService';
-
-  angular.module('myApp').factory(serviceId, function workTypesService(_, priceService, galleryService, $http, $filter) {
+  angular.module('myApp').factory(serviceId, ['_', 'priceService', 'galleryService', '$filter', function workTypesService(_, priceService, galleryService, $filter) {
     var self = this;
 
     function getData() {
@@ -42,7 +40,6 @@
           , description: 'описание раздела'
           , imageSrc: 'http://c2.staticflickr.com/8/7075/27000238684_176bdcbaf3_z.jpg'
       }];
-
       _.map(data, function (item) {
         if (item) {
           if (item.id) {
@@ -51,7 +48,6 @@
           }
         }
       });
-
       return data;
     };
 
@@ -62,13 +58,11 @@
           id: id
         }, true);
       }
-
       return result;
     }
-
     return {
       getData: getData
       , getTypeById: getTypeById
     };
-  });
+  }]);
 })();

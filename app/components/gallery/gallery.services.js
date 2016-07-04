@@ -1,11 +1,8 @@
 (function () {
   'use strict';
-
   var serviceId = 'galleryService';
-
-  angular.module('myApp').factory(serviceId, function galleryService($http, $filter) {
+  angular.module('myApp').factory(serviceId, ['$filter', function galleryService($filter) {
     var self = this;
-
     self.photoList = [
       {
         id: 1
@@ -35,13 +32,11 @@
           workTypeId: workTypeId
         }, true);
       }
-
       return result;
     };
-
     return {
       getPhotoListByWorkTypeId: getPhotoListByWorkTypeId
       , photoList: self.photoList
     };
-  });
+  }]);
 })();

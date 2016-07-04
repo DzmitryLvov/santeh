@@ -50,3 +50,5 @@ fabric.properties
 
 #Bower-based components
 bower_components/
+
+public/

@@ -2,9 +2,7 @@
   'use strict';
 
   angular.module('myApp')
-    .service('homeService', homeService);
-
-  function homeService($http) {
+    .service('homeService', [function homeService() {
     var self = this;
 
     function getInfo() {
@@ -25,5 +23,5 @@
       getInfo: getInfo
       , saveInfo: saveInfo
     }
-  }
+  }]);
 })();

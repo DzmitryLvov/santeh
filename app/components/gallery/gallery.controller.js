@@ -1,14 +1,10 @@
 (function () {
   'use strict';
-
-  angular.module('myApp')
-    .controller('galleryController', galleryController);
+  angular.module('myApp').controller('galleryController', ['galleryService', galleryController]);
 
   function galleryController(galleryService) {
     var vm = this;
-
     vm.items = galleryService.photoList;
-
     $('.gallery-container').magnificPopup({
       delegate: 'a'
       , type: 'image'
@@ -18,7 +14,6 @@
         , tCounter: '<span class="mfp-counter">%curr% из %total%</span>'
       }
     });
-
     return vm;
   }
 })();

@@ -1,15 +1,10 @@
 (function () {
   'use strict';
-
-  angular.module('myApp')
-    .controller('articlesController', articlesController)
-    .directive('articlesPreview', articlesPreview);
+  angular.module('myApp').controller('articlesController', ['articleService', articlesController]).directive('articlesPreview', articlesPreview);
 
   function articlesController(articleService) {
     var vm = this;
-
     vm.postList = articleService.getArticles();
-
     return vm;
   };
 

@@ -1,11 +1,8 @@
 (function () {
   'use strict';
-
   var serviceId = 'priceService';
-
-  angular.module('myApp').factory(serviceId, function priceService($http, $filter) {
+  angular.module('myApp').factory(serviceId, ['$filter', function priceService($filter) {
     var self = this;
-
     self.priceItems = [{
       id: 1
       , workTypeId: 1
@@ -50,13 +47,11 @@
           workTypeId: workTypeId
         }, true);
       }
-
       return result;
     };
-
     return {
       priceItems: self.priceItems
       , getPriceItemsByWorkTypeId: getPriceItemsByWorkTypeId
     }
-  });
+  }]);
 })();

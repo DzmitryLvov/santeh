@@ -1,5 +1,5 @@
 angular.module('myApp')
-  .run(function (_, $rootScope, $state, Authorization, $q) {
+  .run(['_', '$rootScope', '$state', 'Authorization', function (_, $rootScope, $state, Authorization) {
     $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
       if (!Authorization.authorized()) {
         if (Authorization.memorizedState && (!_.has(fromState, 'data.redirectTo') || toState.name !== fromState.data.redirectTo)) {
@@ -26,4 +26,4 @@ angular.module('myApp')
       , storageBucket: "santex-e3078.appspot.com"
     };
     firebase.initializeApp(config)
-  });
+  }]);

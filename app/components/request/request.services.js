@@ -1,11 +1,8 @@
 (function () {
   'use strict';
-
   var serviceId = 'requestService';
-
-  angular.module('myApp').factory(serviceId, function requestService($http, $filter) {
+  angular.module('myApp').factory(serviceId, ['$filter', function requestService($filter) {
     var self = this;
-
     self.requestList = [
       {
         id: 1
@@ -44,14 +41,11 @@
       }
     };
 
-    function deleteRequest(requestId) {
-
-    };
-
+    function deleteRequest(requestId) {};
     return {
       requestList: self.requestList
       , saveRequest: saveRequest
       , deleteRequest: deleteRequest
     }
-  });
+  }]);
 })();

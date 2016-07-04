@@ -1,11 +1,8 @@
 (function () {
   'use strict';
-
   var serviceId = 'aboutService';
-
-  angular.module('myApp').factory(serviceId, function aboutService($http) {
+  angular.module('myApp').factory(serviceId, [function aboutService() {
     var self = this;
-
     self.aboutText = "<h1 style='text-align: center;'>Заголовок</h1><h4 style='text-align: center;'>Подзаголовок</h4><p style='text-align: left;'>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни.</p><p style='text-align: center;'><img src='http://c2.staticflickr.com/8/7075/27000238684_176bdcbaf3_z.jpg'/></p><p>Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу.</p>";
 
     function saveAboutText(text) {
@@ -13,7 +10,6 @@
         self.aboutText = text;
       }
     }
-
     var factory = {
       preparedData: [
         {
@@ -33,7 +29,6 @@
       , aboutText: self.aboutText
       , saveAboutText: saveAboutText
     };
-
     return factory;
-  });
+  }]);
 })();

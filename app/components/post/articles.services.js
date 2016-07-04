@@ -3,7 +3,7 @@
 
   var serviceId = 'articleService';
 
-  angular.module('myApp').factory(serviceId, function articleService($filter, $firebaseArray) {
+  angular.module('myApp').factory(serviceId, ['$filter', '$firebaseArray', function articleService($filter, $firebaseArray) {
     var self = this;
 
     var options = {
@@ -82,5 +82,5 @@
       , savePost: savePost
       , deletePost: deletePost
     }
-  });
+  }]);
 })();
