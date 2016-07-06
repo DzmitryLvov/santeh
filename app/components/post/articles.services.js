@@ -7,10 +7,10 @@
     var self = this;
 
     var options = {
-      year: 'numeric'
-      , month: 'long'
-      , day: 'numeric'
-      , weekday: 'long'
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      weekday: 'long'
     };
 
     self.preparedData = [];
@@ -29,8 +29,8 @@
     };
 
     function getPost(postId) {
-      if (!self.preparedData) {
-        //getPostList();
+      if (!self.preparedData || !self.preparedData.length) {
+        getArticles();
       }
 
       var id = parseInt(postId);
@@ -53,7 +53,8 @@
           post.formattedDate = post.date.toLocaleDateString("ru", options);
 
           self.preparedData.push(post)
-        } else {
+        }
+        else {
           existingPost.title = post.title;
           existingPost.previewText = post.previewText;
           existingPost.text = post.text;
@@ -77,10 +78,10 @@
     };
 
     return {
-      getArticles: getArticles
-      , getPost: getPost
-      , savePost: savePost
-      , deletePost: deletePost
+      getArticles: getArticles,
+      getPost: getPost,
+      savePost: savePost,
+      deletePost: deletePost
     }
   }]);
 })();

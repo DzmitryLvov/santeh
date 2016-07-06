@@ -1,44 +1,56 @@
 (function () {
   'use strict';
-  angular.module('myApp').controller('workTypesController', ['workTypesService', '$state', '$stateParams', '$filter', workTypesController]).directive('svgImage', ['$http', svgImage]);
+  angular.module('myApp').controller('workTypesController', ['workTypesService', '$state', '$stateParams', '$filter', workTypesController]).directive('svgImage', [svgImage]);
 
   function workTypesController(workTypesService, $state, $stateParams, $filter) {
     var vm = this;
-    vm.workTypes = workTypesService.getData();
+
+    vm.workTypes = [];
+
+    workTypesService.getDataAsync()
+      .then(function (snapshot) {
+        vm.workTypes = snapshot;
+
+        if ($stateParams.workTitle) {
+          var item = $filter('filter')(vm.workTypes, {
+            urlText: $stateParams.workTitle
+          }, true)[0];
+          if (item) {
+            vm.selectItem(item);
+          }
+        }
+        else {
+          vm.selectItem(vm.workTypes[0]);
+        }
+      });
+
     vm.selectItem = function (item) {
-      if (vm.selectedItem) {
-        vm.selectedItem.active = false;
-      }
-      vm.selectedItem = item;
-      vm.selectedItem.active = true;
-    };
-    if ($stateParams.workTitle) {
-      var item = $filter('filter')(vm.workTypes, {
-        urlText: $stateParams.workTitle
-      }, true)[0];
       if (item) {
-        vm.selectItem(item);
+        if (vm.selectedItem) {
+          vm.selectedItem.active = false;
+        }
+        vm.selectedItem = item;
+        vm.selectedItem.active = true;
       }
-    }
-    else {
-      vm.selectItem(vm.workTypes[0]);
-    }
+    };
+
     $('.gallery-photos').magnificPopup({
-      delegate: 'a'
-      , type: 'image'
-      , gallery: {
-        enabled: true
-        , arrowMarkup: ''
-        , tCounter: '<span class="mfp-counter">%curr% из %total%</span>'
+      delegate: 'a',
+      type: 'image',
+      gallery: {
+        enabled: true,
+        arrowMarkup: '',
+        tCounter: '<span class="mfp-counter">%curr% из %total%</span>'
       }
     });
+
     return vm;
   };
 
-  function svgImage($http) {
+  function svgImage() {
     return {
-      restrict: 'E'
-      , link: function (scope, element) {
+      restrict: 'E',
+      link: function (scope, element) {
         var imgURL = element.attr('src');
         // if you want to use ng-include, then
         // instead of the above line write the bellow:

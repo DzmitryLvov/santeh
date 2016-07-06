@@ -1,0 +1,76 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="myApp" ng-cloak>
+
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+
+  <link rel="stylesheet" href="css/components.min.css"/>
+
+  <link rel="stylesheet" href="css/all.min.css"/>
+
+</head>
+
+<body>
+  <div class="main-container" ng-controller="homeController as ctrl">
+    <div class="header">
+      <div class="navbar-main navbar-default navbar-static-top">
+        <div class="container header-width">
+          <div class="navbar navbar-header">
+            <a class="navbar-brand" href="#">
+                Logo
+            </a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+          </div>
+          <div class="collapse navbar-collapse navHeaderCollapse">
+            <ng-include src="'app/shared/navbar.view.html'"></ng-include>
+            <form class="navbar-form navbar-right" role="search">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Поиск по сайту"> <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid address-panel ">
+      <div class="container stripe-adress">
+        <div class="col-md-2 logo"> <a href="#">Logo</a> </div>
+        <div class="col-md-8 adress">
+          <div class="col-md-6 col-xs-6">
+            <p>{{ctrl.info.address}}</p>
+          </div>
+          <div class="col-md-6">
+            <p>{{ctrl.info.phone}}
+              <br>{{ctrl.info.schedule}}</p>
+          </div>
+        </div>
+        <a href="#/price" ui-sref="price">
+          <div class="col-md-2 request-button"> <span>Оставить заявку</span> </div>
+        </a>
+      </div>
+    </div>
+    <ui-view></ui-view>
+    <div class="push"></div>
+  </div>
+  <div class="footer-container">
+    <div class="footer-navbar">
+      <div class="container-fluid">
+        <div class="col-md-12">
+          <div class="col-md-8 col-md-offset-2 topper">
+            <ng-include src="'app/shared/navbar.view.html'"></ng-include>
+            <a href="" class="on-top"> <i class="fa fa-angle-up" aria-hidden="true"></i> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="bundle.min.js"></script>
+
+</html>

@@ -6,7 +6,7 @@ angular
   .module('myApp', ['ui.router', 'textAngular', 'ngMaterial', 'underscore', 'firebase'])
 
 .constant('CONFIG', {
-  DebugMode: true
-  , StepCounter: 0
-  , APIHost: 'http://localhost:12017'
+  DebugMode: true,
+  StepCounter: 0,
+  APIHost: 'http://localhost:12017'
 });

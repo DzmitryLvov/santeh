@@ -20,10 +20,10 @@ angular.module('myApp')
     };
 
     var config = {
-      apiKey: "AIzaSyAebzYs_DR29-HYxS0T368XAwg2Tdrvyck"
-      , authDomain: "santex-e3078.firebaseapp.com"
-      , databaseURL: "https://santex-e3078.firebaseio.com"
-      , storageBucket: "santex-e3078.appspot.com"
+      apiKey: "AIzaSyAebzYs_DR29-HYxS0T368XAwg2Tdrvyck",
+      authDomain: "santex-e3078.firebaseapp.com",
+      databaseURL: "https://santex-e3078.firebaseio.com",
+      storageBucket: "santex-e3078.appspot.com"
     };
     firebase.initializeApp(config)
   }]);

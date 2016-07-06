@@ -3,7 +3,7 @@
     <div class="container">
       <a href="#/works/{{tab.urlText}}" class="worktype-tab" ng-class="{'active': tab.active}" ng-repeat="tab in ctrl.workTypes">
         <div class="tab-icon">
-          <image src="{{tab.thumbSrc}}" alt=""></image>
+          <image ng-src="{{tab.thumbSrc}}" alt=""></image>
         </div>
         <div class="tab-title">{{tab.thumbText}}</div>
       </a>
