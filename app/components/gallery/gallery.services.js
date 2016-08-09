@@ -13,17 +13,31 @@
       return self.photoList;
     };
 
-    function getPhotoListByWorkTypeId(workTypeId) {
-      if (workTypeId) {
-        if (!self.photoList || self.photoList.length) {
-          getData();
-        }
-
-        var result = $filter('filter')(self.photoList, {
-          workTypeId: workTypeId
-        }, true);
+    function getDataAsync() {
+      if (!self.photoList || !self.photoList.length) {
+        return $firebaseArray(firebase
+            .database().ref().child('PhotoList'))
+          .$loaded()
+          .then(function (data) {
+            self.photoList = data;
+            return self.photoList;
+          })
       }
-      return result;
+      else {
+        return new Promise(function (resolve, reject) {
+          resolve(self.photoList);
+        })
+      }
+    }
+
+    function getPhotoListByWorkTypeId(workTypeId) {
+      if (workTypeId >= 0) {
+        return getDataAsync().then(function (data) {
+          return $filter('filter')(self.photoList, {
+            workTypeId: workTypeId
+          }, true);
+        });
+      }
     };
 
     return {

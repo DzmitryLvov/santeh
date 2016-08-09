@@ -17,21 +17,37 @@
       return $firebaseArray(firebase.database().ref().child('PriceItems'))
         .$loaded()
         .then(function (data) {
+          self.priceItems = data;
           return data;
         })
     };
 
     function getPriceItemsByWorkTypeId(workTypeId) {
-      if (workTypeId) {
-        if (!self.priceItems || !self.priceItems.length) {
-          getData();
-        }
+      if (workTypeId > 0) {
+        if (self.priceItems && self.priceItems.length > 0) {
+          return new Promise(function (resolve, reject) {
+            var searchResult = $filter('filter')(self.priceItems, {
+              workTypeId: workTypeId
+            }, true);
 
-        var result = $filter('filter')(self.priceItems, {
-          workTypeId: workTypeId
-        }, true);
+            if (searchResult && searchResult.length > 0) {
+              resolve(searchResult);
+            }
+            else {
+              reject('work type not found');
+            }
+          });
+        }
+        else {
+          return getDataAsync().then(function (data) {
+            var searchResult = $filter('filter')(self.priceItems, {
+              workTypeId: workTypeId
+            }, true);
+
+            return searchResult;
+          })
+        }
       }
-      return result;
     };
 
     return {

@@ -1,8 +1,8 @@
 (function () {
   'use strict';
-  angular.module('myApp').controller('workTypesController', ['workTypesService', '$state', '$stateParams', '$filter', workTypesController]).directive('svgImage', [svgImage]);
+  angular.module('myApp').controller('workTypesController', ['workTypesService', 'priceService', 'galleryService', '$state', '$stateParams', '$filter', workTypesController]).directive('svgImage', [svgImage]);
 
-  function workTypesController(workTypesService, $state, $stateParams, $filter) {
+  function workTypesController(workTypesService, priceService, galleryService, $state, $stateParams, $filter) {
     var vm = this;
 
     vm.workTypes = [];
@@ -16,15 +16,17 @@
             urlText: $stateParams.workTitle
           }, true)[0];
           if (item) {
-            vm.selectItem(item);
+            selectItem(item);
+            populateRelatedData();
           }
         }
         else {
-          vm.selectItem(vm.workTypes[0]);
+          selectItem(vm.workTypes[0]);
+          populateRelatedData();
         }
       });
 
-    vm.selectItem = function (item) {
+    var selectItem = function (item) {
       if (item) {
         if (vm.selectedItem) {
           vm.selectedItem.active = false;
@@ -33,6 +35,18 @@
         vm.selectedItem.active = true;
       }
     };
+
+    var populateRelatedData = function () {
+      vm.selectedItem.priceItems = [];
+      priceService.getPriceItemsByWorkTypeId(vm.selectedItem.id).then(function (data) {
+        vm.selectedItem.priceItems = data;
+      });
+
+      vm.selectedItem.photos = [];
+      galleryService.getPhotoListByWorkTypeId(vm.selectedItem.id).then(function (data) {
+        vm.selectedItem.photos = data;
+      });
+    }
 
     $('.gallery-photos').magnificPopup({
       delegate: 'a',
