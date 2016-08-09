@@ -3,33 +3,34 @@
     <div class="price-list-title">
       <h2>Редактирование прайс листа</h2>
     </div>
-    <section class="price-plans">
-      <div class="col-md-4" ng-repeat="item in ctrl.priceList | limitTo: 3 ">
-        <md-card>
-          <md-card-title>
-            <md-card-title-text>
-              <span class="md-headline">{{item.title}}</span>
-            </md-card-title-text>
-          </md-card-title>
-          <md-card-content>
-            <md-input-container>
-              <label>Заголовок</label>
-              <input ng-model="item.title">
-            </md-input-container>
-            <md-input-container>
-              <label>Цена</label>
-              <input ng-model="item.price">
-            </md-input-container>
-            <md-input-container ng-repeat="option in item.options">
-              <label>Элемент</label>
-              <input ng-model="option">
-            </md-input-container>
-          </md-card-content>
-          <md-card-actions layout="row" layout-align="end center">
-            <md-button ng-click="ctrl.savePriceItem(item)">Сохранить</md-button>
-          </md-card-actions>
-        </md-card>
+    <div class="price-list-container">
+      <div class="container center-block">
+        <div class="price-list-title">
+          <md-button class="button-wide md-raised md-primary" ng-click="ctrl.editPriceItemDialog($event)">Добавить элемент</md-button>
+        </div>
+        <div class="price-list-content">
+          <div class="price-group" ng-repeat="group in ctrl.priceGroups">
+            <div class="heading-text">{{group.title}}</div>
+            <table class="table table-hover table-responsive price-table">
+              <thead>
+                <tr>
+                  <td>Название</td>
+                  <td>Единицы</td>
+                  <td>Цена</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="priceItem in group">
+                  <td class=" col-md-8 ">{{priceItem.name}}</td>
+                  <td class="col-md-2 ">{{priceItem.units}}</td>
+                  <td class="col-md-2 ">{{priceItem.cost}}</td>
+                </tr>
+              </tbody>
+            </table>
+            {{group.notesText}}
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
   </div>
 </div>
