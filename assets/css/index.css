@@ -1,3 +1,9 @@
+@media screen and (min-width: 960px) {
+    html {
+        /* margin-left: calc(99vw - 100%); */
+        /* margin-right: 0; */
+    }
+}
 body {
   min-height: 100%;
   padding: 0;

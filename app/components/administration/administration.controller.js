@@ -1,23 +1,34 @@
 (function () {
   'use strict';
-  angular.module('myApp').controller('administrationController', ['articleService', 'aboutService', 'homeService', 'priceService', 'requestService', '$mdDialog', '$mdMedia', '$rootScope', function (articleService, aboutService, homeService, priceService, requestService, $mdDialog, $mdMedia, $rootScope) {
+  angular.module('myApp').controller('administrationController', [
+    'articleService',
+    'homeService',
+    'priceService',
+    'requestService',
+    'workTypesService',
+    '$mdDialog',
+    '$mdMedia',
+    '$rootScope',
+    administrationController]);
+
+  function administrationController(articleService, homeService, priceService, requestService, workTypesService, $mdDialog, $mdMedia, $rootScope) {
     var vm = this;
     vm.tabs = [
       {
-        title: 'Заявки'
-        , templateUrl: 'app/components/administration/views/requests.administration.view.html'
+        title: 'Заявки',
+        templateUrl: 'app/components/administration/views/requests.administration.view.html'
       }, {
-        title: 'Главная'
-        , templateUrl: 'app/components/administration/views/main.administration.view.html'
+        title: 'Главная',
+        templateUrl: 'app/components/administration/views/main.administration.view.html'
       }, {
-        title: 'О компании'
-        , templateUrl: 'app/components/administration/views/about.administration.view.html'
+        title: 'О компании',
+        templateUrl: 'app/components/administration/views/about.administration.view.html'
       }, {
-        title: 'Статьи'
-        , templateUrl: 'app/components/administration/views/articles.administration.view.html'
+        title: 'Статьи',
+        templateUrl: 'app/components/administration/views/articles.administration.view.html'
       }, {
-        title: 'Прайс лист'
-        , templateUrl: 'app/components/administration/views/price.administration.view.html'
+        title: 'Прайс лист',
+        templateUrl: 'app/components/administration/views/price.administration.view.html'
       }
     ];
     vm.selectedTab = vm.tabs[0];
@@ -38,13 +49,13 @@
     vm.editPostDialog = function (event, post) {
       var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'));
       $mdDialog.show({
-        templateUrl: 'app/components/administration/views/newpost.administration.modal.html'
-        , parent: angular.element(document.body)
-        , targetEvent: event
-        , clickOutsideToClose: false
-        , fullscreen: useFullScreen
-        , controller: 'editPostController as ctrl'
-        , locals: {
+        templateUrl: 'app/components/administration/views/newpost.administration.modal.html',
+        parent: angular.element(document.body),
+        targetEvent: event,
+        clickOutsideToClose: false,
+        fullscreen: useFullScreen,
+        controller: 'editPostController as ctrl',
+        locals: {
           post: post
         }
       }).then(function (answer) {}, function () {});
@@ -63,7 +74,6 @@
     };
     vm.requestList = requestService.requestList;
     vm.deleteRequest = requestService.deleteRequest;
-    vm.aboutText = aboutService.aboutText;
     vm.saveAboutText = function () {
       var confirm = $mdDialog.confirm().title('Сохранить изменения?').textContent('Сохранение').ariaLabel('Lucky day').targetEvent(event).ok('Сохранить').cancel('Отменить');
       $mdDialog.show(confirm).then(function () {
@@ -76,6 +86,39 @@
         $rootScope.logout();
       }, function () {});
     };
+
+    priceService.getDataAsync().then(function (data) {
+      vm.priceGroups = _.groupBy(data, function (item) {
+        return item.workTypeId
+      });
+
+      for (var groupId in vm.priceGroups) {
+        var id = parseInt(groupId);
+
+        vm.priceGroups[groupId].title = ''
+        var workType = workTypesService.getTypeById(id).then(function (data) {
+          if (data && data.length > 0) {
+            vm.priceGroups[groupId].title = data[0].titleText;
+          }
+        });
+      }
+    });
+
+    vm.editPriceItemDialog = function (event, priceItem) {
+      var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'));
+      $mdDialog.show({
+        templateUrl: 'app/components/administration/views/priceitem.administration.modal.html',
+        parent: angular.element(document.body),
+        targetEvent: event,
+        clickOutsideToClose: false,
+        fullscreen: useFullScreen,
+        controller: 'editPriceItemController as ctrl',
+        locals: {
+          priceItem: priceItem
+        }
+      }).then(function (answer) {}, function () {});
+    }
+
     return vm;
-  }]);
+  };
 })();

@@ -17,13 +17,19 @@
                   <td>Название</td>
                   <td>Единицы</td>
                   <td>Цена</td>
+                  <td></td>
                 </tr>
               </thead>
               <tbody>
                 <tr ng-repeat="priceItem in group">
-                  <td class=" col-md-8 ">{{priceItem.name}}</td>
+                  <td class=" col-md-7 ">{{priceItem.name}}</td>
                   <td class="col-md-2 ">{{priceItem.units}}</td>
                   <td class="col-md-2 ">{{priceItem.cost}}</td>
+                  <td class="col-md-1">
+                    <md-button class="md-button" aria-label="More" ng-click="ctrl.editPriceItemDialog($event, priceItem)">
+                       Редактировать
+                    </md-button>
+                  </td>
                 </tr>
               </tbody>
             </table>

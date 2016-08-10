@@ -13,25 +13,25 @@
       <div class="md-dialog-content">
         <md-input-container class="md-block" flex-gt-xs>
           <label>Название</label>
-          <input ng-model="ctrl.post.title">
+          <input ng-model="ctrl.priceItem.name">
         </md-input-container>
         <md-input-container class="md-block" flex-gt-xs>
           <label>Единицы</label>
-          <input ng-model="ctrl.post.previewText">
+          <input ng-model="ctrl.priceItem.units">
         </md-input-container>
         <md-input-container class="md-block" flex-gt-xs>
           <label>Стоимость</label>
-          <input ng-model="ctrl.post.previewText">
+          <input ng-model="ctrl.priceItem.cost">
         </md-input-container>
         <md-input-container class="md-block" flex-gt-xs>
           <label>Категория</label>
-          <input ng-model="ctrl.post.previewText">
+          <input ng-model="ctrl.priceItem.workTypeId">
         </md-input-container>
       </div>
     </md-dialog-content>
     <md-dialog-actions layout="row">
       <span flex></span>
-      <md-button ng-click="ctrl.savePriceItem()">
+      <md-button ng-click="ctrl.saveItem()">
         Сохранить
       </md-button>
       <md-button ng-click="ctrl.cancel()">

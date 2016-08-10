@@ -17,18 +17,12 @@
     }
 
     function getTypeById(id) {
-      if (id) {
-        if (!self.data || !self.data.length) {
-          getData();
-        }
-
-        var result = $filter('filter')(self.data, {
+      return getDataAsync().then(function (data) {
+        return $filter('filter')(self.data, {
           id: id
         }, true);
-      }
-
-      return result;
-    };
+      });
+    }
 
     return {
       getDataAsync: getDataAsync,
