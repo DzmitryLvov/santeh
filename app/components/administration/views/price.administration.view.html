@@ -22,12 +22,15 @@
               </thead>
               <tbody>
                 <tr ng-repeat="priceItem in group">
-                  <td class=" col-md-7 ">{{priceItem.name}}</td>
+                  <td class=" col-md-6 ">{{priceItem.name}}</td>
                   <td class="col-md-2 ">{{priceItem.units}}</td>
                   <td class="col-md-2 ">{{priceItem.cost}}</td>
-                  <td class="col-md-1">
-                    <md-button class="md-button" aria-label="More" ng-click="ctrl.editPriceItemDialog($event, priceItem)">
-                       Редактировать
+                  <td class="col-md-2">
+                    <md-button class="md-icon-button" aria-label="Edit" ng-click="ctrl.editPriceItemDialog($event, priceItem)">
+                      <md-icon md-font-set="md">edit</md-icon>
+                    </md-button>
+                    <md-button class="md-icon-button" aria-label="Delete" ng-click="ctrl.deletePriceItem($event, priceItem)">
+                      <md-icon md-font-set="md">delete</md-icon>
                     </md-button>
                   </td>
                 </tr>

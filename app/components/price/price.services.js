@@ -51,7 +51,7 @@
     };
 
     function savePriceItem(item) {
-      getDataAsync().then(function (data) {
+      return getDataAsync().then(function (data) {
         var existingItemIndex = data.$indexFor(item.$id);
         if (existingItemIndex < 0) {
           data.$add(item);
@@ -60,14 +60,25 @@
           data[existingItemIndex] = item;
           data.$save(existingItemIndex);
         }
-      })
+      });
+    }
+    
+    function deleteItem(item){
+      return getDataAsync().then(function (data) {
+        var existingItemIndex = data.$indexFor(item.$id);
+        if (existingItemIndex > 0) {
+          data[existingItemIndex] = item;
+          data.$remove(existingItemIndex);
+        }
+      });
     }
 
     return {
       getDataAsync: getDataAsync,
       getData: getData,
       getPriceItemsByWorkTypeId: getPriceItemsByWorkTypeId,
-      savePriceItem: savePriceItem
+      savePriceItem: savePriceItem,
+      deleteItem: deleteItem
     }
   }]);
 })();

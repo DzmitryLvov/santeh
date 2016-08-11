@@ -6,8 +6,6 @@
     var self = this;
 
     function getInfo() {
-      console.log('Get main info');
-
       return {
         phone: '+7(123)456-78-90'
         , address: 'Москва, Цветной бульвар д.11 стр.6, офис 406'
