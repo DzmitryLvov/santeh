@@ -13,14 +13,22 @@
       for (var groupId in vm.priceGroups) {
         var id = parseInt(groupId);
 
-        var workType = workTypesService.getTypeById(id)[0];
-        if (workType) {
-          vm.priceGroups[groupId].title = workType.titleText;
-          vm.priceGroups[groupId].notesText = workType.notesText;
+        if (id < 0) {
+          vm.priceGroups[id].title = 'Прочие услуги';
+        }
+        else {
+          workTypesService.getTypeById(id).then(function (data) {
+            if (data && data.length > 0) {
+              var workType = data[0];
+
+              vm.priceGroups[workType.id].title = workType.titleText;
+              vm.priceGroups[workType.id].notesText = workType.notesText;
+            }
+          })
         }
       }
     });
-    
+
     return vm;
   }
 })();
