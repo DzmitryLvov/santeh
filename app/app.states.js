@@ -69,5 +69,11 @@ angular.module('myApp')
         templateUrl: 'app/components/worktypes/views/worktypes.view.html',
         controller: 'workTypesController',
         controllerAs: 'ctrl'
-      });
+      })
+      .state('houseWorks', {
+        url: '/house/{workTitle}',
+        templateUrl: 'app/components/worktypes/views/house.worktypes.view.html',
+        controller: 'workTypesHouseController',
+        controllerAs: 'ctrl'
+      });;
 }]);

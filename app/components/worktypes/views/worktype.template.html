@@ -1,0 +1,37 @@
+<div class="container worktypes-content">
+  <div class="heading-text">
+    {{ctrl.selectedItem.titleText}}
+  </div>
+  <div class="description-text clearfix">
+    <div class="worktype-image pull-left">
+      <a href=""></a>
+      <img src="{{ctrl.selectedItem.imageSrc}}" alt="">
+    </div>
+    <div ng-bind-html="ctrl.selectedItem.description"></div>
+  </div>
+  <div class="heading-text">Стоимость</div>
+  <table class="table table-hover table-responsive price-table">
+    <thead>
+      <tr>
+        <td>Название</td>
+        <td>Единицы</td>
+        <td>Цена</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="priceItem in ctrl.selectedItem.priceItems">
+        <td class="col-md-8">{{priceItem.name}}</td>
+        <td class="col-md-2">{{priceItem.units}}</td>
+        <td class="col-md-2">{{priceItem.cost}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="heading-text">Примеры работ</div>
+  <div class="gallery-photos" layout="row" layout-xs="column" layout-wrap>
+    <div class="image-container" ng-repeat="item in ctrl.selectedItem.photos | limitTo: 3" flex-gt-xs="33">
+      <a href="{{item.src}}">
+        <img ng-src="{{item.src}}" alt="">
+      </a>
+    </div>
+  </div>
+</div>
