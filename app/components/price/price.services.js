@@ -1,17 +1,10 @@
 (function () {
   'use strict';
   var serviceId = 'priceService';
-  angular.module('myApp').factory(serviceId, ['$filter', '$firebaseArray', function priceService($filter, $firebaseArray) {
+  angular.module('myApp').factory(serviceId, ['$q', '$filter', '$firebaseArray', function priceService($q, $filter, $firebaseArray) {
     var self = this;
 
     self.priceItems = [];
-
-    function getData() {
-      var ref = firebase.database().ref().child('PriceItems');
-      self.priceItems = $firebaseArray(ref);
-
-      return self.priceItems;
-    };
 
     function getDataAsync() {
       return $firebaseArray(firebase.database().ref().child('PriceItems'))
@@ -25,18 +18,20 @@
     function getPriceItemsByWorkTypeId(workTypeId) {
       if (workTypeId > 0) {
         if (self.priceItems && self.priceItems.length > 0) {
-          return new Promise(function (resolve, reject) {
-            var searchResult = $filter('filter')(self.priceItems, {
-              workTypeId: workTypeId
-            }, true);
+          var deffered = $q.defer();
 
-            if (searchResult && searchResult.length > 0) {
-              resolve(searchResult);
-            }
-            else {
-              reject('work type not found');
-            }
-          });
+          var searchResult = $filter('filter')(self.priceItems, {
+            workTypeId: workTypeId
+          }, true);
+
+          if (searchResult && searchResult.length > 0) {
+            deffered.resolve(searchResult);
+          }
+          else {
+            deffered.reject('work type not found');
+          }
+          
+          return deffered.promise;
         }
         else {
           return getDataAsync().then(function (data) {
@@ -62,8 +57,8 @@
         }
       });
     }
-    
-    function deleteItem(item){
+
+    function deleteItem(item) {
       return getDataAsync().then(function (data) {
         var existingItemIndex = data.$indexFor(item.$id);
         if (existingItemIndex > 0) {
@@ -75,7 +70,6 @@
 
     return {
       getDataAsync: getDataAsync,
-      getData: getData,
       getPriceItemsByWorkTypeId: getPriceItemsByWorkTypeId,
       savePriceItem: savePriceItem,
       deleteItem: deleteItem

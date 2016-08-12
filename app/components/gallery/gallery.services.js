@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   var serviceId = 'galleryService';
-  angular.module('myApp').factory(serviceId, ['$filter', '$firebaseArray', function galleryService($filter, $firebaseArray) {
+  angular.module('myApp').factory(serviceId, ['$q', '$filter', '$firebaseArray', function galleryService($q, $filter, $firebaseArray) {
     var self = this;
 
     self.photoList = [];
@@ -24,9 +24,9 @@
           })
       }
       else {
-        return new Promise(function (resolve, reject) {
-          resolve(self.photoList);
-        })
+        var deffered = $q.defer();
+        deffered.resolve(self.photoList)
+        return deffered.promise;
       }
     }
 
