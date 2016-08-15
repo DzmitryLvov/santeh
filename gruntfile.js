@@ -29,7 +29,7 @@ module.exports = function (grunt) {
           'node_modules/angular-material/angular-material.min.js',
           'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
           'node_modules/angularfire/dist/angularfire.min.js'],
-        css: 'assets/css/*.css',
+        css: 'app/**/*.css',
         cssComponents: [
           'node_modules/textangular/dist/textAngular.css',
           'node_modules/angular-material/angular-material.css',
