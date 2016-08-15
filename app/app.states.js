@@ -1,8 +1,3 @@
-/**
- * Load states for application
- * more info on UI-Router states can be found at
- * https://github.com/angular-ui/ui-router/wiki
- */
 angular.module('myApp')
   .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider.when('', '/');
@@ -44,8 +39,28 @@ angular.module('myApp')
       })
       .state('administration', {
         url: '/administration',
-        templateUrl: 'app/components/administration/views/administration.view.html',
+        templateUrl: 'app/components/administration/administration.view.html',
         controller: 'administrationController',
+        controllerAs: 'ctrl',
+        data: {
+          authorization: true,
+          redirectTo: 'login'
+        }
+      })
+      .state('administration.price', {
+        url: '/price',
+        templateUrl: 'app/components/administration/priceitems/price.administration.view.html',
+        controller: 'priceItemAdministrationController',
+        controllerAs: 'ctrl',
+        data: {
+          authorization: true,
+          redirectTo: 'login'
+        }
+      })
+      .state('administration.works', {
+        url: '/works',
+        templateUrl: 'app/components/administration/worktypes/worktypes.administration.view.html',
+        controller: 'worktypesAdministrationController',
         controllerAs: 'ctrl',
         data: {
           authorization: true,

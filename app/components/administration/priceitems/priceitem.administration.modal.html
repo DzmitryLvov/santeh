@@ -1,4 +1,4 @@
-<md-dialog class="newpost-modal" aria-label="Добавление услуги" ng-cloak>
+<md-dialog class="modal-base" aria-label="Добавление услуги" ng-cloak>
   <form>
     <md-toolbar>
       <div class="md-toolbar-tools">
@@ -13,19 +13,19 @@
       <div class="md-dialog-content">
         <md-input-container class="md-block" flex-gt-xs>
           <label>Название</label>
-          <input ng-model="ctrl.priceItem.name">
+          <input ng-model="ctrl.selectedPriceItem.name">
         </md-input-container>
         <md-input-container class="md-block" flex-gt-xs>
           <label>Единицы</label>
-          <input ng-model="ctrl.priceItem.units">
+          <input ng-model="ctrl.selectedPriceItem.units">
         </md-input-container>
         <md-input-container class="md-block" flex-gt-xs>
           <label>Стоимость</label>
-          <input ng-model="ctrl.priceItem.cost">
+          <input ng-model="ctrl.selectedPriceItem.cost">
         </md-input-container>
         <md-input-container class="md-block" flex-gt-xs>
-          <md-select placeholder="Тип работ" ng-model="ctrl.priceItem.workTypeId" style="min-width: 200px;">
-            <md-option ng-value="type.id" ng-repeat="type in ctrl.workTypes">{{type.titleText}}</md-option>
+          <md-select placeholder="Тип работ" ng-model="ctrl.selectedPriceItem.workTypeId" style="min-width: 200px;">
+            <md-option ng-value="type.$id" ng-repeat="type in ctrl.workTypes">{{type.titleText}}</md-option>
             <md-option ng-value="-1">Прочие услуги</md-option>
           </md-select>
           <label>Категория</label>
@@ -37,7 +37,7 @@
       <md-button ng-click="ctrl.saveItem()">
         Сохранить
       </md-button>
-      <md-button ng-click="ctrl.cancel();">
+      <md-button ng-click="ctrl.cancel()">
         Закрыть
       </md-button>
     </md-dialog-actions>

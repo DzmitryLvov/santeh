@@ -1,0 +1,62 @@
+<div layout="row">
+  <md-dialog class="modal-base" aria-label="Добавление услуги" ng-cloak>
+    <form>
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <h2>Редактирование</h2>
+          <span flex></span>
+          <md-button class="md-icon-button" ng-click="ctrl.cancel()">
+            <md-icon md-font-set="md">close</md-icon>
+          </md-button>
+        </div>
+      </md-toolbar>
+      <md-dialog-content>
+        <div class="md-dialog-content">
+          <md-input-container class="md-block" flex-gt-xs>
+            <label>Название</label>
+            <input ng-model="ctrl.selectedWorkType.thumbText">
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-xs>
+            <label>Текст ссылки</label>
+            <input ng-model="ctrl.selectedWorkType.urlText">
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-xs>
+            <label>Ссылка на иконку</label>
+            <input ng-model="ctrl.selectedWorkType.thumbSrc">
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-xs>
+            <label>Ссылка на заглавную картинку</label>
+            <input ng-model="ctrl.selectedWorkType.imageSrc">
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-xs>
+            <label>Заголовок</label>
+            <input ng-model="ctrl.selectedWorkType.titleText">
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-xs>
+            <div text-angular ng-model="ctrl.selectedWorkType.description"></div>
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-xs>
+            <label>Примечание</label>
+            <input ng-model="ctrl.selectedWorkType.notesText">
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-xs>
+            <md-select placeholder="Тип работ" ng-model="ctrl.selectedWorkType.categoryId" style="min-width: 200px;">
+              <md-option ng-value="1">Квартиры</md-option>
+              <md-option ng-value="2">Дома</md-option>
+            </md-select>
+            <label>Категория</label>
+          </md-input-container>
+        </div>
+      </md-dialog-content>
+      <md-dialog-actions layout="row">
+        <span flex></span>
+        <md-button ng-click="ctrl.saveItem()">
+          Сохранить
+        </md-button>
+        <md-button ng-click="ctrl.cancel()">
+          Закрыть
+        </md-button>
+      </md-dialog-actions>
+    </form>
+  </md-dialog>
+</div>

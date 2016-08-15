@@ -1,0 +1,17 @@
+<md-button class="button-wide md-raised md-primary" ng-click="ctrl.editWorkTypeDialog($event)">Добавить элемент</md-button>
+<div layout="row" layout-sm="column">
+  <div flex="33">
+    <div class="worktype-tiles-container house">
+      <div class="tile" ng-repeat="basicType in ctrl.houseWorkTypes" ng-click="ctrl.editWorkTypeDialog($event, basicType)">
+        <image ng-src="{{basicType.thumbSrc}}" alt=""></image>
+      </div>
+    </div>
+  </div>
+  <div flex>
+    <div class="worktype-tiles-container">
+      <div class="col-md-3 tile" ng-repeat="basicType in ctrl.baseWorkTypes" ng-click="ctrl.editWorkTypeDialog($event, basicType)">
+        <image ng-src="{{basicType.thumbSrc}}" alt=""></image>
+      </div>
+    </div>
+  </div>
+</div>

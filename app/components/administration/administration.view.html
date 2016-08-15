@@ -7,22 +7,27 @@
     </md-toolbar>
     <md-content>
       <md-list>
-        <md-list-item class="md-3-line administration-menu-item" ng-repeat="tab in ctrl.tabs">
-          <div class="item-text" ng-click="ctrl.selectTab(tab)" ng-class="{'active': tab.active}">
-            {{tab.title}}
-          </div>
+        <md-list-item class="md-3-line administration-menu-item">
+          <a ui-sref="administration.works" class="item-text">
+            Работы
+          </a>
+          <md-divider></md-divider>
+        </md-list-item>
+        <md-list-item class="md-3-line administration-menu-item">
+          <a ui-sref="administration.price" class="item-text">
+            Прайс лист
+          </a>
           <md-divider></md-divider>
         </md-list-item>
         <md-list-item class="md-3-line administration-menu-item">
           <div class="item-text" ng-click="ctrl.logOut()">
             Выход
           </div>
-          <md-divider ng-if="!$last"></md-divider>
         </md-list-item>
       </md-list>
     </md-content>
   </div>
   <div class="col-md-10">
-    <div ng-include="ctrl.selectedTab.templateUrl"></div>
+    <ui-view></ui-view>
   </div>
 </md-content>
