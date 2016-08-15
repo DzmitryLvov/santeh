@@ -1,0 +1,14 @@
+.gallery-container {
+  padding: 0;
+  margin: 8px auto;
+}
+
+.image-container {
+  padding: 15px 15px 0 0;
+}
+
+@media screen and (max-width: 600px) {
+  .image-container {
+    padding: 15px 0 0 0;
+  }
+}

@@ -1,0 +1,11 @@
+.feedback-list-container {}
+
+.feedback-list-container .add-feedback-container {
+  text-align: center;
+  margin: 100px auto;
+}
+
+.newfeedback-modal {
+  max-width: 100%;
+  padding: 0;
+}

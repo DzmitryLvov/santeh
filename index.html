@@ -17,13 +17,15 @@
   <!-- /build -->
 
   <!-- build:css css/all.min.css -->
-  <link type="text/css" rel="stylesheet" href="assets/css/index.css">
-  <link type="text/css" rel="stylesheet" href="assets/css/news.css">
-  <link type="text/css" rel="stylesheet" href="assets/css/price-list.css">
-  <link type="text/css" rel="stylesheet" href="assets/css/feedback.css">
-  <link type="text/css" rel="stylesheet" href="assets/css/gallery.css">
-  <link type="text/css" rel="stylesheet" href="assets/css/worktypes.css">
+  <link type="text/css" rel="stylesheet" href="app/shared/index.css">
+  <link type="text/css" rel="stylesheet" href="app/shared/modal.css">
+  <link type="text/css" rel="stylesheet" href="app/components/post/views/news.css">
+  <link type="text/css" rel="stylesheet" href="app/components/price/views/price-list.css">
+  <link type="text/css" rel="stylesheet" href="app/components/feedback/views/feedback.css">
+  <link type="text/css" rel="stylesheet" href="app/components/gallery/views/gallery.css">
+  <link type="text/css" rel="stylesheet" href="app/components/worktypes/views/worktypes.css">
   <!-- /build -->
+
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
@@ -33,10 +35,12 @@
       <div class="navbar-main navbar-default navbar-static-top">
         <div class="container header-width">
           <div class="navbar navbar-header">
-            <a class="navbar-brand" href="#">
-                Logo
-            </a>
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            <a class="navbar-brand" href="#">Logo</a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
           </div>
           <div class="collapse navbar-collapse navHeaderCollapse">
             <ng-include src="'app/shared/navbar.view.html'"></ng-include>
@@ -122,9 +126,10 @@
 <script src="app/components/post/articles.services.js"></script>
 <script src="app/components/post/articles.controller.js"></script>
 <script src="app/components/post/post.controller.js"></script>
+<script src="app/components/administration/priceitems/price.administration.controller.js"></script>
 <script src="app/components/administration/administration.controller.js"></script>
-<script src="app/components/administration/editpost.administration.controller.js"></script>
-<script src="app/components/administration/editPriceItem.administration.controller.js"></script>
+<script src="app/components/administration/posts/editpost.administration.controller.js"></script>
+<script src="app/components/administration/worktypes/worktypes.administration.controller.js"></script>
 <script src="app/components/request/request.controller.js"></script>
 <script src="app/components/request/request.services.js"></script>
 <script src="app/components/login/login.controller.js"></script>
