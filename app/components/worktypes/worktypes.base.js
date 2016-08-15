@@ -37,12 +37,12 @@
 
     function populateRelatedData() {
       vm.selectedItem.priceItems = [];
-      priceService.getPriceItemsByWorkTypeId(vm.selectedItem.id).then(function (data) {
+      priceService.getPriceItemsByWorkTypeId(vm.selectedItem.$id).then(function (data) {
         vm.selectedItem.priceItems = data;
       });
 
       vm.selectedItem.photos = [];
-      galleryService.getPhotoListByWorkTypeId(vm.selectedItem.id).then(function (data) {
+      galleryService.getPhotoListByWorkTypeId(vm.selectedItem.$id).then(function (data) {
         vm.selectedItem.photos = data;
       });
     }

@@ -15,8 +15,8 @@
 
     function getDataAsync() {
       if (!self.photoList || !self.photoList.length) {
-        return $firebaseArray(firebase
-            .database().ref().child('PhotoList'))
+        return $firebaseArray(
+            firebase.database().ref().child('PhotoList'))
           .$loaded()
           .then(function (data) {
             self.photoList = data;
@@ -31,13 +31,11 @@
     }
 
     function getPhotoListByWorkTypeId(workTypeId) {
-      if (workTypeId >= 0) {
-        return getDataAsync().then(function (data) {
-          return $filter('filter')(self.photoList, {
-            workTypeId: workTypeId
-          }, true);
-        });
-      }
+      return getDataAsync().then(function (data) {
+        return $filter('filter')(self.photoList, {
+          workTypeId: workTypeId
+        }, true);
+      });
     };
 
     return {

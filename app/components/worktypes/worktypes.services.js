@@ -27,15 +27,45 @@
     function getTypeById(id) {
       return getDataAsync().then(function (data) {
         return $filter('filter')(self.data, {
-          id: id
+          $id: id
         }, true);
+      });
+    }
+
+    function saveItem(item) {
+      return getDataAsync().then(function (data) {
+        if (!item.$id) {
+          data.$add(item);
+        }
+        else {
+          var existingItemIndex = data.$indexFor(item.$id);
+          if (existingItemIndex < 0) {
+            data.$add(item);
+          }
+          else {
+            data[existingItemIndex] = item;
+            data.$save(existingItemIndex);
+          }
+        }
+      });
+    }
+
+    function deleteItem(item) {
+      return getDataAsync().then(function (data) {
+        var existingItemIndex = data.$indexFor(item.$id);
+        if (existingItemIndex > 0) {
+          data[existingItemIndex] = item;
+          data.$remove(existingItemIndex);
+        }
       });
     }
 
     return {
       getDataAsync: getDataAsync,
       getDataByCategoryId: getDataByCategoryId,
-      getTypeById: getTypeById
+      getTypeById: getTypeById,
+      saveItem: saveItem,
+      deleteItem: deleteItem
     };
   }]);
 })();

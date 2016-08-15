@@ -16,44 +16,47 @@
     };
 
     function getPriceItemsByWorkTypeId(workTypeId) {
-      if (workTypeId > 0) {
-        if (self.priceItems && self.priceItems.length > 0) {
-          var deffered = $q.defer();
+      if (self.priceItems && self.priceItems.length > 0) {
+        var deffered = $q.defer();
 
+        var searchResult = $filter('filter')(self.priceItems, {
+          workTypeId: workTypeId
+        }, true);
+
+        if (searchResult && searchResult.length > 0) {
+          deffered.resolve(searchResult);
+        }
+        else {
+          deffered.reject('work type not found');
+        }
+
+        return deffered.promise;
+      }
+      else {
+        return getDataAsync().then(function (data) {
           var searchResult = $filter('filter')(self.priceItems, {
             workTypeId: workTypeId
           }, true);
 
-          if (searchResult && searchResult.length > 0) {
-            deffered.resolve(searchResult);
-          }
-          else {
-            deffered.reject('work type not found');
-          }
-          
-          return deffered.promise;
-        }
-        else {
-          return getDataAsync().then(function (data) {
-            var searchResult = $filter('filter')(self.priceItems, {
-              workTypeId: workTypeId
-            }, true);
-
-            return searchResult;
-          })
-        }
+          return searchResult;
+        })
       }
     };
 
     function savePriceItem(item) {
       return getDataAsync().then(function (data) {
-        var existingItemIndex = data.$indexFor(item.$id);
-        if (existingItemIndex < 0) {
+        if (!item.$id) {
           data.$add(item);
         }
         else {
-          data[existingItemIndex] = item;
-          data.$save(existingItemIndex);
+          var existingItemIndex = data.$indexFor(item.$id);
+          if (existingItemIndex < 0) {
+            data.$add(item);
+          }
+          else {
+            data[existingItemIndex] = item;
+            data.$save(existingItemIndex);
+          }
         }
       });
     }

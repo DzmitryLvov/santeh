@@ -11,18 +11,16 @@
       });
 
       for (var groupId in vm.priceGroups) {
-        var id = parseInt(groupId);
-
-        if (id < 0) {
-          vm.priceGroups[id].title = 'Прочие услуги';
+        if (groupId == '-1') {
+          vm.priceGroups[groupId].title = 'Прочие услуги';
         }
         else {
-          workTypesService.getTypeById(id).then(function (data) {
+          workTypesService.getTypeById(groupId).then(function (data) {
             if (data && data.length > 0) {
               var workType = data[0];
 
-              vm.priceGroups[workType.id].title = workType.titleText;
-              vm.priceGroups[workType.id].notesText = workType.notesText;
+              vm.priceGroups[workType.$id].title = workType.titleText;
+              vm.priceGroups[workType.$id].notesText = workType.notesText;
             }
           })
         }
