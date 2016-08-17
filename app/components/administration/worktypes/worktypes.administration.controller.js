@@ -6,6 +6,7 @@
 
     vm.workTypes = [];
     vm.baseWorkTypes = [];
+    vm.houseWorkTypes = [];
 
     var loadWorkTypes = function () {
       workTypesService.getDataAsync().then(function (data) {

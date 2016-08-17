@@ -38,9 +38,40 @@
       });
     };
 
+    function saveItem(item) {
+      return getDataAsync().then(function (data) {
+        if (!item.$id) {
+          data.$add(item);
+        }
+        else {
+          var existingItemIndex = data.$indexFor(item.$id);
+          if (existingItemIndex < 0) {
+            data.$add(item);
+          }
+          else {
+            data[existingItemIndex] = item;
+            data.$save(existingItemIndex);
+          }
+        }
+      });
+    }
+
+    function deleteItem(item) {
+      return getDataAsync().then(function (data) {
+        var existingItemIndex = data.$indexFor(item.$id);
+        if (existingItemIndex > 0) {
+          data[existingItemIndex] = item;
+          data.$remove(existingItemIndex);
+        }
+      });
+    }
+
     return {
       getData: getData,
-      getPhotoListByWorkTypeId: getPhotoListByWorkTypeId
+      getDataAsync: getDataAsync,
+      getPhotoListByWorkTypeId: getPhotoListByWorkTypeId,
+      saveItem: saveItem,
+      deleteItem: deleteItem
     };
   }]);
 })();

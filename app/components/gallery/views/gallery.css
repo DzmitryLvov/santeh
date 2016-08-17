@@ -12,3 +12,23 @@
     padding: 15px 0 0 0;
   }
 }
+
+.gallery-container.administration .image-container .image {
+  background: #000;
+  position: relative;
+}
+
+.gallery-container.administration .image-container:hover img {
+  transition: .4s all ease;
+  opacity: 0.5;
+}
+
+.gallery-container.administration .image-container:hover .image:before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font: 56px FontAwesome;
+  content: "\f013";
+  color: #fff;
+}

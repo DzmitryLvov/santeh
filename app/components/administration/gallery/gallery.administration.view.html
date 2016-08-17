@@ -1,0 +1,13 @@
+<div class="gallery-container administration container centered">
+    <div class="price-list-title">
+      <md-button class="button-wide md-raised md-primary" ng-click="ctrl.editPhotoDialog($event)">Добавить фото</md-button>
+    </div>
+ 
+  <div layout="row" layout-xs="column" layout-wrap>
+    <div class="image-container" ng-repeat="item in ctrl.gallery" flex-gt-xs="33">
+      <div class="image">
+        <img ng-src='{{item.src}}' alt="" ng-click="ctrl.editPhotoDialog($event, item)">
+      </div>
+    </div>
+  </div>
+</div>

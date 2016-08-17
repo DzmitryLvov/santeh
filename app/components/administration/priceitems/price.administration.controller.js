@@ -31,7 +31,6 @@
           }
         }
       });
-
     }
 
     vm.editPriceItemDialog = function (event, priceItem) {
@@ -105,10 +104,6 @@
           $mdDialog.hide();
         });
     }
-
-    workTypesService.getDataAsync().then(function (data) {
-      vm.workTypes = data;
-    });
 
     loadWorkTypes();
 
