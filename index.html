@@ -14,6 +14,7 @@
   <link type="text/css" rel="stylesheet" href="node_modules/angular-material/angular-material.css">
   <link type="text/css" rel="stylesheet" href="node_modules/magnific-popup/dist/magnific-popup.css">
   <link type="text/css" rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+  <link type="text/css" rel="stylesheet" href="app/shared/fonts/stylesheet.css">
   <!-- /build -->
 
   <!-- build:css css/all.min.css -->
@@ -32,7 +33,7 @@
 <body>
   <div class="main-container" ng-controller="homeController as ctrl">
     <div class="header">
-      <div class="navbar-main navbar-default navbar-static-top">
+      <div class="navbar-default">
         <div class="container header-width">
           <div class="navbar navbar-header">
             <a class="navbar-brand" href="#">Logo</a>
@@ -44,32 +45,25 @@
           </div>
           <div class="collapse navbar-collapse navHeaderCollapse">
             <ng-include src="'app/shared/navbar.view.html'"></ng-include>
-            <form class="navbar-form navbar-right" role="search">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Поиск по сайту"> <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">
-                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                </span>
-              </div>
-            </form>
           </div>
         </div>
       </div>
     </div>
-    <div class="container-fluid address-panel ">
+    <div class="container-fluid address-panel">
       <div class="container stripe-adress">
-        <div class="col-md-2 logo"> <a href="#">Logo</a> </div>
-        <div class="col-md-8 adress">
-          <div class="col-md-6 col-xs-6">
-            <p>{{ctrl.info.address}}</p>
-          </div>
-          <div class="col-md-6">
-            <p>{{ctrl.info.phone}}
-              <br>{{ctrl.info.schedule}}</p>
+        <div class="col-md-2 col-sm-6 logo">
+          <a ui-sref="home" href="#">TEPLOHOUSE</a>
+        </div>
+        <div class="col-md-8 col-sm-6 adress">
+          <div class="phone pull-right">
+            <p>+375(29)844-40-07</p>
+            <p>+375(29)844-40-07</p>
           </div>
         </div>
         <a href="#/price" ui-sref="price">
-          <div class="col-md-2 request-button"> <span>Оставить заявку</span> </div>
+          <div class="col-md-2 request-button">
+            <span>Оставить заявку</span>
+          </div>
         </a>
       </div>
     </div>
@@ -130,6 +124,7 @@
 <script src="app/components/administration/administration.controller.js"></script>
 <script src="app/components/administration/posts/editpost.administration.controller.js"></script>
 <script src="app/components/administration/worktypes/worktypes.administration.controller.js"></script>
+<script src="app/components/administration/gallery/gallery.administration.controller.js"></script>
 <script src="app/components/request/request.controller.js"></script>
 <script src="app/components/request/request.services.js"></script>
 <script src="app/components/login/login.controller.js"></script>

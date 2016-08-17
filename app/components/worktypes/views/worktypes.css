@@ -30,7 +30,7 @@
 }
 
 .worktype-tab.active {
-  background: #fff;
+  background: #fafafa;
   box-shadow: 0px 0px 12px 0px rgba(69, 102, 116, 0.2);
 }
 
@@ -65,11 +65,22 @@
   margin-top: 20px;
 }
 
-.worktype-tiles-container .tile {
-  text-align: center;
-  padding-bottom: 25px;
+.worktype-tiles-container .tile-container {
+  padding-bottom: 40px;
+  display: block;
 }
 
-.worktype-tiles-container .tile image {}
+.worktype-tiles-container .tile-container .title image {}
 
-.worktype-tiles-container .tile .title {}
+.worktype-tiles-container .tile-container .title {
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}
+
+.tile-header {
+  width: 100%;
+  text-align: center;
+  margin: 35px 0;
+  color: #555;
+}

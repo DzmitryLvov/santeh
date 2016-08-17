@@ -1,33 +1,75 @@
 <div class="hero-header">
-  <img src="assets/img/bg.jpg" alt="" class="hero-image">
+  <img src="assets/img/bg.jpg" alt="" class="hero-image hidden-xs">
   <div class="container benefits-container">
     <div class="benefits row">
-      <div class="col-md-3 header">
+      <div class="header col-md-3 col-sm-12">
         <div class="header-wrapper">
-          <h2>Почему выбирают нас</h2>
+          <div class="title">
+            <h2>Почему выбирают нас</h2>
+          </div>
         </div>
-        <div class="triangle">&nbsp;</div>
+        <div class="triangle">
+          <div></div>
+        </div>
       </div>
-      <div class="col-md-9 benefits-list">
+      <div class="col-md-12 benefits-list">
         <div class="row">
-          <div class="col-md-3">
-            <h3>Бесплатный выезд специалиста на осмотр</h3>
-            <p>Мы не берем оплату за консультации, расчеты и оценку объема работ.</p>
+          <div class="col-md-3 col-sm-6 col-xs-12 benefit">
+            <h3>Бесплатный осмотр специалистом</h3>
+            <span>Мы не берем оплату за консультации, расчеты и оценку объема работ.</span>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 col-sm-6 col-xs-12 benefit">
             <h3>Приемлемые <br class="hidden-xs hidden-sm">цены</h3>
-            <p>И не только. Предусмотрена гибкая система скидок.</p>
+            <span>И не только. Предусмотрена гибкая система скидок.</span>
           </div>
-          <div class="col-md-3">
-            <h3>Любой район. Москва и область</h3>
-            <p>Выезжаем работать в любую точку города и области благодаря большому парку собственных автомобилей.</p>
+          <div class="col-md-3 col-sm-6 col-xs-12 benefit">
+            <h3>Любой район. Могилев и область</h3>
+            <span>Выезжаем работать в любую точку города и области.</span>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 col-sm-6 col-xs-12 benefit">
             <h3>Работаем без выходных</h3>
-            <p>Поэтому вы можете вызвать мастера в действительно удобное для вас время.</p>
+            <span>Поэтому вы можете вызвать мастера в действительно удобное для вас время.</span>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="tile-header page-header">
+    <h1>Виды работ</h1>
+  </div>
+  <div layout="row" layout-sm="column">
+    <div class="col-md-3">
+      <div class="worktype-tiles-container house">
+        <div class="tile-container" ng-repeat="houseType in ctrl.houseWorkTypes">
+          <a href="#/house/{{houseType.urlText}}" ui-sref="houseWorks({workTitle: houseType.urlText})" class="tile">
+            <image ng-src="{{houseType.thumbSrc}}" alt=""></image>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="worktype-tiles-container">
+        <div class="col-md-3 tile-container" ng-repeat="basicType in ctrl.baseWorkTypes">
+          <a href="title" href="#/works/{{basicType.urlText}}" ui-sref="works({workTitle: basicType.urlText})">
+            <image ng-src="{{basicType.thumbSrc}}" alt=""></image>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="tile-header page-header">
+    <h1>Почему выбирают нас</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-9">
+      <p>Текст</p>
+    </div>
+    <div class="col-md-3">
+      <img src="{{ctrl.info.aboutPhotoUrl}}" alt="картинка">
     </div>
   </div>
 </div>

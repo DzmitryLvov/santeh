@@ -67,6 +67,16 @@ angular.module('myApp')
           redirectTo: 'login'
         }
       })
+      .state('administration.photo', {
+        url: '/photos',
+        templateUrl: 'app/components/administration/gallery/gallery.administration.view.html',
+        controller: 'galleryAdministrationController',
+        controllerAs: 'ctrl',
+        data: {
+          authorization: true,
+          redirectTo: 'login'
+        }
+      })
       .state('feedback', {
         url: '/feedback',
         templateUrl: 'app/components/feedback/views/feedback.view.html',

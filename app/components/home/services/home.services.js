@@ -2,24 +2,26 @@
   'use strict';
 
   angular.module('myApp')
-    .service('homeService', [function homeService() {
-    var self = this;
+    .service('homeService', ['$firebaseObject', function homeService($firebaseObject) {
+      var self = this;
 
-    function getInfo() {
-      return {
-        phone: '+7(123)456-78-90'
-        , address: 'Москва, Цветной бульвар д.11 стр.6, офис 406'
-        , schedule: 'Пн-Вс с 9:00 до 21:00'
+      function getInfoAsync() {
+        return $firebaseObject(firebase
+            .database().ref().child('About'))
+          .$loaded()
+          .then(function (data) {
+            self.data = data;
+            return self.data;
+          });
       }
-    }
 
-    function saveInfo(info) {
+      function saveInfo(info) {
 
-    }
+      }
 
-    return {
-      getInfo: getInfo
-      , saveInfo: saveInfo
-    }
+      return {
+        getInfoAsync: getInfoAsync,
+        saveInfo: saveInfo
+      }
   }]);
 })();

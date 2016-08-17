@@ -1,3 +1,11 @@
 .modal-base{
   width: 800px;
 }
+
+.modal-gallery{
+  width: 500px;
+}
+
+.modal-gallery img{
+  width: 100%;
+}
