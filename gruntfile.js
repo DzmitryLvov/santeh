@@ -105,6 +105,11 @@ module.exports = function (grunt) {
           cwd: 'node_modules/bootstrap/dist/fonts/',
           src: ['**'],
           dest: 'build/fonts'
+        }, {
+          expand: true,
+          cwd: 'fonts/',
+          src: ['**'],
+          dest: 'build/fonts'
         }]
       },
       bootstrap: {

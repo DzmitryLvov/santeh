@@ -44,7 +44,7 @@
   line-height: 1.428571429;
   color: #444;
   line-height: 1.4em;
-  border-bottom: 2px solid #FFE401;
+  border-bottom: 2px solid #bbdddd;
   margin: 10px 0 25px;
 }
 
@@ -68,6 +68,7 @@
 .worktype-tiles-container .tile-container {
   padding-bottom: 40px;
   display: block;
+  text-align: center;
 }
 
 .worktype-tiles-container .tile-container .title image {}

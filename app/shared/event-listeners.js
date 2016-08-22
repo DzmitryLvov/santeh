@@ -1,29 +1,30 @@
 $(document)
   .ready(function () {
-    $('a.on-top').click(function (e) {
-      $('html, body').animate({
-        scrollTop: 0
-      }, 200);
-      e.preventDefault();
-    });
+    var triggerBttn = document.getElementById('trigger-overlay'),
+      overlay = document.querySelector('div.overlay'),
+      closeBttn = overlay.querySelector('button.overlay-close');
 
-    $('a.bktop').click(function (e) {
-      $('html, body').animate({
-        scrollTop: 0
-      }, '1000');
-      e.preventDefault();
-    });
+    function toggleOverlay() {
+      if ($(overlay).hasClass('open')) {
+        $(overlay).removeClass('open');
+        $(overlay).addClass('close');
+        var onEndTransitionFn = function (ev) {
 
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > 100) {
-        $('.bktop').fadeIn('2000');
-      } else {
-        $('.bktop').fadeOut('500');
+          if (ev.propertyName !== 'visibility') return;
+          this.removeEventListener('transitionend', onEndTransitionFn);
+
+          $(overlay).removeClass('close');
+        };
+
+        overlay.addEventListener('transitionend', onEndTransitionFn);
       }
-    });
-  })
-  .on('click', '.navbar-collapse.in', function (e) {
-    if ($(e.target).is('a')) {
-      $(this).collapse('hide');
+      else if (!$(overlay).hasClass('close')) {
+        $(overlay).addClass('open');
+      }
     }
+
+    $('div.overlay a').click(toggleOverlay);
+  
+    triggerBttn.addEventListener('click', toggleOverlay);
+    closeBttn.addEventListener('click', toggleOverlay);
   });

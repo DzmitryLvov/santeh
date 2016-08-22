@@ -1,6 +1,7 @@
 <div class="hero-header">
   <img src="assets/img/bg.jpg" alt="" class="hero-image hidden-xs">
-  <div class="container benefits-container">
+  <div class="container benefits-container md-whiteframe-9dp">
+    <!--h1 class="hero-text">Сантехнические работы в Могилеве</h1-->
     <div class="benefits row">
       <div class="header col-md-3 col-sm-12">
         <div class="header-wrapper">
@@ -39,19 +40,19 @@
   <div class="tile-header page-header">
     <h1>Виды работ</h1>
   </div>
-  <div layout="row" layout-sm="column">
-    <div class="col-md-3">
+  <div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
       <div class="worktype-tiles-container house">
-        <div class="tile-container" ng-repeat="houseType in ctrl.houseWorkTypes">
+        <div class="col-xs-4 col-sm-4 col-md-12 tile-container" ng-repeat="houseType in ctrl.houseWorkTypes">
           <a href="#/house/{{houseType.urlText}}" ui-sref="houseWorks({workTitle: houseType.urlText})" class="tile">
             <image ng-src="{{houseType.thumbSrc}}" alt=""></image>
           </a>
         </div>
       </div>
     </div>
-    <div class="col-md-9">
+    <div class="col-xs-12 col-sm-12 col-md-9">
       <div class="worktype-tiles-container">
-        <div class="col-md-3 tile-container" ng-repeat="basicType in ctrl.baseWorkTypes">
+        <div class="col-xs-4 col-sm-4 col-md-3 tile-container" ng-repeat="basicType in ctrl.baseWorkTypes">
           <a href="title" href="#/works/{{basicType.urlText}}" ui-sref="works({workTitle: basicType.urlText})">
             <image ng-src="{{basicType.thumbSrc}}" alt=""></image>
           </a>
@@ -66,10 +67,19 @@
   </div>
   <div class="row">
     <div class="col-md-9">
-      <p>Текст</p>
+      <p>Потому что у нас Саня и Вовка</p>
     </div>
     <div class="col-md-3">
       <img src="{{ctrl.info.aboutPhotoUrl}}" alt="картинка">
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="tile-header page-header">
+    <h1>Фото работ</h1>
+  </div>
+  <div class="main-gallery">
+    <div class="photo col-md-3" style="background-image: url('{{photo.src}}'" ng-repeat="photo in ctrl.gallery | limitTo: 12">
     </div>
   </div>
 </div>
