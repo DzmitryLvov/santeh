@@ -78,8 +78,13 @@
   <div class="tile-header page-header">
     <h1>Фото работ</h1>
   </div>
-  <div class="main-gallery">
-    <a class="photo col-md-3" href='{{photo.src}}' style="background-image: url('{{photo.src}}'" ng-repeat="photo in ctrl.gallery | limitTo: 12">
+  <div class="main-gallery clearfix">
+    <a class="photo col-xs-6 col-sm-4 col-md-3" href='{{photo.src}}' style="background-image: url('{{photo.src}}'" ng-repeat="photo in ctrl.gallery | limitTo: 12">
+    </a>
+  </div>
+  <div class="main-gallery-button-container">
+    <a href="#/gallery" ui-sref="gallery" class="gallery-button">
+        Смотреть все фото
     </a>
   </div>
 </div>
