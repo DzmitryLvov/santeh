@@ -14,7 +14,7 @@
   function administrationController(articleService, homeService, priceService, requestService, workTypesService, $mdDialog, $mdMedia, $rootScope) {
     var vm = this;
 
-    vm.mainInfo = homeService.getInfo();
+    vm.mainInfo = homeService.getInfoAsync();
     vm.saveMainInfo = function (event) {
       var confirm = $mdDialog
         .confirm()

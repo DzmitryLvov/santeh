@@ -31,6 +31,16 @@
     var loadGallery = function () {
       galleryService.getDataAsync().then(function (data) {
         vm.gallery = data;
+
+        $('.main-gallery').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          gallery: {
+            enabled: true,
+            arrowMarkup: '',
+            tCounter: '<span class="mfp-counter">%curr% из %total%</span>'
+          }
+        });
       });
     }
 
