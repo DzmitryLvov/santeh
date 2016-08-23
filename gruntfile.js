@@ -33,7 +33,8 @@ module.exports = function (grunt) {
         cssComponents: [
           'node_modules/textangular/dist/textAngular.css',
           'node_modules/angular-material/angular-material.css',
-          'node_modules/magnific-popup/dist/magnific-popup.css']
+          'node_modules/magnific-popup/dist/magnific-popup.css',
+          'node_modules/font-awesome/css/font-awesome.min.css']
       },
       dest: {
         bundle: 'dist/bundle.min.js',
@@ -102,7 +103,7 @@ module.exports = function (grunt) {
       fonts: {
         files: [{
           expand: true,
-          cwd: 'node_modules/bootstrap/dist/fonts/',
+          cwd: 'node_modules/font-awesome/fonts/',
           src: ['**'],
           dest: 'build/fonts'
         }, {
