@@ -1,11 +1,17 @@
-.modal-base{
+.modal-base {
   width: 800px;
 }
 
-.modal-gallery{
+@media screen and (max-width:787px) {
+  .modal-base {
+    width: auto;
+  }
+}
+
+.modal-gallery {
   width: 500px;
 }
 
-.modal-gallery img{
+.modal-gallery img {
   width: 100%;
 }

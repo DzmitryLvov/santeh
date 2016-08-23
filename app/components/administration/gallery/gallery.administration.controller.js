@@ -6,7 +6,13 @@
       'workTypesService',
       '$mdDialog',
       '$mdMedia',
-      galleryAdministrationController]);
+      galleryAdministrationController])
+    .controller('photoEditorController', [
+      '$mdDialog',
+      'galleryService',
+      'workTypesService',
+      'photoItem',
+      photoEditorController])
 
   function galleryAdministrationController(galleryService, workTypesService, $mdDialog, $mdMedia) {
     var vm = this;
@@ -28,13 +34,13 @@
         targetEvent: event,
         clickOutsideToClose: false,
         fullscreen: useFullScreen,
-        controller: photoEditorController,
+        controller: 'photoEditorController',
         controllerAs: 'ctrl',
         locals: {
-          $mdDialog: $mdDialog,
-          galleryService: galleryService,
-          workTypesService: workTypesService,
-          photoItem: photo
+          '$mdDialog': $mdDialog,
+          'galleryService': galleryService,
+          'workTypesService': workTypesService,
+          'photoItem': photo
         }
       }).then(function (answer) {
         loadGallery();

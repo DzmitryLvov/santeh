@@ -101,3 +101,8 @@
 .news-list-container .post .post-content .preview-text {
   display: block;
 }
+
+.news-list-container .post-link:hover{
+  text-decoration: none;
+}
+

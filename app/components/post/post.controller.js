@@ -4,13 +4,16 @@
 
   function postController(articleService, $state, $stateParams) {
     var vm = this;
-    var searchResult = articleService.getPost($stateParams.postId);
-    if (searchResult && searchResult.length) {
-      vm.post = searchResult[0];
-    }
-    else {
-      $state.go('404');
-    }
+
+    articleService.getPost($stateParams.urlText).then(function (data) {
+      if (data && data.length) {
+        vm.post = data[0];
+      }
+      else {
+        $state.go('404');
+      }
+    })
+
     return vm;
   }
 })();

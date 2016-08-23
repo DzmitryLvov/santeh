@@ -1,5 +1,17 @@
 (function () {
-  angular.module('myApp').controller('worktypesAdministrationController', ['$filter', '$mdMedia', '$mdDialog', 'workTypesService', worktypesAdministrationController]);
+  angular.module('myApp')
+    .controller('worktypesAdministrationController', [
+      '$filter',
+      '$mdMedia',
+      '$mdDialog',
+      'workTypesService',
+      worktypesAdministrationController])
+    .controller('workTypeEditorController', [
+      '$mdDialog',
+      'workTypesService',
+      'workType',
+      workTypeEditorController
+  ]);
 
   function worktypesAdministrationController($filter, $mdMedia, $mdDialog, workTypesService) {
     var vm = this;
@@ -34,9 +46,9 @@
         controller: workTypeEditorController,
         controllerAs: 'ctrl',
         locals: {
-          $mdDialog: $mdDialog,
-          workTypesService: workTypesService,
-          workType: item
+          '$mdDialog': $mdDialog,
+          'workTypesService': workTypesService,
+          'workType': item
         }
       }).then(function (answer) {
         loadWorkTypes();

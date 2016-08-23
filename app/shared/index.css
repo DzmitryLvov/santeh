@@ -55,18 +55,23 @@ img {
 }
 
 .address-container a.request-button {
-  background: #d9eaea;
+  background: #6db5d2;
   margin: 15px 0;
   font-size: 21px;
   word-wrap: break-word;
-  color: #4B666E;
-  padding: 16px 10px;
+  color: #fff;
+  padding: 13px 25px;
   line-height: 1.3;
   text-transform: capitalize;
   vertical-align: top;
   display: inline-block;
   text-decoration: none;
   box-sizing: border-box;
+  transition: all .4s ease;
+}
+
+.address-container a.request-button:hover {
+  background: #84cdea;
 }
 
 .address-panel {
@@ -216,7 +221,7 @@ img {
 .footer-container {
   display: inline-block;
   width: 100%;
-  background: #335555;
+  background: #6db5d2;
   z-index: 100;
 }
 
@@ -516,7 +521,7 @@ md-card img {
   .overlay ul li {
     display: block;
     height: 20%;
-    height: calc(100% / 4);
+    height: calc(100% / 5);
     min-height: 54px;
     backface-visibility: hidden;
   }

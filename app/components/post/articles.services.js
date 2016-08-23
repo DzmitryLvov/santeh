@@ -3,7 +3,7 @@
 
   var serviceId = 'articleService';
 
-  angular.module('myApp').factory(serviceId, ['$filter', '$firebaseArray', function articleService($filter, $firebaseArray) {
+  angular.module('myApp').factory(serviceId, ['$q', '$filter', '$firebaseArray', function articleService($q, $filter, $firebaseArray) {
     var self = this;
 
     var options = {
@@ -15,73 +15,71 @@
 
     self.preparedData = [];
 
-    function getArticles() {
-      var ref = firebase.database().ref().child('Articles');
-      self.preparedData = $firebaseArray(ref);
-      self.preparedData.every(formatDate);
+    function getDataAsync() {
+      if (!self.photoList || !self.photoList.length) {
+        return $firebaseArray(
+            firebase.database().ref().child('Articles'))
+          .$loaded()
+          .then(function (data) {
+            self.photoList = data;
+            return self.photoList;
+          })
+      }
+      else {
+        var deffered = $q.defer();
+        deffered.resolve(self.photoList)
+        return deffered.promise;
+      }
+    }
 
-      return self.preparedData;
+    function getPost(urlText) {
+      return getDataAsync().then(function (data) {
+        return $filter('filter')(self.photoList, {
+          urlText: urlText
+        }, true);
+      });
     };
+
+    function saveItem(item) {
+      return getDataAsync().then(function (data) {
+        if (!item.$id) {
+          item.date = Date.today().toLocaleDateString("ru", options);
+          data.$add(item);
+        }
+        else {
+          var existingItemIndex = data.$indexFor(item.$id);
+          if (existingItemIndex < 0) {
+            item.date = Date.today().toLocaleDateString("ru", options);
+            data.$add(item);
+          }
+          else {
+            data[existingItemIndex] = item;
+            data.$save(existingItemIndex);
+          }
+        }
+      });
+    }
+
+    function deleteItem(item) {
+      return getDataAsync().then(function (data) {
+        var existingItemIndex = data.$indexFor(item.$id);
+        if (existingItemIndex > 0) {
+          data[existingItemIndex] = item;
+          data.$remove(existingItemIndex);
+        }
+      });
+    }
 
     function formatDate(element, index, array) {
       element.formattedDate = element.date.toLocaleDateString("ru", options);
       return true;
     };
 
-    function getPost(postId) {
-      if (!self.preparedData || !self.preparedData.length) {
-        getArticles();
-      }
-
-      var id = parseInt(postId);
-
-      if (id) {
-        var result = $filter('filter')(self.preparedData, {
-          id: id
-        }, true);
-      }
-
-      return result;
-    };
-
-    function savePost(post) {
-      if (post) {
-        var existingPost = getPost(post.id);
-        if (!existingPost) {
-          post.date = Date.today();
-          console.log(post.date);
-          post.formattedDate = post.date.toLocaleDateString("ru", options);
-
-          self.preparedData.push(post)
-        }
-        else {
-          existingPost.title = post.title;
-          existingPost.previewText = post.previewText;
-          existingPost.text = post.text;
-          existingPost.date = post.date;
-        }
-      }
-    };
-
-    function deletePost(postId) {
-      var post = getPost(postId);
-
-      if (post) {
-        var index = self.preparedData.map(function (element) {
-          return element.id;
-        }).indexOf(postId);
-
-        if (index > -1) {
-          self.preparedData.splice(index, 1);
-        }
-      }
-    };
-
     return {
-      getArticles: getArticles,
+      getDataAsync: getDataAsync,
       getPost: getPost,
-      savePost: savePost,
-      deletePost: deletePost
+      saveItem: saveItem,
+      deleteItem: deleteItem
     }
   }]);
 })();

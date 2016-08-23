@@ -32,7 +32,7 @@ angular.module('myApp')
         controllerAs: 'ctrl'
       })
       .state('post', {
-        url: '/post/:postId',
+        url: '/post/:urlText',
         templateUrl: 'app/components/post/views/post.view.html',
         controller: 'postController',
         controllerAs: 'ctrl'
@@ -77,6 +77,16 @@ angular.module('myApp')
           redirectTo: 'login'
         }
       })
+      .state('administration.articles', {
+        url: '/articles',
+        templateUrl: 'app/components/administration/articles/articles.administration.view.html',
+        controller: 'articlesAdministrationController',
+        controllerAs: 'ctrl',
+        data: {
+          authorization: true,
+          redirectTo: 'login'
+        }
+      })
       .state('feedback', {
         url: '/feedback',
         templateUrl: 'app/components/feedback/views/feedback.view.html',
@@ -100,5 +110,5 @@ angular.module('myApp')
         templateUrl: 'app/components/worktypes/views/house.worktypes.view.html',
         controller: 'workTypesHouseController',
         controllerAs: 'ctrl'
-      });;
+      });
 }]);

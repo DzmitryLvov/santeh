@@ -14,20 +14,6 @@
   function administrationController(articleService, homeService, priceService, requestService, workTypesService, $mdDialog, $mdMedia, $rootScope) {
     var vm = this;
 
-    vm.mainInfo = homeService.getInfoAsync();
-    vm.saveMainInfo = function (event) {
-      var confirm = $mdDialog
-        .confirm()
-        .title('Сохранить изменения?')
-        .targetEvent(event)
-        .ok('Сохранить')
-        .cancel('Отменить');
-
-      $mdDialog.show(confirm).then(function () {
-        homeService.saveInfo(vm.mainInfo);
-      }, function () {});
-    };
-
     vm.postList = articleService.preparedData;
     vm.editPostDialog = function (event, post) {
       var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'));

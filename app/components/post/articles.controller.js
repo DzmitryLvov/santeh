@@ -1,17 +1,14 @@
 (function () {
   'use strict';
-  angular.module('myApp').controller('articlesController', ['articleService', articlesController]).directive('articlesPreview', articlesPreview);
+  angular.module('myApp').controller('articlesController', ['articleService', articlesController]);
 
   function articlesController(articleService) {
     var vm = this;
-    vm.postList = articleService.getArticles();
-    return vm;
-  };
 
-  function articlesPreview() {
-    return {
-      restrict: 'E'
-      , templateUrl: 'app/components/post/views/articles-preview.view.html'
-    };
+    articleService.getDataAsync().then(function (data) {
+      vm.postList = data;
+    })
+
+    return vm;
   };
 })();
