@@ -7,7 +7,6 @@
 }
 
 .worktype-tab {
-  /* display: inline-block; */
   vertical-align: middle;
   text-align: center;
   padding: 10px 20px;
@@ -27,6 +26,7 @@
 .worktype-tab .tab-title {
   margin-top: 10px;
   text-align: center;
+  font-size: 14px;
 }
 
 .worktype-tab.active {
@@ -84,4 +84,17 @@
   text-align: center;
   margin: 35px 0;
   color: #555;
+}
+
+.tile-text {
+  display: block;
+  margin-top: 10px;
+}
+
+.tile{
+  color: #555;
+}
+
+.tile:hover{
+  text-decoration: none;
 }

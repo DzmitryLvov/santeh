@@ -36,55 +36,97 @@
     </div>
   </div>
 </div>
-<div class="container">
-  <div class="tile-header page-header">
-    <h1>Сантехнические работы в могилеве</h1>
-  </div>
-  <div>
-    <div class="col-xs-12 col-sm-12 col-md-3">
-      <div class="worktype-tiles-container house">
-        <div class="col-xs-4 col-sm-4 col-md-12 tile-container" ng-repeat="houseType in ctrl.houseWorkTypes">
-          <a href="#/house/{{houseType.urlText}}" ui-sref="houseWorks({workTitle: houseType.urlText})" class="tile">
-            <image ng-src="{{houseType.thumbSrc}}" alt=""></image>
-          </a>
+<div class="container-fluid tile-block">
+  <div class="container">
+    <div class="tile-header page-header">
+      <h1>Сантехнические работы в могилеве</h1>
+    </div>
+    <div>
+      <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="worktype-tiles-container house">
+          <div class="col-xs-4 col-sm-4 col-md-12 tile-container" ng-repeat="houseType in ctrl.houseWorkTypes">
+            <a href="#/house/{{houseType.urlText}}" ui-sref="houseWorks({workTitle: houseType.urlText})" class="tile">
+              <image ng-src="{{houseType.thumbSrc}}" alt=""></image>
+              <span class="tile-text">{{houseType.thumbText}}</span>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-9">
-      <div class="worktype-tiles-container">
-        <div class="col-xs-4 col-sm-4 col-md-3 tile-container" ng-repeat="basicType in ctrl.baseWorkTypes">
-          <a href="title" href="#/works/{{basicType.urlText}}" ui-sref="works({workTitle: basicType.urlText})">
-            <image ng-src="{{basicType.thumbSrc}}" alt=""></image>
-          </a>
+      <div class="col-xs-12 col-sm-12 col-md-9">
+        <div class="worktype-tiles-container">
+          <div class="col-xs-4 col-sm-4 col-md-3 tile-container" ng-repeat="basicType in ctrl.baseWorkTypes">
+            <a href="title" href="#/works/{{basicType.urlText}}" ui-sref="works({workTitle: basicType.urlText})" class="tile">
+              <image ng-src="{{basicType.thumbSrc}}" alt=""></image>
+              <span class="tile-text">{{basicType.thumbText}}</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<div class="container">
-  <div class="tile-header page-header">
-    <h1>О нас</h1>
-  </div>
-  <div class="row">
-    <div class="col-md-9">
-      <p>Мы самые классные</p>
+<div class="container-fluid about-block">
+  <div class="container">
+    <div class="tile-header page-header">
+      <h1>О нас</h1>
     </div>
-    <div class="col-md-3">
-      <img src="{{ctrl.info.aboutPhotoUrl}}" alt="картинка">
+    <div class="about-container clearfix">
+      <div class="row">
+        <div class="col-sm-6 about about-left">
+          <div class="about-text col-xs-9">
+            <h2>Заголовок</h2>
+            <p>Текст текст текст</p>
+          </div>
+          <div class="about-icon col-xs-3">
+            <i class="fa fa-clock-o fa-3x"></i>
+          </div>
+        </div>
+        <div class="col-sm-6 about about-right">
+          <div class="about-icon col-xs-3">
+            <i class="fa fa-clock-o fa-3x"></i>
+          </div>
+          <div class="about-text col-xs-9">
+            <h2>Заголовок</h2>
+            <p>Текст текст текст</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 about about-left">
+          <div class="about-text col-xs-9">
+            <h2>Заголовок</h2>
+            <p>Текст текст текст</p>
+          </div>
+          <div class="about-icon col-xs-3">
+            <i class="fa fa-clock-o fa-3x"></i>
+          </div>
+        </div>
+        <div class="col-sm-6 about about-right">
+          <div class="about-icon col-xs-3">
+            <i class="fa fa-clock-o fa-3x"></i>
+          </div>
+          <div class="about-text col-xs-9">
+            <h2>Заголовок</h2>
+            <p>Текст текст текст</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-<div class="container">
-  <div class="tile-header page-header">
-    <h1>Фото работ</h1>
-  </div>
-  <div class="main-gallery clearfix">
-    <a class="photo col-xs-6 col-sm-4 col-md-3" href='{{photo.src}}' style="background-image: url('{{photo.src}}'" ng-repeat="photo in ctrl.gallery | limitTo: 12">
-    </a>
-  </div>
-  <div class="main-gallery-button-container">
-    <a href="#/gallery" ui-sref="gallery" class="gallery-button">
+<div class="container-fluid">
+  <div class="container">
+    <div class="tile-header page-header">
+      <h1>Фото работ</h1>
+    </div>
+    <div class="main-gallery clearfix">
+      <a class="photo col-xs-6 col-sm-4 col-md-3" href='{{photo.src}}' style="background-image: url('{{photo.src}}'" ng-repeat="photo in ctrl.gallery | limitTo: 12">
+      </a>
+    </div>
+    <div class="main-gallery-button-container">
+      <a href="#/gallery" ui-sref="gallery" class="gallery-button">
         Смотреть все фото
     </a>
+    </div>
   </div>
 </div>

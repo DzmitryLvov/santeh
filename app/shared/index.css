@@ -13,6 +13,10 @@ img {
   max-width: 100%;
 }
 
+.container-fluid {
+  padding: 0;
+}
+
 .main-container {
   min-height: 100%;
   margin-bottom: -120px;
@@ -56,7 +60,7 @@ img {
 
 .address-container a.request-button {
   background: #6db5d2;
-  margin: 18px 0;
+  margin: 19px 0;
   font-size: 21px;
   word-wrap: break-word;
   color: #fff;
@@ -71,7 +75,7 @@ img {
 }
 
 .address-container a.request-button:hover {
-  background: #84cdea;
+  background: #84cdea;
 }
 
 .address-panel {
@@ -135,9 +139,8 @@ img {
   color: #4B666E;
 }
 
-.logo a:hover{
+.logo a:hover {
   background: transparent;
-  
 }
 
 .sub-category-list {
@@ -359,7 +362,7 @@ md-card img {
 }
 
 .benefits-container .benefits .header .header-wrapper {
-  width: 80%;
+  /* width: 80%; */
   height: 100%;
   padding: 0 15px;
   position: relative;
@@ -593,4 +596,64 @@ md-card img {
 .main-gallery-button-container .gallery-button:hover {
   box-shadow: 0 5px 6px -3px rgba(0, 0, 0, .2), 0 9px 12px 1px rgba(0, 0, 0, .14), 0 3px 16px 2px rgba(0, 0, 0, .12);
   text-decoration: none;
+}
+
+.tile-block {
+  -webkit-box-shadow: 0px 0px 70px -40px rgba(58, 58, 59, 1);
+  -moz-box-shadow: 0px 0px 70px -40px rgba(58, 58, 59, 1);
+  box-shadow: 0px 0px 70px -40px rgba(58, 58, 59, 1);
+}
+
+.about-block {
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 70px -40px rgba(58, 58, 59, 1);
+  -moz-box-shadow: 0px 0px 70px -40px rgba(58, 58, 59, 1);
+  box-shadow: 0px 0px 70px -40px rgba(58, 58, 59, 1);
+}
+
+.about-container {
+  padding-bottom: 20px;
+}
+
+.about-container .row {
+  height: 150px;
+}
+
+.about-container .about-text {
+  height: 100%;
+}
+
+.about-container .about-icon {
+  color: #6db5d2;
+  height: 100%;
+  text-align: center;
+}
+
+.about-container .about-icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about-container .about {
+  padding: 0;
+  height: 100%;
+}
+
+.about-container .about.about-left {
+  text-align: right;
+}
+
+.about-container .about.about-right {
+  text-align: left;
+}
+
+@media screen and (max-width: 767px) {
+  .about-container .row {
+    height: 300px;
+  }
+  .about-container .about{
+    height: 50%;
+  }
 }
