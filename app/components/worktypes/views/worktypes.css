@@ -71,7 +71,9 @@
   text-align: center;
 }
 
-.worktype-tiles-container .tile-container .title image {}
+.tiles-container{
+  margin-bottom: 10px;
+}
 
 .worktype-tiles-container .tile-container .title {
   text-decoration: none;

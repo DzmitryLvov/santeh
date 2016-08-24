@@ -143,6 +143,10 @@ img {
   background: transparent;
 }
 
+.head-title {}
+
+.head-title span {}
+
 .sub-category-list {
   padding: 00;
   margin: 0;
@@ -362,7 +366,7 @@ md-card img {
 }
 
 .benefits-container .benefits .header .header-wrapper {
-  /* width: 80%; */
+  width: 80%;
   height: 100%;
   padding: 0 15px;
   position: relative;
@@ -653,7 +657,7 @@ md-card img {
   .about-container .row {
     height: 300px;
   }
-  .about-container .about{
+  .about-container .about {
     height: 50%;
   }
 }
