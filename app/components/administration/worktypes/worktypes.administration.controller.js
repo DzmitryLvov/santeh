@@ -43,7 +43,7 @@
         targetEvent: event,
         clickOutsideToClose: false,
         fullscreen: useFullScreen,
-        controller: workTypeEditorController,
+        controller: 'workTypeEditorController',
         controllerAs: 'ctrl',
         locals: {
           '$mdDialog': $mdDialog,

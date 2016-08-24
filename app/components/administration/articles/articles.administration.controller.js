@@ -35,7 +35,7 @@
         controller: 'editPostController',
         controllerAs: 'ctrl',
         locals: {
-          '$mdDialog': articleService,
+          'articleService': articleService,
           '$mdDialog': $mdDialog,
           'post': post
         }
