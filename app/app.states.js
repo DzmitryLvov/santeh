@@ -1,5 +1,6 @@
 angular.module('myApp')
   .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
+    $locationProvider.hashPrefix('!');
     $urlRouterProvider.when('', '/');
 
     $urlRouterProvider.otherwise('/404');
