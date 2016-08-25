@@ -143,8 +143,6 @@ img {
   background: transparent;
 }
 
-.head-title {}
-
 .head-title span {}
 
 .sub-category-list {
@@ -660,4 +658,12 @@ md-card img {
   .about-container .about {
     height: 50%;
   }
+}
+
+.md-button.md-fab.md-fab-bottom-right {
+  top: auto;
+  right: 30px;
+  bottom: 30px;
+  left: auto;
+  position: fixed;
 }

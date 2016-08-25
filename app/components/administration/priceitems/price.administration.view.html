@@ -1,43 +1,50 @@
 <div class="price-list-container">
-  <div class="container">
+  <div class="container-fluid">
     <div class="price-list-title">
       <h2>Редактирование прайс листа</h2>
+      <md-button class="md-fab md-fab-bottom-right md-raised md-primary pull-right" ng-click="ctrl.editPriceItemDialog($event)">
+        <md-icon md-font-set="md">add</md-icon>
+        <md-tooltip md-direction="left">
+          Добавить элемент
+        </md-tooltip>
+      </md-button>
     </div>
     <div class="price-list-container">
-      <div class="container center-block">
-        <div class="price-list-title">
-          <md-button class="button-wide md-raised md-primary" ng-click="ctrl.editPriceItemDialog($event)">Добавить элемент</md-button>
-        </div>
-        <div class="price-list-content">
-          <div class="price-group" ng-repeat="group in ctrl.priceGroups">
-            <div class="heading-text">{{group.title}}</div>
-            <table class="table table-hover table-responsive price-table">
-              <thead>
-                <tr>
-                  <td>Название</td>
-                  <td>Единицы</td>
-                  <td>Цена</td>
-                  <td></td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr ng-repeat="priceItem in group">
-                  <td class=" col-md-6 ">{{priceItem.name}}</td>
-                  <td class="col-md-2 ">{{priceItem.units}}</td>
-                  <td class="col-md-2 ">{{priceItem.cost}}</td>
-                  <td class="col-md-2">
-                    <md-button class="md-icon-button" aria-label="Edit" ng-click="ctrl.editPriceItemDialog($event, priceItem)">
-                      <md-icon md-font-set="md">edit</md-icon>
-                    </md-button>
-                    <md-button class="md-icon-button" aria-label="Delete" ng-click="ctrl.deletePriceItem($event, priceItem)">
-                      <md-icon md-font-set="md">delete</md-icon>
-                    </md-button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            {{group.notesText}}
-          </div>
+      <div class="price-list-content">
+        <div class="price-group" ng-repeat="group in ctrl.priceGroups">
+          <div class="heading-text">{{group.title}}</div>
+          <table class="table table-hover table-responsive price-table">
+            <thead>
+              <tr>
+                <td>Название</td>
+                <td>Единицы</td>
+                <td>Цена</td>
+                <td></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="priceItem in group">
+                <td class=" col-md-6 ">{{priceItem.name}}</td>
+                <td class="col-md-2 ">{{priceItem.units}}</td>
+                <td class="col-md-2 ">{{priceItem.cost}}</td>
+                <td class="col-md-2">
+                  <md-button class="md-icon-button" aria-label="Up" ng-click="ctrl.moveUp(priceItem, group)">
+                    <md-icon md-font-set="md">keyboard_arrow_up</md-icon>
+                  </md-button>
+                  <md-button class="md-icon-button" aria-label="Down" ng-click="ctrl.moveDown(priceItem, group)">
+                    <md-icon md-font-set="md">keyboard_arrow_down</md-icon>
+                  </md-button>
+                  <md-button class="md-icon-button" aria-label="Edit" ng-click="ctrl.editPriceItemDialog($event, priceItem)">
+                    <md-icon md-font-set="md">edit</md-icon>
+                  </md-button>
+                  <md-button class="md-icon-button" aria-label="Delete" ng-click="ctrl.deletePriceItem($event, priceItem)">
+                    <md-icon md-font-set="md">delete</md-icon>
+                  </md-button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          {{group.notesText}}
         </div>
       </div>
     </div>

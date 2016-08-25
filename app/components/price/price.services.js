@@ -70,12 +70,33 @@
         }
       });
     }
+    
+    function swapItems(leftItem, rightItem){
+      return getDataAsync().then(function(data){
+        var currentLeftItem = data.$getRecord(leftItem.$id);
+        copyRecordData(rightItem, currentLeftItem);
+        
+        var currentRightItem = data.$getRecord(rightItem.$id);
+        copyRecordData(leftItem, currentRightItem);
+        
+        data.$save(currentLeftItem);
+        data.$save(currentRightItem);
+      })
+    }
 
+    var copyRecordData = function(itemFrom, itemTo){
+       itemTo.name = itemFrom.name;
+        itemTo.units = itemFrom.units;
+        itemTo.cost = itemFrom.cost;
+        itemTo.workTypeId = itemFrom.workTypeId;
+    }
+    
     return {
       getDataAsync: getDataAsync,
       getPriceItemsByWorkTypeId: getPriceItemsByWorkTypeId,
       savePriceItem: savePriceItem,
-      deleteItem: deleteItem
+      deleteItem: deleteItem,
+      swapItems: swapItems
     }
   }]);
 })();
