@@ -88,6 +88,16 @@ angular.module('myApp')
           redirectTo: 'login'
         }
       })
+      .state('administration.requests', {
+        url: '/requests',
+        templateUrl: 'app/components/administration/requests/requests.administration.view.html',
+        controller: 'requestsAdministrationController',
+        controllerAs: 'ctrl',
+        data: {
+          authorization: true,
+          redirectTo: 'login'
+        }
+      })
       .state('feedback', {
         url: '/feedback',
         templateUrl: 'app/components/feedback/views/feedback.view.html',

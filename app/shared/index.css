@@ -58,7 +58,7 @@ img {
   padding: 0;
 }
 
-.address-container a.request-button {
+.address-container .request-button {
   background: #6db5d2;
   margin: 19px 0;
   font-size: 21px;
@@ -74,7 +74,7 @@ img {
   transition: all .4s ease;
 }
 
-.address-container a.request-button:hover {
+.address-container .request-button:hover {
   background: #84cdea;
 }
 
@@ -666,4 +666,8 @@ md-card img {
   bottom: 30px;
   left: auto;
   position: fixed;
+}
+
+md-dialog {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }

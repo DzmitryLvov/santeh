@@ -51,9 +51,9 @@
               <p>+375(29)844-40-07</p>
             </div>
           </div>
-          <a href="#/price" ui-sref="price" class="request-button md-whiteframe-1dp hidden-sm hidden-xs">
-              Оставить заявку
-          </a>
+          <div ng-click="ctrl.showRequestDialog($event)" class="request-button md-whiteframe-1dp hidden-sm hidden-xs">
+            Оставить заявку
+          </div>
         </div>
       </div>
     </div>
@@ -136,7 +136,6 @@
 <script src="app/components/post/articles.services.js"></script>
 <script src="app/components/post/articles.controller.js"></script>
 <script src="app/components/post/post.controller.js"></script>
-<script src="app/components/request/request.controller.js"></script>
 <script src="app/components/request/request.services.js"></script>
 <script src="app/components/login/login.controller.js"></script>
 <script src="app/components/feedback/feedback.controller.js"></script>
@@ -153,6 +152,7 @@
 <script src="app/components/administration/articles/articles.administration.controller.js"></script>
 <script src="app/components/administration/worktypes/worktypes.administration.controller.js"></script>
 <script src="app/components/administration/gallery/gallery.administration.controller.js"></script>
+<script src="app/components/administration/requests/requests.administration.controller.js"></script>
 <!-- /build -->
 
 </html>

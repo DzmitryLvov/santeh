@@ -1,51 +1,50 @@
 (function () {
   'use strict';
-  var serviceId = 'requestService';
-  angular.module('myApp').factory(serviceId, ['$filter', function requestService($filter) {
-    var self = this;
-    self.requestList = [
-      {
-        id: 1
-        , title: 'Заявка 1'
-        , date: Date.today()
-        , phone: '+375222242424'
-        , email: 'email@mail.com'
-        , text: 'Комментарии к заявке'
-      }, {
-        id: 2
-        , title: 'Заявка 2'
-        , date: Date.today()
-        , phone: '+375222242424'
-        , email: 'email@mail.com'
-        , text: 'Комментарии к заявке'
-      }, {
-        id: 3
-        , title: 'Заявка 3'
-        , date: Date.today()
-        , phone: '+375222242424'
-        , email: 'email@mail.com'
-        , text: 'Комментарии к заявке'
-      }, {
-        id: 4
-        , title: 'Заявка 4'
-        , date: Date.today()
-        , phone: '+375222242424'
-        , email: 'email@mail.com'
-        , text: 'Комментарии к заявке'
-      }
-    ];
 
-    function saveRequest(request) {
-      if (request) {
-        self.requestList.push(request);
-      }
+  angular.module('myApp').factory('requestService', [
+    '$filter', '$firebaseArray', requestService]);
+
+  function requestService($filter, $firebaseArray) {
+    function getDataAsync() {
+      return $firebaseArray(firebase.database().ref().child('Requests'))
+        .$loaded()
+        .then(function (data) {
+          return data;
+        })
     };
 
-    function deleteRequest(requestId) {};
-    return {
-      requestList: self.requestList
-      , saveRequest: saveRequest
-      , deleteRequest: deleteRequest
+    function saveItem(item) {
+      return getDataAsync().then(function (data) {
+        if (!item.$id) {
+          data.$add(item);
+        }
+        else {
+          var existingItemIndex = data.$indexFor(item.$id);
+          if (existingItemIndex < 0) {
+            data.$add(item);
+          }
+          else {
+            data[existingItemIndex] = item;
+            data.$save(existingItemIndex);
+          }
+        }
+      });
     }
-  }]);
+
+    function deleteItem(item) {
+      return getDataAsync().then(function (data) {
+        var existingItemIndex = data.$indexFor(item.$id);
+        if (existingItemIndex >= 0) {
+          data[existingItemIndex] = item;
+          data.$remove(existingItemIndex);
+        }
+      });
+    }
+
+    return {
+      getDataAsync: getDataAsync,
+      saveItem: saveItem,
+      deleteItem: deleteItem
+    }
+  }
 })();
