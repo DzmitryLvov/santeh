@@ -629,11 +629,17 @@ md-card img {
 }
 
 .about-container {
-  padding: 15px 0 45px 0;
+  padding: 15px 0 42px 0;
 }
 
 .about-container .row {
   height: 150px;
+}
+
+@media screen and (max-width:991px){
+  .about-container .row{
+    height: 200px;
+  }
 }
 
 .about-container .about-text {
