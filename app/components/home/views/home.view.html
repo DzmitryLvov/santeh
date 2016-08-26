@@ -111,6 +111,11 @@
         </div>
       </div>
     </div>
+    <div class="main-ghost-button-container">
+      <div ng-click="ctrl.showRequestDialog()" class="ghost-button">
+        Оставить заявку
+    </div>
+    </div>
   </div>
 </div>
 <div class="container-fluid">
@@ -122,8 +127,8 @@
       <a class="photo col-xs-6 col-sm-4 col-md-3" href='{{photo.src}}' style="background-image: url('{{photo.src}}'" ng-repeat="photo in ctrl.gallery | limitTo: 12">
       </a>
     </div>
-    <div class="main-gallery-button-container">
-      <a href="#/gallery" ui-sref="gallery" class="gallery-button">
+    <div class="main-ghost-button-container">
+      <a href="#/gallery" ui-sref="gallery" class="ghost-button">
         Смотреть все фото
     </a>
     </div>

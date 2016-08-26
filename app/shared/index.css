@@ -99,7 +99,7 @@ img {
 .address-panel .adress .phone {
   display: inline-block;
   font-size: 22px;
-  margin-top: 19px;
+  margin-top: 35px;
   width: auto;
 }
 
@@ -594,23 +594,23 @@ md-card img {
   height: 200px;
 }
 
-.main-gallery-button-container {
-  height: 200px;
+.main-ghost-button-container {
+  height: 160px;
   width: 100%;
   text-align: center;
-  line-height: 200px;
+  line-height: 150px;
 }
 
-.main-gallery-button-container .gallery-button {
+.main-ghost-button-container .ghost-button {
   display: inline;
-  padding: 20px 33px;
+  padding: 20px 40px;
   border: 2px solid #9ecfe0;
   color: #366877;
   font-size: 22px;
   transition: .4s all ease;
 }
 
-.main-gallery-button-container .gallery-button:hover {
+.main-ghost-button-container .ghost-button:hover {
   box-shadow: 0 5px 6px -3px rgba(0, 0, 0, .2), 0 9px 12px 1px rgba(0, 0, 0, .14), 0 3px 16px 2px rgba(0, 0, 0, .12);
   text-decoration: none;
 }
@@ -629,7 +629,7 @@ md-card img {
 }
 
 .about-container {
-  padding: 15px 0 42px 0;
+  padding-top: 15px0;
 }
 
 .about-container .row {
@@ -678,7 +678,7 @@ md-card img {
 
 @media screen and (max-width: 767px) {
   .about-container .row {
-    height: 300px;
+    height: 400px;
   }
   .about-container .about {
     height: 50%;
