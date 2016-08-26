@@ -629,7 +629,7 @@ md-card img {
 }
 
 .about-container {
-  padding-bottom: 20px;
+  padding: 15px 0 45px 0;
 }
 
 .about-container .row {
@@ -638,6 +638,10 @@ md-card img {
 
 .about-container .about-text {
   height: 100%;
+}
+
+.about-container .about-text p{
+  color: #4b666e;
 }
 
 .about-container .about-icon {
