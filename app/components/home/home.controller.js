@@ -18,6 +18,10 @@
       workTypesService.getDataAsync().then(function (data) {
         vm.workTypes = data;
 
+        vm.workTypes.forEach(function (element, index, array) {
+          element.thumbText = element.thumbText.replace('-', '')
+        })
+
         vm.baseWorkTypes = $filter('filter')(data, {
           categoryId: 1
         }, true);
