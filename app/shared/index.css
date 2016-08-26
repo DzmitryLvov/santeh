@@ -118,15 +118,8 @@ img {
   }
 }
 
-@media screen and (max-width:767px) {
-  .header {
-    display: none;
-  }
-}
-
 .logo {
   font-family: 'clear_sansregular';
-  line-height: 90px;
   vertical-align: middle;
   text-align: left;
   padding: 0;
@@ -137,16 +130,38 @@ img {
   font-size: 32px;
   padding: 0px 10px;
   color: #4B666E;
+  line-height: 90px;
 }
 
 .logo a:hover {
   background: transparent;
 }
 
-.head-title span {}
+.logo-title {
+  display: inline-block;
+  margin-left: 25px;
+  width: 190;
+  vertical-align: top;
+  margin-top: 20px;
+}
+
+.logo-title span {}
+
+@media screen and (max-width:767px) {
+  .header {
+    display: none;
+  }
+  .logo-title {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
 
 .sub-category-list {
-  padding: 00;
+  padding: 0;
   margin: 0;
 }
 
