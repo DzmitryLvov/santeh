@@ -7,7 +7,6 @@ body {
   font-size: 18px;
   color: #171717;
   text-decoration: none;
-  overflow-x: hidden;
 }
 
 img {
@@ -637,8 +636,8 @@ md-card img {
   height: 150px;
 }
 
-@media screen and (max-width:991px){
-  .about-container .row{
+@media screen and (max-width:991px) {
+  .about-container .row {
     height: 200px;
   }
 }
@@ -647,7 +646,7 @@ md-card img {
   height: 100%;
 }
 
-.about-container .about-text p{
+.about-container .about-text p {
   color: #4b666e;
 }
 
