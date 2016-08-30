@@ -136,6 +136,12 @@ module.exports = function (grunt) {
           src: 'bundle.min.js',
           dest: 'build/'
         }]
+      },
+      html: {
+        files: [{
+          src: 'google7955107f0e844546.html',
+          dest: 'build/'
+        }]
       }
     },
     ngtemplates: {
