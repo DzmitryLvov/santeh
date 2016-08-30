@@ -1,9 +1,7 @@
 (function () {
   'use strict';
 
-  var serviceId = 'articleService';
-
-  angular.module('myApp').factory(serviceId, ['$q', '$filter', '$firebaseArray', function articleService($q, $filter, $firebaseArray) {
+  angular.module('myApp').factory('articleService', ['$q', '$filter', '$firebaseArray', function articleService($q, $filter, $firebaseArray) {
     var self = this;
 
     var options = {
@@ -12,8 +10,6 @@
       day: 'numeric',
       weekday: 'long'
     };
-
-    self.preparedData = [];
 
     function getDataAsync() {
       if (!self.photoList || !self.photoList.length) {

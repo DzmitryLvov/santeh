@@ -1,77 +1,19 @@
 (function () {
   'use strict';
   var serviceId = 'galleryService';
-  angular.module('myApp').factory(serviceId, ['$q', '$filter', '$firebaseArray', function galleryService($q, $filter, $firebaseArray) {
+  angular.module('myApp').factory(serviceId, ['$filter', 'ResourceService', function galleryService($filter, ResourceService) {
     var self = this;
 
-    self.photoList = [];
+    angular.extend(self, new ResourceService('PhotoList'));
 
-    function getData() {
-      var ref = firebase.database().ref().child('PhotoList');
-      self.photoList = $firebaseArray(ref);
-
-      return self.photoList;
-    };
-
-    function getDataAsync() {
-      if (!self.photoList || !self.photoList.length) {
-        return $firebaseArray(
-            firebase.database().ref().child('PhotoList'))
-          .$loaded()
-          .then(function (data) {
-            self.photoList = data;
-            return self.photoList;
-          })
-      }
-      else {
-        var deffered = $q.defer();
-        deffered.resolve(self.photoList)
-        return deffered.promise;
-      }
-    }
-
-    function getPhotoListByWorkTypeId(workTypeId) {
-      return getDataAsync().then(function (data) {
-        return $filter('filter')(self.photoList, {
+    self.getPhotoListByWorkTypeId = function (workTypeId) {
+      return self.getDataAsync().then(function (data) {
+        return $filter('filter')(data, {
           workTypeId: workTypeId
         }, true);
       });
     };
 
-    function saveItem(item) {
-      return getDataAsync().then(function (data) {
-        if (!item.$id) {
-          data.$add(item);
-        }
-        else {
-          var existingItemIndex = data.$indexFor(item.$id);
-          if (existingItemIndex < 0) {
-            data.$add(item);
-          }
-          else {
-            data[existingItemIndex] = item;
-            data.$save(existingItemIndex);
-          }
-        }
-      });
-    }
-
-    function deleteItem(item) {
-      return getDataAsync().then(function (data) {
-        var existingItemIndex = data.$indexFor(item.$id);
-        if (existingItemIndex > 0) {
-          data[existingItemIndex] = item;
-          data.$remove(existingItemIndex);
-        }
-      });
-    }
-
-    return {
-      getData: getData,
-      getDataAsync: getDataAsync,
-      getPhotoListByWorkTypeId: getPhotoListByWorkTypeId,
-      saveItem: saveItem,
-      deleteItem: deleteItem
-    };
+    return self;
   }]);
 })();

@@ -5,7 +5,9 @@
   function galleryController(galleryService) {
     var vm = this;
 
-    vm.items = galleryService.getData();
+    galleryService.getDataAsync().then(function (data) {
+      vm.items = data;
+    });
 
     $('.gallery-container').magnificPopup({
       delegate: 'a',

@@ -4,7 +4,7 @@
 
   function priceController(priceService, workTypesService) {
     var vm = this;
-
+    
     priceService.getDataAsync().then(function (data) {
       vm.priceGroups = _.groupBy(data, function (item) {
         return item.workTypeId

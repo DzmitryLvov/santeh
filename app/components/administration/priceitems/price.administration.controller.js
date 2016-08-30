@@ -128,7 +128,7 @@
     };
 
     vm.saveItem = function () {
-      priceService.savePriceItem(vm.selectedPriceItem)
+      priceService.saveItem(vm.selectedPriceItem)
         .then(function (response) {
           $mdDialog.hide();
         });
