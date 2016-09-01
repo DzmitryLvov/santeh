@@ -22,6 +22,8 @@
             selectItem(vm.workTypes[0]);
             populateRelatedData();
           }
+
+          return vm.workTypes;
         });
     }
 

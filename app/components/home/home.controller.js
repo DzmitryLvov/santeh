@@ -19,7 +19,7 @@
         vm.workTypes = data;
 
         vm.workTypes.forEach(function (element, index, array) {
-          element.thumbText = element.thumbText.replace('-', '')
+          element.thumbText = element.thumbText.replace('-', '<span class="visible-xs"> </span>')
         })
 
         vm.baseWorkTypes = $filter('filter')(data, {
