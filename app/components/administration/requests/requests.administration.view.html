@@ -1,3 +1,32 @@
+<div class="col-md-12">
+  <md-button class="button-wide md-raised md-primary" ng-click="ctrl.editTokenDialog($event)">Добавить код</md-button>
+  <div class="col-md-4">
+    <table class="table table-hover table-responsive price-table">
+      <thead>
+        <tr>
+          <td>Код</td>
+          <td></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="token in ctrl.tokenList">
+          <td class="col-md-6">{{token.$value}}</td>
+          <td class="col-md-6">
+            <md-button class="md-icon-button" aria-label="Edit" ng-click="ctrl.editTokenDialog($event, token)">
+              <md-icon md-font-set="md">edit</md-icon>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="Delete" ng-click="ctrl.deleteToken($event, token)">
+              <md-icon md-font-set="md">delete</md-icon>
+            </md-button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div ng-repeat="">
+    <span>{{token.$value}}</span><i class="material-icons" ng-click="ctrl.deleteToken">delete_forever</i>
+  </div>
+</div>
 <div class="request-panel-container">
   <div class="col-md-4 request" ng-repeat="request in ctrl.requestList | orderBy: request : true ">
     <md-card>

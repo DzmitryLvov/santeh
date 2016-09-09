@@ -1,8 +1,25 @@
 (function () {
   'use strict';
-  angular.module('myApp').controller('homeController', ['$scope', '$filter', '$mdDialog', 'homeService', 'workTypesService', 'galleryService', 'requestService', homeController]);
+  angular.module('myApp').controller('homeController', [
+    '$scope',
+    '$filter',
+    '$mdDialog',
+    'homeService',
+    'workTypesService',
+    'galleryService',
+    'requestService',
+    'notificationService',
+    homeController]);
 
-  function homeController($scope, $filter, $mdDialog, homeService, workTypesService, galleryService, requestService) {
+  function homeController(
+    $scope,
+    $filter,
+    $mdDialog,
+    homeService,
+    workTypesService,
+    galleryService,
+    requestService,
+    notificationService) {
     var vm = this
 
     homeService.getInfoAsync().then(function (data) {
@@ -48,16 +65,6 @@
       });
     }
 
-    var options = {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      weekday: 'long',
-      hour: 'numeric',
-      minute: 'numeric',
-      second: 'numeric'
-    };
-
     vm.showRequestDialog = function (event) {
       var confirm = $mdDialog.prompt()
         .title('Оставьте нам номер и мы Вам перезвоним')
@@ -66,11 +73,24 @@
         .ok('Готово!')
         .cancel('Закрыть');
       $mdDialog.show(confirm).then(function (result) {
-        var date = Date.today().toLocaleDateString("ru", options);
-        requestService.saveItem({
+        var date = Date.today().toLocaleDateString("ru", {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+          weekday: 'long',
+          hour: 'numeric',
+          minute: 'numeric',
+          second: 'numeric'
+        });
+        
+        var request = {
           phone: result,
-          date: date
-        }).then(function (response) {
+          date: date,
+        }
+        
+        requestService.saveItem(request).then(function (response) {
+          notificationService.pushAll(request);
+
           $mdDialog.show(
             $mdDialog.alert()
             .clickOutsideToClose(true)

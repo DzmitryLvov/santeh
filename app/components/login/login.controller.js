@@ -4,9 +4,11 @@
 
   function loginController($state, Authorization) {
     var vm = this
+    
     vm.userName = '';
     vm.password = '';
     vm.messageText = '';
+    
     vm.login = function () {
       if (vm.userName == 'admin' && vm.password == 'admin') {
         Authorization.go('administration');
@@ -15,6 +17,7 @@
         vm.messageText = 'Неправильный логин или пароль!';
       }
     };
+    
     return vm;
   }
 })();
